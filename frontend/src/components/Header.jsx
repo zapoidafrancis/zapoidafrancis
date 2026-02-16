@@ -42,7 +42,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#d4af37] transition-colors font-medium"
+                className="text-white hover:text-[#90ee90] transition-colors font-medium"
               >
                 {link.label}
               </a>
@@ -53,7 +53,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-white hover:text-[#d4af37]"
+            className="md:hidden text-white hover:text-[#9370db]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -67,7 +67,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#d4af37] transition-colors font-medium"
+                className="text-white hover:text-[#90ee90] transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
