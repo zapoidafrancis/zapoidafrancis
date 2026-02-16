@@ -77,7 +77,7 @@ const SoloProject = () => {
                     )}
                     <a
                       href={song.spotifyUrl}
-                      className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#c4a037] transition-colors"
+                      className="inline-flex items-center gap-2 text-[#9370db] hover:text-[#8060c0] transition-colors"
                     >
                       Listen on Spotify <ExternalLink className="w-4 h-4" />
                     </a>
