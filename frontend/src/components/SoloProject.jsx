@@ -120,20 +120,20 @@ const SoloProject = () => {
           <TabsContent value="interviews">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {soloProject.interviews.map(interview => (
-                <Card key={interview.id} className="bg-[#0a0a0a] border-gray-800 hover:border-[#d4af37] transition-all">
+                <Card key={interview.id} className="bg-[#0a0a0a] border-gray-800 hover:border-[#9370db] transition-all">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3 mb-4">
-                      <FileText className="w-6 h-6 text-[#d4af37] flex-shrink-0 mt-1" />
+                      <FileText className="w-6 h-6 text-[#90ee90] flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="text-xl font-semibold mb-2">{interview.title}</h3>
-                        <p className="text-[#d4af37] text-sm mb-1">{interview.publication}</p>
+                        <p className="text-[#9370db] text-sm mb-1">{interview.publication}</p>
                         <p className="text-gray-500 text-sm mb-4">{interview.date}</p>
                       </div>
                     </div>
                     <p className="text-gray-300 leading-relaxed mb-4">{interview.excerpt}</p>
                     <a
                       href={interview.url}
-                      className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#c4a037] transition-colors"
+                      className="inline-flex items-center gap-2 text-[#90ee90] hover:text-[#7fdf7f] transition-colors"
                     >
                       Read Full Interview <ExternalLink className="w-4 h-4" />
                     </a>
