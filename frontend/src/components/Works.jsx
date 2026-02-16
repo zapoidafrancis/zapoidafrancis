@@ -52,7 +52,7 @@ const Works = () => {
           {filteredWorks.map(work => (
             <div
               key={work.id}
-              className="bg-[#1a1a1a] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#d4af37]"
+              className="bg-[#1a1a1a] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#9370db]"
             >
               {/* Image/Thumbnail */}
               <div className="relative h-56 overflow-hidden">
