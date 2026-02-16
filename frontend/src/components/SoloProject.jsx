@@ -94,7 +94,7 @@ const SoloProject = () => {
                 <Card key={video.id} className="bg-[#0a0a0a] border-gray-800">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
-                      <Video className="w-5 h-5 text-[#d4af37]" />
+                      <Video className="w-5 h-5 text-[#90ee90]" />
                       {video.title}
                     </CardTitle>
                   </CardHeader>
