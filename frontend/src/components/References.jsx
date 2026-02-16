@@ -1,10 +1,17 @@
 import React from 'react';
-import { Quote } from 'lucide-react';
+import { Quote, Download } from 'lucide-react';
 import { references } from '../data/mock';
 import { Card, CardContent } from './ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
+import { Button } from './ui/button';
 
 const References = () => {
+  const handleDownload = (ref) => {
+    // This will be implemented with backend later
+    // For now, just show alert
+    alert(`Download functionality will be available soon for ${ref.name}'s reference letter.`);
+  };
+
   return (
     <section id="references" className="min-h-screen bg-[#0a0a0a] text-white py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -15,15 +22,15 @@ const References = () => {
         </div>
 
         {/* References Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {references.map((ref, idx) => (
             <Card
               key={idx}
-              className="bg-[#1a1a1a] border-gray-800 hover:border-[#d4af37] transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-[#1a1a1a] border-gray-800 hover:border-[#9370db] transition-all duration-300"
             >
               <CardContent className="p-8">
                 {/* Quote Icon */}
-                <Quote className="w-10 h-10 text-[#d4af37] mb-6 opacity-60" />
+                <Quote className="w-10 h-10 text-[#9370db] mb-6 opacity-60" />
 
                 {/* Quote Text */}
                 <p className="text-gray-300 leading-relaxed mb-8 italic">
@@ -31,19 +38,28 @@ const References = () => {
                 </p>
 
                 {/* Reference Info */}
-                <div className="flex items-center gap-4">
-                  <Avatar className="w-14 h-14 border-2 border-[#d4af37]">
+                <div className="flex items-center gap-4 mb-6">
+                  <Avatar className="w-14 h-14 border-2 border-[#90ee90]">
                     <AvatarImage src={ref.image} alt={ref.name} />
-                    <AvatarFallback className="bg-[#d4af37] text-black font-semibold">
+                    <AvatarFallback className="bg-[#90ee90] text-black font-semibold">
                       {ref.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
                   </Avatar>
                   <div>
                     <p className="font-semibold text-lg">{ref.name}</p>
-                    <p className="text-[#d4af37] text-sm">{ref.role}</p>
+                    <p className="text-[#9370db] text-sm">{ref.role}</p>
                     <p className="text-gray-500 text-sm">{ref.company}</p>
                   </div>
                 </div>
+
+                {/* Download Button */}
+                <Button
+                  onClick={() => handleDownload(ref)}
+                  className="w-full bg-[#90ee90] text-black hover:bg-[#7fdf7f] transition-colors"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Full Reference Letter
+                </Button>
               </CardContent>
             </Card>
           ))}
