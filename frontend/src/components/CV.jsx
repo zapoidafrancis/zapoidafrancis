@@ -17,7 +17,7 @@ const CV = () => {
         {/* Experience Section */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <Briefcase className="w-8 h-8 text-[#d4af37]" />
+            <Briefcase className="w-8 h-8 text-[#9370db]" />
             <h3 className="text-3xl font-semibold">Professional Experience</h3>
           </div>
           <div className="space-y-6">
