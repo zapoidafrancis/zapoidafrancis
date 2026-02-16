@@ -22,7 +22,7 @@ const SoloProject = () => {
         {/* Section Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <Music2 className="w-12 h-12 text-[#d4af37]" />
+            <Music2 className="w-12 h-12 text-[#9370db]" />
             <h2 className="text-5xl md:text-6xl font-bold">{soloProject.name}</h2>
           </div>
           <p className="text-xl text-gray-400 mb-6">{soloProject.description}</p>
