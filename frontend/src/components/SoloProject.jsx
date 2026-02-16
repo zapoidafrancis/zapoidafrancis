@@ -145,26 +145,35 @@ const SoloProject = () => {
 
           {/* Music Film Tab */}
           <TabsContent value="film">
-            <Card className="bg-[#0a0a0a] border-gray-800">
-              <CardHeader>
-                <CardTitle className="text-white text-3xl">{soloProject.musicFilm.title}</CardTitle>
-                <p className="text-gray-400 text-lg">{soloProject.musicFilm.description}</p>
-              </CardHeader>
-              <CardContent>
-                <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={soloProject.musicFilm.videoUrl}
-                    title={soloProject.musicFilm.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                <p className="text-gray-400 italic">{soloProject.musicFilm.credits}</p>
-              </CardContent>
-            </Card>
+            {soloProject.musicFilm ? (
+              <Card className="bg-[#0a0a0a] border-gray-800">
+                <CardHeader>
+                  <CardTitle className="text-white text-3xl">{soloProject.musicFilm.title}</CardTitle>
+                  <p className="text-gray-400 text-lg">{soloProject.musicFilm.description}</p>
+                </CardHeader>
+                <CardContent>
+                  <div className="aspect-video bg-black rounded-lg overflow-hidden mb-4">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={soloProject.musicFilm.videoUrl}
+                      title={soloProject.musicFilm.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  <p className="text-gray-400 italic">{soloProject.musicFilm.credits}</p>
+                </CardContent>
+              </Card>
+            ) : (
+              <Card className="bg-[#0a0a0a] border-gray-800">
+                <CardContent className="p-12 text-center">
+                  <p className="text-2xl text-gray-400 mb-4">Coming Soon</p>
+                  <p className="text-gray-500">Music film content will be added here</p>
+                </CardContent>
+              </Card>
+            )}
           </TabsContent>
         </Tabs>
       </div>
