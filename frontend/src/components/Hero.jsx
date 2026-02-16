@@ -32,13 +32,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#works"
-            className="px-8 py-4 bg-[#d4af37] text-black font-semibold rounded-sm hover:bg-[#c4a037] transition-all duration-300 transform hover:scale-105"
+            className="px-8 py-4 bg-[#9370db] text-white font-semibold rounded-sm hover:bg-[#8060c0] transition-all duration-300 transform hover:scale-105"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-sm hover:bg-white hover:text-black transition-all duration-300"
+            className="px-8 py-4 bg-transparent border-2 border-[#90ee90] text-[#90ee90] font-semibold rounded-sm hover:bg-[#90ee90] hover:text-black transition-all duration-300"
           >
             Get In Touch
           </a>
