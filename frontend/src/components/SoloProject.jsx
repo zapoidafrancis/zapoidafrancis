@@ -32,16 +32,16 @@ const SoloProject = () => {
         {/* Tabs for different content */}
         <Tabs defaultValue="songs" className="w-full">
           <TabsList className="bg-[#0a0a0a] mb-8 p-1 grid w-full grid-cols-2 md:grid-cols-4 gap-2">
-            <TabsTrigger value="songs" className="data-[state=active]:bg-[#d4af37] data-[state=active]:text-black">
+            <TabsTrigger value="songs" className="data-[state=active]:bg-[#9370db] data-[state=active]:text-white">
               Songs
             </TabsTrigger>
-            <TabsTrigger value="videos" className="data-[state=active]:bg-[#d4af37] data-[state=active]:text-black">
+            <TabsTrigger value="videos" className="data-[state=active]:bg-[#9370db] data-[state=active]:text-white">
               Videos
             </TabsTrigger>
-            <TabsTrigger value="interviews" className="data-[state=active]:bg-[#d4af37] data-[state=active]:text-black">
+            <TabsTrigger value="interviews" className="data-[state=active]:bg-[#9370db] data-[state=active]:text-white">
               Interviews
             </TabsTrigger>
-            <TabsTrigger value="film" className="data-[state=active]:bg-[#d4af37] data-[state=active]:text-black">
+            <TabsTrigger value="film" className="data-[state=active]:bg-[#9370db] data-[state=active]:text-white">
               Music Film
             </TabsTrigger>
           </TabsList>
