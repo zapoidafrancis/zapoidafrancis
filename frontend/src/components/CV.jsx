@@ -41,7 +41,7 @@ const CV = () => {
         {/* Education Section */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="w-8 h-8 text-[#d4af37]" />
+            <GraduationCap className="w-8 h-8 text-[#90ee90]" />
             <h3 className="text-3xl font-semibold">Education</h3>
           </div>
           <div className="space-y-6">
