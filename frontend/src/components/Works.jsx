@@ -111,7 +111,7 @@ const Works = () => {
                     href={work.videoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#c4a037] transition-colors mt-2"
+                    className="inline-flex items-center gap-2 text-[#90ee90] hover:text-[#7fdf7f] transition-colors mt-2"
                   >
                     Watch Video <ExternalLink className="w-4 h-4" />
                   </a>
