@@ -19,7 +19,7 @@ const Hero = () => {
         </h1>
 
         {/* Tagline */}
-        <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-[#d4af37] font-light tracking-wide">
+        <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-[#9370db] font-light tracking-wide">
           {heroData.tagline}
         </p>
 
