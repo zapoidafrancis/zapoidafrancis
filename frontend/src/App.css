@@ -13,12 +13,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d4af37;
+    background: #9370db;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #c4a037;
+    background: #8060c0;
 }
 
 /* Audio player styling */
@@ -34,7 +34,7 @@ audio::-webkit-media-controls-panel {
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
-    color: #d4af37;
+    color: #90ee90;
 }
 
 /* Animations */
