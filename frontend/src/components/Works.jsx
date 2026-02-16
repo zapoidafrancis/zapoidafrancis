@@ -65,7 +65,7 @@ const Works = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                     <button
                       onClick={() => handlePlayAudio(work.id)}
-                      className="w-16 h-16 bg-[#d4af37] rounded-full flex items-center justify-center hover:bg-[#c4a037] transition-all"
+                      className="w-16 h-16 bg-[#90ee90] rounded-full flex items-center justify-center hover:bg-[#7fdf7f] transition-all"
                     >
                       <Play className="w-8 h-8 text-black ml-1" />
                     </button>
