@@ -50,10 +50,15 @@ const CV = () => {
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <CardTitle className="text-2xl text-white">{edu.degree}</CardTitle>
-                    <Badge className="bg-[#d4af37] text-black w-fit">{edu.year}</Badge>
+                    <Badge className="bg-[#9370db] text-white w-fit">{edu.year}</Badge>
                   </div>
-                  <p className="text-[#d4af37] text-lg">{edu.institution}</p>
+                  <p className="text-[#90ee90] text-lg">{edu.institution}</p>
                 </CardHeader>
+                {edu.details && (
+                  <CardContent>
+                    <p className="text-gray-300 leading-relaxed">{edu.details}</p>
+                  </CardContent>
+                )}
               </Card>
             ))}
           </div>
