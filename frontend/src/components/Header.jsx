@@ -32,8 +32,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold text-white hover:text-[#d4af37] transition-colors">
-            AR
+          <a href="#" className="text-2xl font-bold text-white hover:text-[#9370db] transition-colors">
+            FMD
           </a>
 
           {/* Desktop Navigation */}
