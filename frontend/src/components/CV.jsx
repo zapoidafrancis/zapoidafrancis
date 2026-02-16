@@ -67,7 +67,7 @@ const CV = () => {
         {/* Skills Section */}
         <div>
           <div className="flex items-center gap-3 mb-8">
-            <Award className="w-8 h-8 text-[#d4af37]" />
+            <Award className="w-8 h-8 text-[#9370db]" />
             <h3 className="text-3xl font-semibold">Skills & Expertise</h3>
           </div>
           <Card className="bg-[#0a0a0a] border-gray-800">
@@ -76,7 +76,7 @@ const CV = () => {
                 {cvData.skills.map((skill, idx) => (
                   <Badge
                     key={idx}
-                    className="bg-[#2a2a2a] text-white text-sm px-4 py-2 hover:bg-[#d4af37] hover:text-black transition-colors cursor-default"
+                    className="bg-[#2a2a2a] text-white text-sm px-4 py-2 hover:bg-[#9370db] hover:text-white transition-colors cursor-default"
                   >
                     {skill}
                   </Badge>
