@@ -26,9 +26,9 @@ const CV = () => {
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <CardTitle className="text-2xl text-white">{exp.title}</CardTitle>
-                    <Badge className="bg-[#d4af37] text-black w-fit">{exp.period}</Badge>
+                    <Badge className="bg-[#90ee90] text-black w-fit">{exp.period}</Badge>
                   </div>
-                  <p className="text-[#d4af37] text-lg">{exp.company}</p>
+                  <p className="text-[#9370db] text-lg">{exp.company}</p>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed">{exp.description}</p>
