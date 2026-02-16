@@ -83,7 +83,7 @@ const Works = () => {
                   </Badge>
                 </div>
 
-                <p className="text-[#d4af37] mb-3">{work.artist}</p>
+                <p className="text-[#9370db] mb-3">{work.artist}</p>
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{work.description}</p>
 
                 {/* Role Tags */}
