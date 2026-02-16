@@ -38,8 +38,8 @@ const Works = () => {
               variant={selectedRole === role.id ? 'default' : 'outline'}
               className={`rounded-full transition-all duration-300 ${
                 selectedRole === role.id
-                  ? 'bg-[#d4af37] text-black hover:bg-[#c4a037]'
-                  : 'border-gray-600 text-gray-300 hover:border-[#d4af37] hover:text-[#d4af37]'
+                  ? 'bg-[#9370db] text-white hover:bg-[#8060c0]'
+                  : 'border-gray-600 text-gray-300 hover:border-[#90ee90] hover:text-[#90ee90]'
               }`}
             >
               {role.name}
