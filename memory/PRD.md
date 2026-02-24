@@ -14,7 +14,7 @@ A musician, music producer, and audio engineer based in Berlin needs a captivati
 ### ✅ Implemented
 1. **Hero Section**
    - Name displayed as "zapoida francis" in massive bold typography (Bebas Neue)
-   - RGB chromatic aberration effect on background photo (slow, never settling, 12-27px split)
+   - Interactive RGB chromatic aberration effect (responds to mouse movement)
    - Infinite scrolling marquee with roles
    - CTA buttons (View Work, Get in Touch)
    - Purple accent color (#a855f7)
@@ -47,8 +47,13 @@ A musician, music producer, and audio engineer based in Berlin needs a captivati
 7. **Design System**
    - Purple accent (#a855f7)
    - Sharp-edged UI (0 border-radius)
-   - Bebas Neue display font + Inter body font
+   - Bebas Neue display font + Inter body font (monospace font removed - Dec 2025)
    - Film grain texture overlay
+   - Purple hover states on navigation (Dec 2025)
+
+8. **Mobile Experience**
+   - Fixed mobile menu with backdrop blur (works on scrolled pages - Dec 2025)
+   - Responsive layout across all breakpoints
 
 ### ⏳ Pending (P1)
 1. **Download Buttons Functionality**
