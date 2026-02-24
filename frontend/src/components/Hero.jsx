@@ -1,9 +1,18 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { heroData } from '../data/mock';
 
 const Hero = () => {
   const [split, setSplit] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
   const heroRef = useRef(null);
+
+  // Detect mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const roles = [
     'musician',
@@ -18,7 +27,8 @@ const Hero = () => {
   const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
 
   const handleMouseMove = (e) => {
-    if (!heroRef.current) return;
+    // No interactive split on mobile
+    if (isMobile || !heroRef.current) return;
     
     const rect = heroRef.current.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width; // 0 to 1
@@ -46,8 +56,14 @@ const Hero = () => {
   };
 
   const handleMouseLeave = () => {
-    setSplit({ x: 8, y: 5 });
+    if (!isMobile) {
+      setSplit({ x: 8, y: 5 });
+    }
   };
+
+  // Mobile gets minimal fixed split, desktop gets interactive
+  const baseSplit = isMobile ? 4 : 8;
+  const baseSplitY = isMobile ? 3 : 5;
 
   // Default split values (subtle when not hovering near head)
   const redX = -(split.x || 8);
