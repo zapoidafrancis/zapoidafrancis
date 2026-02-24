@@ -2,82 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import bold, modern font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* Import edgy, modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background: #000000;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
+/* Film grain texture overlay */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
 
 @layer base {
   :root {
         --background: 0 0% 100%;
         --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
         --primary: 0 0% 9%;
         --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
-        
-        /* Berlin aesthetic - Purple accent */
         --accent-purple: 147 60% 65%;
-        --accent-purple-hover: 147 65% 55%;
-    }
-  .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
     }
 }
 
@@ -90,22 +49,33 @@ code {
     }
 }
 
-/* Berlin Fashion Aesthetic - Custom Animations */
-@keyframes pulse-glow {
+/* Berlin Underground Aesthetic Animations */
+@keyframes pulse-intense {
     0%, 100% {
         opacity: 1;
-        text-shadow: 0 0 20px rgba(147, 112, 219, 0.5);
+        transform: scale(1);
+        text-shadow: 0 0 30px rgba(147, 112, 219, 0.6);
     }
     50% {
-        opacity: 0.8;
-        text-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
+        opacity: 0.9;
+        transform: scale(1.01);
+        text-shadow: 0 0 50px rgba(147, 112, 219, 0.9);
+    }
+}
+
+@keyframes slide-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
 
 @keyframes fade-in-up {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
@@ -113,32 +83,58 @@ code {
     }
 }
 
-@keyframes slide-in-left {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
+@keyframes glitch {
+    0% {
+        transform: translate(0);
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
     }
 }
 
-.animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
+.animate-pulse-intense {
+    animation: pulse-intense 4s ease-in-out infinite;
+}
+
+.animate-slide-infinite {
+    animation: slide-infinite 30s linear infinite;
 }
 
 .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out;
 }
 
-.animate-slide-in-left {
-    animation: slide-in-left 0.8s ease-out;
+.animate-glitch {
+    animation: glitch 0.3s ease-in-out;
 }
 
-/* Custom scrollbar - minimal and sleek */
+/* Grainy texture backgrounds */
+.bg-grain {
+    background-color: #0a0a0a;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,.03) 2px, rgba(255,255,255,.03) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,.03) 2px, rgba(255,255,255,.03) 4px);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+}
+
+/* Custom scrollbar - minimal */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -147,24 +143,43 @@ code {
 
 ::-webkit-scrollbar-thumb {
     background: #9370db;
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #8060c0;
-}
-
-/* Audio player styling */
-audio {
-    width: 100%;
-    border-radius: 8px;
-}
-
-audio::-webkit-media-controls-panel {
-    background-color: #1a1a1a;
+    background: #a080e0;
 }
 
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Sharp button style */
+.btn-sharp {
+    border-radius: 0;
+    border: 2px solid #9370db;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.btn-sharp:hover {
+    background: #9370db;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(147, 112, 219, 0.3);
+}
+
+/* Audio player */
+audio {
+    width: 100%;
+    border-radius: 0px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #0a0a0a;
 }
