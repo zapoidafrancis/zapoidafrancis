@@ -134,16 +134,16 @@ const Works = () => {
         </div>
 
         {/* Role Filters */}
-        <div className="mb-12 flex flex-wrap gap-3">
+        <div className="mb-16 flex flex-wrap gap-4">
           {roles.map(role => (
             <Button
               key={role.id}
               onClick={() => setSelectedRole(role.id)}
               variant={selectedRole === role.id ? 'default' : 'outline'}
-              className={`rounded-full transition-all duration-300 ${
+              className={`rounded-none transition-all duration-300 font-bold uppercase text-sm tracking-wider ${
                 selectedRole === role.id
-                  ? 'bg-[#9370db] text-white hover:bg-[#8060c0]'
-                  : 'border-gray-600 text-gray-300 hover:border-[#90ee90] hover:text-[#90ee90]'
+                  ? 'bg-[#9370db] text-white hover:bg-[#8060c0] shadow-lg shadow-purple-500/50'
+                  : 'border-gray-700 text-gray-300 hover:border-[#9370db] hover:text-white bg-transparent'
               }`}
             >
               {role.name}
