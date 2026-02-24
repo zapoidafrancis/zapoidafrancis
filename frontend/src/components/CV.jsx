@@ -30,11 +30,11 @@ const CV = () => {
             <h3 className="font-display text-3xl">Experience</h3>
           </div>
           
-          <div className="space-y-20">
+          <div className="space-y-14">
             {cvData.experience.map((exp, idx) => (
               <div 
                 key={idx} 
-                className="relative pl-8 border-l-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 group"
+                className="relative pl-8 border-l-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 group pb-1"
                 data-testid={`experience-${idx}`}
               >
                 {/* Timeline dot */}
