@@ -240,10 +240,16 @@ export const works = [
 export const cvData = {
   experience: [
     {
+      title: "Guitar Teacher",
+      company: "Musikschule Behm, Bertheau & Morgenstern",
+      period: "Feb 2026 - Present",
+      description: "Guitar instruction and music education."
+    },
+    {
       title: "Founder Member, Audio Engineer, Musician, Sound Artist",
       company: "Affinity Space Design Studio",
       period: "Jan 2025 - Present",
-      description: "Multimedia design studio specializing in audio engineering, sound design, and artistic collaborations."
+      description: "Multimedia Design Studio. Audio engineering, sound design, and artistic collaborations."
     },
     {
       title: "Venue Sound Technician",
@@ -258,16 +264,16 @@ export const cvData = {
       description: "Studio assistance and audio engineering for soundtracks, audio post-production, mixing, recording, and logistics."
     },
     {
-      title: "Freelance Music Producer, Audio Engineer, Session Musician",
-      company: "Self-Employed",
-      period: "2017 - Present",
-      description: "Music production, audio engineering, guitar and bass session work, and guitar teaching for various clients and projects."
-    },
-    {
       title: "Guitar Teacher, Studio Assistant, Music Educator",
       company: "Drop In, Berlin",
       period: "Oct 2022 - Dec 2022",
-      description: "Intercultural forum for education providing guitar instruction and studio support."
+      description: "Guitar classes, workshops and studio support for Drop In (Forum für interkulturelle und politische Bildung)."
+    },
+    {
+      title: "Freelance Music Producer, Audio Engineer, Session Musician",
+      company: "Self-Employed",
+      period: "2019 - Present",
+      description: "Music production, audio engineering, guitar and bass session work, and guitar teaching for various clients and projects."
     }
   ],
   education: [
