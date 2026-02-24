@@ -121,6 +121,13 @@ body {
   animation: marquee 12s linear infinite;
 }
 
+/* Mobile: faster and smaller marquee */
+@media (max-width: 767px) {
+  .animate-marquee-fast {
+    animation: marquee 8s linear infinite;
+  }
+}
+
 .animate-marquee:hover,
 .animate-marquee-fast:hover {
   animation-play-state: paused;
