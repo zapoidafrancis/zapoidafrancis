@@ -241,7 +241,7 @@ export const cvData = {
   experience: [
     {
       title: "Guitar Teacher",
-      company: "Musikschule Behm, Bertheau & Morgenstern",
+      company: "Musikschule Behm, Bertheau & Morgenstern, Berlin",
       period: "Feb 2026 - Present",
       description: "Guitar instruction and music education."
     },
@@ -253,13 +253,13 @@ export const cvData = {
     },
     {
       title: "Venue Sound Technician",
-      company: "The Lighthouse of Digital Arts & New Media Art Center",
+      company: "The Lighthouse of Digital Arts & New Media Art Center, Berlin",
       period: "Apr 2025 - May 2025",
       description: "Sound technician for digital art museum events, handling setup, soundchecks, and equipment maintenance."
     },
     {
       title: "Studio Assistant, Audio Engineer",
-      company: "Sky Deep's Audio Production Studio",
+      company: "Sky Deep's Audio Production Studio, Berlin",
       period: "Mar 2023 - Dec 2024",
       description: "Studio assistance and audio engineering for soundtracks, audio post-production, mixing, recording, and logistics."
     },
