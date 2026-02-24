@@ -23,6 +23,18 @@ export const roles = [
 ];
 
 export const works = [
+  // 2026
+  {
+    id: 18,
+    title: 'Marko Bošnjak',
+    artist: 'Live Tours',
+    role: ['guitar-player'],
+    type: 'no-link',
+    image: 'https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&q=80',
+    description: 'Touring live as guitar player',
+    year: 2026
+  },
+  // 2025
   {
     id: 1,
     title: '"Sleeping Without Dreams" - 5-Track EP',
@@ -32,7 +44,7 @@ export const works = [
     spotifyUrl: 'https://open.spotify.com/album/596AsVsJfeo5DOQGAve8Ol?si=vrsxhHXcTJW19fJERGiz2g',
     spotifyId: '596AsVsJfeo5DOQGAve8Ol',
     image: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f42a4e0541fb3df25f11331b',
-    description: 'Mix the full EP and perform guitar on "28 Days Later"',
+    description: 'Mix of the full EP, and guitar performance on "28 Days Later"',
     year: 2025
   },
   {
@@ -54,10 +66,11 @@ export const works = [
     role: ['sound-designer'],
     type: 'instagram',
     instagramUrl: 'https://www.instagram.com/reel/DKwzjHotAEU/',
-    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80',
+    image: 'https://scontent-ord5-3.cdninstagram.com/v/t51.75761-15/505414199_17905349562180927_5827741670398753410_n.jpg?stp=dst-jpg_e35_s640x640&_nc_cat=100&ccb=7-5&_nc_sid=18de74',
     description: 'Sound design for footwear innovation design asset promo video',
     year: 2025
   },
+  // 2024
   {
     id: 4,
     title: '"Twister" - Single',
@@ -113,10 +126,11 @@ export const works = [
     role: ['mixing-engineer', 'mastering-engineer'],
     type: 'bandcamp',
     bandcampUrl: 'https://refugeworldwide.bandcamp.com/track/sky-deep-milky-boom-boom',
-    image: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&q=80',
+    image: 'https://f4.bcbits.com/img/a0374684974_16.jpg',
     description: 'Mix and master',
     year: 2024
   },
+  // 2023
   {
     id: 9,
     title: '"Flashbacks" - Theme Song',
@@ -136,9 +150,10 @@ export const works = [
     type: 'link',
     externalUrl: 'https://www.zdf.de/serien/loving-her',
     image: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=800&q=80',
-    description: 'Compose and produce original soundtrack pieces (collaboration with Sky Deep)',
+    description: 'Composition and production of two original pieces of the soundtrack for international broadcasting (collaboration with Sky Deep)',
     year: 2023
   },
+  // 2022
   {
     id: 11,
     title: '"AQUAPAN" - Immersive Installation',
@@ -146,31 +161,10 @@ export const works = [
     role: ['sound-designer', 'music-producer'],
     type: 'no-link',
     image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
-    description: 'Produce, sound design, create, and host immersive sound and visual installation at Berlin modern art museum',
+    description: 'Production, sound design, creation, and hosting of immersive sound and visual installation at Berlin modern art museum',
     year: 2022
   },
-  {
-    id: 12,
-    title: '"Mariposa" - VR/AR Experience',
-    artist: 'Affinity Space Design Studio',
-    role: ['sound-designer'],
-    type: 'no-link',
-    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80',
-    description: 'Immersive sound design for virtual and augmented reality experience',
-    year: 2020
-  },
-  {
-    id: 13,
-    title: '"Bon Courage!" - 6-Track EP',
-    artist: 'La Festa',
-    role: ['studio-assistant'],
-    type: 'spotify-album',
-    spotifyUrl: 'https://open.spotify.com/album/4qAicwbNfoLugYSTRJm5kf?si=SjJZwUVBTJ2-xut3MJaZhQ',
-    spotifyId: '4qAicwbNfoLugYSTRJm5kf',
-    image: 'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026646939dbb3c8e7482ec5662',
-    description: 'Recording studio assistance',
-    year: 2020
-  },
+  // 2021
   {
     id: 14,
     title: '"Bed of Bones" - Single',
@@ -195,6 +189,29 @@ export const works = [
     description: 'Arrangement, production, guitar/bass performance, and studio assistance',
     year: 2021
   },
+  // 2020
+  {
+    id: 12,
+    title: '"Mariposa" - VR/AR Experience',
+    artist: 'Affinity Space Design Studio',
+    role: ['sound-designer'],
+    type: 'no-link',
+    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80',
+    description: 'Immersive sound design for virtual and augmented reality experience',
+    year: 2020
+  },
+  {
+    id: 13,
+    title: '"Bon Courage!" - 6-Track EP',
+    artist: 'La Festa',
+    role: ['studio-assistant'],
+    type: 'spotify-album',
+    spotifyUrl: 'https://open.spotify.com/album/4qAicwbNfoLugYSTRJm5kf?si=SjJZwUVBTJ2-xut3MJaZhQ',
+    spotifyId: '4qAicwbNfoLugYSTRJm5kf',
+    image: 'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026646939dbb3c8e7482ec5662',
+    description: 'Recording studio assistance',
+    year: 2020
+  },
   {
     id: 16,
     title: '"Trouble\'s Coming" - Single',
@@ -207,6 +224,7 @@ export const works = [
     description: 'Arrangement, production, guitar/bass performance, and studio assistance',
     year: 2020
   },
+  // 2019
   {
     id: 17,
     title: 'Daudia',
@@ -216,16 +234,6 @@ export const works = [
     image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&q=80',
     description: 'Guitar performance for recording sessions and live tours',
     year: 2019
-  },
-  {
-    id: 18,
-    title: 'Marko Bošnjak',
-    artist: 'Live Tours',
-    role: ['guitar-player'],
-    type: 'no-link',
-    image: 'https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&q=80',
-    description: 'Touring live as guitar player',
-    year: 2026
   }
 ];
 
