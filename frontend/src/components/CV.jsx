@@ -1,10 +1,16 @@
 import React from 'react';
-import { Briefcase, GraduationCap, Award } from 'lucide-react';
+import { Briefcase, GraduationCap, Download } from 'lucide-react';
 import { cvData } from '../data/mock';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 
 const CV = () => {
+  const handleDownloadCV = () => {
+    // This will be implemented with backend later
+    alert('Download functionality will be available soon for the full CV PDF.');
+  };
+
   return (
     <section id="cv" className="min-h-screen bg-[#1a1a1a] text-white py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -64,26 +70,15 @@ const CV = () => {
           </div>
         </div>
 
-        {/* Skills Section */}
-        <div>
-          <div className="flex items-center gap-3 mb-8">
-            <Award className="w-8 h-8 text-[#9370db]" />
-            <h3 className="text-3xl font-semibold">Skills & Expertise</h3>
-          </div>
-          <Card className="bg-[#0a0a0a] border-gray-800">
-            <CardContent className="pt-6">
-              <div className="flex flex-wrap gap-3">
-                {cvData.skills.map((skill, idx) => (
-                  <Badge
-                    key={idx}
-                    className="bg-[#2a2a2a] text-white text-sm px-4 py-2 hover:bg-[#9370db] hover:text-white transition-colors cursor-default"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+        {/* Download CV Button */}
+        <div className="flex justify-center">
+          <Button
+            onClick={handleDownloadCV}
+            className="bg-[#9370db] text-white hover:bg-[#8060c0] transition-colors px-8 py-6 text-lg"
+          >
+            <Download className="w-5 h-5 mr-2" />
+            Download Full CV (PDF)
+          </Button>
         </div>
       </div>
     </section>
