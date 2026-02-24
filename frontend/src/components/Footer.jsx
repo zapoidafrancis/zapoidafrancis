@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Instagram, Youtube, ArrowUpRight } from 'lucide-react';
 import { heroData } from '../data/mock';
 
 const Footer = () => {
