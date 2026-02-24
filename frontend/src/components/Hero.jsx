@@ -16,22 +16,21 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo layers with smooth transitions */}
+      {/* Background photo layers */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Base grayscale layer */}
+        
+        {/* Grayscale layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-grey-base"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-grey-layer"
           style={{
             backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%)',
-            opacity: 0.5,
           }}
         ></div>
         
-        {/* Negative layer - fades in and out */}
+        {/* Negative layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative-layer"
           style={{
             backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
@@ -39,50 +38,41 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* RGB Split - Magenta/Pink channel - shifts left */}
-        <div 
-          className="absolute inset-0 animate-rgb-red"
-          style={{ mixBlendMode: 'screen' }}
-        >
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${photoUrl})`,
-              backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(100%) saturate(3) hue-rotate(280deg) brightness(0.8)',
-            }}
-          ></div>
-        </div>
+        {/* RGB Red/Magenta - shifts left */}
+        <img 
+          src={photoUrl}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover animate-rgb-red-layer"
+          style={{
+            objectPosition: 'center 15%',
+            filter: 'grayscale(100%) brightness(1) sepia(1) hue-rotate(-50deg) saturate(5)',
+            mixBlendMode: 'lighten',
+          }}
+        />
         
-        {/* RGB Split - Cyan channel - shifts right */}
-        <div 
-          className="absolute inset-0 animate-rgb-cyan"
-          style={{ mixBlendMode: 'screen' }}
-        >
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${photoUrl})`,
-              backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(100%) saturate(3) hue-rotate(140deg) brightness(0.8)',
-            }}
-          ></div>
-        </div>
+        {/* RGB Cyan - shifts right */}
+        <img 
+          src={photoUrl}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover animate-rgb-cyan-layer"
+          style={{
+            objectPosition: 'center 15%',
+            filter: 'grayscale(100%) brightness(1) sepia(1) hue-rotate(120deg) saturate(5)',
+            mixBlendMode: 'lighten',
+          }}
+        />
         
-        {/* RGB Split - Green/Yellow channel - shifts up */}
-        <div 
-          className="absolute inset-0 animate-rgb-green"
-          style={{ mixBlendMode: 'screen' }}
-        >
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url(${photoUrl})`,
-              backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(100%) saturate(3) hue-rotate(40deg) brightness(0.8)',
-            }}
-          ></div>
-        </div>
+        {/* RGB Green - shifts up */}
+        <img 
+          src={photoUrl}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover animate-rgb-green-layer"
+          style={{
+            objectPosition: 'center 15%',
+            filter: 'grayscale(100%) brightness(1) sepia(1) hue-rotate(50deg) saturate(5)',
+            mixBlendMode: 'lighten',
+          }}
+        />
         
         {/* Grain texture */}
         <div 
