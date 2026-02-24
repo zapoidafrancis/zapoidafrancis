@@ -134,7 +134,7 @@ const Works = () => {
             <button
               key={role.id}
               onClick={() => setSelectedRole(role.id)}
-              className={`px-4 py-2 font-mono text-xs tracking-wider uppercase transition-all duration-300 border-2 ${
+              className={`px-4 py-2 text-xs tracking-wider uppercase transition-all duration-300 border-2 ${
                 selectedRole === role.id
                   ? 'bg-[#a855f7] text-[#0d0d0d] border-[#a855f7]'
                   : 'bg-transparent text-[#a0a0a0] border-[#2a2a2a] hover:border-[#a855f7] hover:text-[#a855f7]'
@@ -166,7 +166,7 @@ const Works = () => {
                 
                 {/* Year badge */}
                 <div className="absolute top-4 right-4 bg-[#0d0d0d]/90 border border-[#2a2a2a] px-3 py-1">
-                  <span className="font-mono text-xs text-[#a855f7] flex items-center gap-1">
+                  <span className="text-xs text-[#a855f7] flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
                     {work.year}
                   </span>
@@ -178,7 +178,7 @@ const Works = () => {
                 <h3 className="text-lg font-semibold leading-tight text-[#f0f0e8] mb-2">
                   {work.title}
                 </h3>
-                <p className="text-[#a855f7] font-mono text-sm mb-3">{work.artist}</p>
+                <p className="text-[#a855f7] text-sm mb-3">{work.artist}</p>
                 <p className="text-[#a0a0a0] text-sm mb-4 leading-relaxed">{work.description}</p>
 
                 {/* Role Tags */}
@@ -188,7 +188,7 @@ const Works = () => {
                     return (
                       <span 
                         key={idx} 
-                        className="px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] text-[#a0a0a0] font-mono text-xs"
+                        className="px-2 py-1 bg-[#1a1a1a] border border-[#2a2a2a] text-[#a0a0a0] text-xs"
                       >
                         {roleData?.name}
                       </span>
@@ -218,7 +218,7 @@ const Works = () => {
                 {expandedWork === work.id && (
                   <button
                     onClick={() => toggleExpand(work.id)}
-                    className="mt-4 w-full py-2 border-2 border-[#2a2a2a] text-[#666] font-mono text-xs uppercase tracking-wider hover:border-[#a855f7] hover:text-[#a855f7] transition-all"
+                    className="mt-4 w-full py-2 border-2 border-[#2a2a2a] text-[#666] text-xs uppercase tracking-wider hover:border-[#a855f7] hover:text-[#a855f7] transition-all"
                   >
                     Collapse
                   </button>
@@ -231,7 +231,7 @@ const Works = () => {
         {/* Empty State */}
         {filteredWorks.length === 0 && (
           <div className="text-center py-20 border-2 border-dashed border-[#2a2a2a]">
-            <p className="font-mono text-[#666] text-lg">No works found for this role</p>
+            <p className="text-[#666] text-lg">No works found for this role</p>
           </div>
         )}
       </div>
