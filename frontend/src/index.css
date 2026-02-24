@@ -106,29 +106,29 @@ body {
   45%, 55% { opacity: 0.75; }
 }
 
-/* RGB split - always visible, never fully aligned */
+/* RGB split - always visible, more during negative */
 @keyframes rgbRedFlow {
-  0% { opacity: 0.45; transform: translateX(-30px); }
-  25% { opacity: 0.5; transform: translateX(-40px); }
-  45%, 55% { opacity: 0.25; transform: translateX(-12px); }
-  75% { opacity: 0.5; transform: translateX(-40px); }
-  100% { opacity: 0.45; transform: translateX(-30px); }
+  0% { opacity: 0.45; transform: translateX(-32px); }
+  25% { opacity: 0.5; transform: translateX(-45px); }
+  45%, 55% { opacity: 0.35; transform: translateX(-22px); }
+  75% { opacity: 0.5; transform: translateX(-45px); }
+  100% { opacity: 0.45; transform: translateX(-32px); }
 }
 
 @keyframes rgbCyanFlow {
-  0% { opacity: 0.45; transform: translateX(30px); }
-  25% { opacity: 0.5; transform: translateX(40px); }
-  45%, 55% { opacity: 0.25; transform: translateX(12px); }
-  75% { opacity: 0.5; transform: translateX(40px); }
-  100% { opacity: 0.45; transform: translateX(30px); }
+  0% { opacity: 0.45; transform: translateX(32px); }
+  25% { opacity: 0.5; transform: translateX(45px); }
+  45%, 55% { opacity: 0.35; transform: translateX(22px); }
+  75% { opacity: 0.5; transform: translateX(45px); }
+  100% { opacity: 0.45; transform: translateX(32px); }
 }
 
 @keyframes rgbBlueFlow {
-  0% { opacity: 0.35; transform: translateY(-18px); }
-  25% { opacity: 0.4; transform: translateY(-28px); }
-  45%, 55% { opacity: 0.18; transform: translateY(-8px); }
-  75% { opacity: 0.4; transform: translateY(-28px); }
-  100% { opacity: 0.35; transform: translateY(-18px); }
+  0% { opacity: 0.35; transform: translateY(-20px); }
+  25% { opacity: 0.4; transform: translateY(-30px); }
+  45%, 55% { opacity: 0.28; transform: translateY(-14px); }
+  75% { opacity: 0.4; transform: translateY(-30px); }
+  100% { opacity: 0.35; transform: translateY(-20px); }
 }
 
 .animate-grey-flow {
