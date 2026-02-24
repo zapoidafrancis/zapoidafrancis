@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="text-[#a855f7]">francis</span>
             </h3>
             <p className="text-[#a0a0a0] leading-relaxed max-w-xl text-lg mb-2">
-              You have an idea? You want me to perfect your music or your mixed media project? You wanna learn guitar?
+              You have an idea? You want me to perfect your music or your mixed media project? Do you want to learn guitar?
             </p>
             <p className="text-[#a0a0a0] leading-relaxed max-w-xl text-lg mb-8">
               Shoot me a message and let's talk.
