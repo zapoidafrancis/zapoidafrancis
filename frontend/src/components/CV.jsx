@@ -45,17 +45,6 @@ const CV = () => {
                   <h4 className="text-xl font-semibold text-[#f0f0e8]">{exp.title}</h4>
                   <p className="text-[#a855f7] text-sm">{exp.company}</p>
                   <p className="text-[#a0a0a0] text-sm leading-relaxed pt-1">{exp.description}</p>
-                  
-                  {/* Guitar teaching CTA */}
-                  {exp.title === "Guitar Teacher" && (
-                    <a 
-                      href="#contact" 
-                      className="inline-block mt-4 text-sm text-[#a855f7] hover:text-[#f0f0e8] transition-colors border-b border-[#a855f7] hover:border-[#f0f0e8] pb-0.5"
-                      data-testid="guitar-cta"
-                    >
-                      You wanna learn guitar?
-                    </a>
-                  )}
                 </div>
               </div>
             ))}

@@ -14,12 +14,16 @@ const Footer = () => {
               <span className="text-[#f0f0e8]">zapoida</span>{' '}
               <span className="text-[#a855f7]">francis</span>
             </h3>
-            <p className="text-[#a0a0a0] leading-relaxed max-w-xl text-lg mb-8">
+            <p className="text-[#a0a0a0] leading-relaxed max-w-xl text-lg mb-4">
               You have an idea? You want me to perfect your music or your mixed media project? Shoot me a message and let's talk.
+            </p>
+            <p className="text-[#a0a0a0] leading-relaxed max-w-xl text-lg mb-8">
+              You wanna learn guitar?
             </p>
             <a 
               href={`mailto:${heroData.email}`}
               className="btn-filled px-8 py-4 text-sm inline-flex items-center gap-2"
+              data-testid="footer-cta"
             >
               Get in Touch
               <ArrowUpRight className="w-4 h-4" />
