@@ -7,7 +7,8 @@ const Hero = () => {
     'audio engineer', 
     'music producer',
     'sound designer',
-    'guitar teacher'
+    'guitar teacher',
+    'multimedia artist'
   ];
 
   // Duplicate roles for seamless infinite scroll
@@ -22,16 +23,9 @@ const Hero = () => {
       <div className="grain-overlay"></div>
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pt-32 pb-20">
-        {/* Small intro text */}
-        <p 
-          className="font-mono text-[#00ff88] text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-in-up"
-          data-testid="hero-intro"
-        >
-        </p>
-
         {/* Name - MASSIVE lowercase */}
         <h1 
-          className="font-display text-[15vw] md:text-[12vw] lg:text-[10vw] leading-[0.85] tracking-tight mb-4 opacity-0 animate-fade-in-up delay-100"
+          className="font-display text-[15vw] md:text-[12vw] lg:text-[10vw] leading-[0.85] tracking-tight mb-4 opacity-0 animate-fade-in-up"
           data-testid="hero-name"
         >
           <span className="block">zapoida</span>
@@ -40,14 +34,14 @@ const Hero = () => {
 
         {/* Description */}
         <p 
-          className="text-lg md:text-xl max-w-2xl text-[#a0a0a0] leading-relaxed mt-12 mb-16 opacity-0 animate-fade-in-up delay-300"
+          className="text-lg md:text-xl max-w-2xl text-[#a0a0a0] leading-relaxed mt-12 mb-16 opacity-0 animate-fade-in-up delay-200"
           data-testid="hero-description"
         >
           {heroData.description}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up delay-400">
+        <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up delay-300">
           <a
             href="#works"
             className="btn-filled px-8 py-4 text-sm tracking-widest inline-block text-center"
@@ -67,23 +61,17 @@ const Hero = () => {
 
       {/* Infinite scrolling marquee - roles */}
       <div className="w-full overflow-hidden border-t border-b border-[#2a2a2a] py-6 mt-auto">
-        <div className="animate-marquee flex whitespace-nowrap">
+        <div className="animate-marquee flex whitespace-nowrap items-center">
           {marqueeRoles.map((role, idx) => (
             <span 
               key={idx} 
-              className="font-display text-4xl md:text-5xl lg:text-6xl text-[#f0f0e8] mx-8 flex items-center"
+              className="font-display text-4xl md:text-5xl lg:text-6xl text-[#f0f0e8] flex items-center"
             >
-              {role}
-              <span className="text-[#a855f7] mx-8 text-2xl">●</span>
+              <span className="mx-6">{role}</span>
+              <span className="text-[#a855f7] text-sm mx-2">●</span>
             </span>
           ))}
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-500">
-        <span className="font-mono text-xs text-[#666] tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-[#00f0ff] to-transparent"></div>
       </div>
     </section>
   );

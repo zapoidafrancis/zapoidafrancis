@@ -15,7 +15,6 @@ const Works = () => {
   };
 
   const renderPlatformEmbed = (work) => {
-    // Spotify embeds
     if (work.type === 'spotify-track' && work.spotifyId) {
       return (
         <div className="mt-6">
@@ -50,7 +49,6 @@ const Works = () => {
       );
     }
 
-    // Instagram - embed player
     if (work.type === 'instagram' && work.instagramUrl) {
       const reelId = work.instagramUrl.match(/reel\/([^\/\?]+)/)?.[1];
       
@@ -81,7 +79,6 @@ const Works = () => {
       );
     }
 
-    // Bandcamp
     if (work.type === 'bandcamp' && work.bandcampUrl) {
       return (
         <div className="mt-6">
@@ -98,7 +95,6 @@ const Works = () => {
       );
     }
 
-    // Generic external link
     if (work.type === 'link' && work.externalUrl) {
       return (
         <div className="mt-6">
@@ -123,7 +119,6 @@ const Works = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">
-          <p className="font-mono text-[#00ff88] text-sm tracking-[0.3em] uppercase mb-4">Portfolio</p>
           <h2 
             className="font-display text-6xl md:text-7xl lg:text-8xl tracking-tight"
             data-testid="works-title"
@@ -171,7 +166,7 @@ const Works = () => {
                 
                 {/* Year badge */}
                 <div className="absolute top-4 right-4 bg-[#0d0d0d]/90 border border-[#2a2a2a] px-3 py-1">
-                  <span className="font-mono text-xs text-[#00ff88] flex items-center gap-1">
+                  <span className="font-mono text-xs text-[#a855f7] flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
                     {work.year}
                   </span>
