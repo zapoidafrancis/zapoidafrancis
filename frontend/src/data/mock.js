@@ -167,7 +167,7 @@ export const works = [
     type: 'spotify-album',
     spotifyUrl: 'https://open.spotify.com/album/4qAicwbNfoLugYSTRJm5kf?si=SjJZwUVBTJ2-xut3MJaZhQ',
     spotifyId: '4qAicwbNfoLugYSTRJm5kf',
-    image: 'https://i.scdn.co/image/ab67616d0000b2735c5c5c5c5c5c5c5c5c5c5c5c',
+    image: 'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e026646939dbb3c8e7482ec5662',
     description: 'Recording studio assistance',
     year: 2020
   },
