@@ -75,14 +75,14 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#666] font-mono text-xs tracking-wider">
+          <p className="text-[#666] text-xs tracking-wider">
             &copy; {new Date().getFullYear()} ZAPOIDA FRANCIS. ALL RIGHTS RESERVED.
           </p>
           
           {/* Back to top */}
           <a 
             href="#"
-            className="flex items-center gap-2 text-[#666] hover:text-[#a855f7] transition-colors font-mono text-xs tracking-wider group"
+            className="flex items-center gap-2 text-[#666] hover:text-[#a855f7] transition-colors text-xs tracking-wider group"
           >
             BACK TO TOP 
             <ArrowUpRight className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />

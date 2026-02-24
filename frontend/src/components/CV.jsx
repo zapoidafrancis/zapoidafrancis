@@ -41,9 +41,9 @@ const CV = () => {
                 <div className="absolute left-[-9px] top-0 w-4 h-4 bg-[#141414] border-2 border-[#2a2a2a] group-hover:border-[#a855f7] group-hover:bg-[#a855f7] transition-all duration-300"></div>
                 
                 <div className="space-y-0.5">
-                  <span className="font-mono text-xs text-[#a855f7] tracking-wider block">{exp.period}</span>
+                  <span className="text-xs text-[#a855f7] tracking-wider block">{exp.period}</span>
                   <h4 className="text-xl font-semibold text-[#f0f0e8]">{exp.title}</h4>
-                  <p className="text-[#a855f7] font-mono text-sm">{exp.company}</p>
+                  <p className="text-[#a855f7] text-sm">{exp.company}</p>
                   <p className="text-[#a0a0a0] text-sm leading-relaxed pt-1">{exp.description}</p>
                 </div>
               </div>
@@ -69,10 +69,10 @@ const CV = () => {
               >
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="w-4 h-4 text-[#666]" />
-                  <span className="font-mono text-xs text-[#a855f7] tracking-wider">{edu.year}</span>
+                  <span className="text-xs text-[#a855f7] tracking-wider">{edu.year}</span>
                 </div>
                 <h4 className="text-xl font-semibold text-[#f0f0e8]">{edu.degree}</h4>
-                <p className="text-[#a855f7] font-mono text-sm mt-1">{edu.institution}</p>
+                <p className="text-[#a855f7] text-sm mt-1">{edu.institution}</p>
                 {edu.details && (
                   <p className="text-[#a0a0a0] text-sm leading-relaxed border-t border-[#2a2a2a] pt-4 mt-4">
                     {edu.details}

@@ -32,7 +32,7 @@ const SoloProject = () => {
           </div>
 
           <h3 className="font-display text-4xl mb-4 text-[#666]">Coming Soon</h3>
-          <p className="text-[#666] max-w-lg mx-auto leading-relaxed font-mono text-sm">
+          <p className="text-[#666] max-w-lg mx-auto leading-relaxed text-sm">
             {soloProject.bio}
           </p>
 

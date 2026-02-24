@@ -46,11 +46,11 @@ const References = () => {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-semibold text-xl text-[#f0f0e8] mb-1">{ref.name}</p>
-                  <p className="text-[#a855f7] font-mono text-sm">{ref.role}</p>
+                  <p className="text-[#a855f7] text-sm">{ref.role}</p>
                   {ref.company && (
                     <p className="text-[#666] text-sm mt-1">{ref.company}</p>
                   )}
-                  <p className="text-[#a855f7] font-mono text-xs mt-2 opacity-60">{ref.date}</p>
+                  <p className="text-[#a855f7] text-xs mt-2 opacity-60">{ref.date}</p>
                 </div>
 
                 {/* Download Button */}
