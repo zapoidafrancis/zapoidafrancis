@@ -49,10 +49,10 @@ const Hero = () => {
     setSplit({ x: 8, y: 5 });
   };
 
-  // Default split values
-  const redX = -(split.x || 12);
-  const cyanX = split.x || 12;
-  const blueY = -(split.y || 8);
+  // Default split values (subtle when not hovering near head)
+  const redX = -(split.x || 8);
+  const cyanX = split.x || 8;
+  const blueY = -(split.y || 5);
 
   return (
     <section 
