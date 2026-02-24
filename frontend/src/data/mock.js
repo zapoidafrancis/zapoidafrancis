@@ -331,40 +331,32 @@ export const references = [
     name: "Vasily Fedotov",
     role: "Founder & Managing Director",
     company: "KHROMA Vienna / The Lighthouse of Digital Art",
-    quote: "Francesco demonstrates high technical competence, reliability, and self-responsibility. His structured work method and professional interaction with teams and artists make him a valuable asset. I believe he will successfully apply his skills in future projects.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
+    quote: "Francesco demonstrates high technical competence, reliability, and self-responsibility. His structured work method and professional interaction with teams and artists make him a valuable asset.",
     date: "Berlin, 05.07.2025",
-    fullText: "This is to confirm that Mr. Francesco Maria De Lucia was engaged by us on a freelance basis as a sound technician at various events for The Lighthouse of Digital Art and the New Media Art Center. His tasks included the setup and dismantling of sound systems, conducting soundchecks, and ensuring the functionality and maintenance of equipment.\\n\\nThroughout the collaboration, Mr. De Lucia demonstrated high technical competence, reliability, and self-responsibility. His structured and precise work method, as well as his professional interaction with our team and the artists, made him a valuable asset to our events.\\n\\nWe are convinced that Mr. De Lucia will successfully apply his skills and experience in future projects and wish him continued success.",
     documentUrl: "#"
   },
   {
-    name: "Sky Dietrich",
+    name: "Sky Deep",
     role: "Multi-Media Technical Artist",
-    company: "SKY DEEP",
-    quote: "Francesco was an invaluable asset who consistently demonstrated exceptional skill, dedication, and professionalism. His understanding of music arrangement, studio equipment, and audio editing software is remarkable. Clients were consistently pleased with his work.",
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80',
+    company: null,
+    quote: "Francesco was an invaluable asset who consistently demonstrated exceptional skill, dedication, and professionalism. His understanding of music arrangement, studio equipment, and audio editing software is remarkable.",
     date: "Berlin, 17.04.2024",
-    fullText: "I am writing to highly recommend Francesco De Lucia for any position in music production, studio assistance, and audio engineering. During his time working with me, Francesco was an invaluable asset who consistently demonstrated exceptional skill, dedication, and professionalism.\\n\\nFrancesco served as both a studio assistant and audio engineer, contributing significantly to a variety of projects including soundtracks, audio post-production for visual projects, mixing, recording, and logistics. His understanding of music arrangement, studio equipment, and audio editing software is remarkable.\\n\\nWhat truly sets Francesco apart is his ability to multi-task while maintaining enthusiasm and attention to detail. His team-player attitude, willingness to collaborate, strong work ethic, adaptability, exceptional communication, and interpersonal abilities make him stand out. Clients were consistently pleased with his work.",
     documentUrl: "#"
   },
   {
     name: "Dario Besirevic",
     role: "Singer/Songwriter / Musical Director / Performer",
-    company: "Independent Artist",
-    quote: "Francesco was a great asset in the composition and production of my debut single. His professionalism, efficient project execution, outstanding communication skills, and empathic consultation created the perfect balance. His experience brought the final product to industry standard.",
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80',
+    company: null,
+    quote: "Francesco was a great asset in the composition and production of my debut single. His professionalism, efficient project execution, and outstanding communication skills created the perfect balance.",
     date: "April 17th, 2024",
-    fullText: "Francesco was a great asset in the composition and production of my debut single. His professionalism and efficient execution of this project, his outstanding communication skills and empathic consultation created the perfect balance between allowing me as the artist to lead the project while offering constructive feedback.\\n\\nHis experience in production and arrangement brought the final product to an industry standard I could not have reached without him. I can highly recommend Francesco for studio production projects. His skills in arrangement and mixing are strong, and he is a talented young professional.",
     documentUrl: "#"
   },
   {
     name: "Nic Storm",
     role: "Music Producer / Recording Artist",
-    company: "Independent Artist",
-    quote: "Francesco's performance as a mastering engineer was exemplary. His excellent communication skills, prompt understanding of vision and requirements, and clear exchange consistently resulted in high-quality work that exceeded expectations. He is an invaluable asset.",
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
+    company: null,
+    quote: "Francesco's performance as a mastering engineer was exemplary. His excellent communication skills and prompt understanding of vision consistently resulted in high-quality work that exceeded expectations.",
     date: "May 5th, 2024",
-    fullText: "I am pleased to provide this formal recommendation for Francesco Maria De Lucia, whom I had the pleasure of working with as a mastering engineer. Francesco's performance was exemplary. His excellent communication skills, prompt understanding of vision and requirements, and clear, transparent exchange were outstanding.\\n\\nHe consistently met deadlines and delivered high-quality work that exceeded expectations due to his high standard of professionalism. I consider Francesco an invaluable asset and highly recommend him.",
     documentUrl: "#"
   }
 ];
