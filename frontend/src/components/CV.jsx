@@ -30,20 +30,22 @@ const CV = () => {
             <h3 className="font-display text-3xl">Experience</h3>
           </div>
           
-          <div className="space-y-14">
+          <div>
             {cvData.experience.map((exp, idx) => (
               <div 
                 key={idx} 
-                className="relative pl-8 border-l-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 group pb-1"
+                className="relative pl-8 border-l-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 group mb-12 last:mb-0"
                 data-testid={`experience-${idx}`}
               >
                 {/* Timeline dot */}
                 <div className="absolute left-[-9px] top-0 w-4 h-4 bg-[#141414] border-2 border-[#2a2a2a] group-hover:border-[#a855f7] group-hover:bg-[#a855f7] transition-all duration-300"></div>
                 
-                <span className="font-mono text-xs text-[#a855f7] tracking-wider">{exp.period}</span>
-                <h4 className="text-xl font-semibold text-[#f0f0e8] mt-1">{exp.title}</h4>
-                <p className="text-[#a855f7] font-mono text-sm mt-0.5">{exp.company}</p>
-                <p className="text-[#a0a0a0] text-sm leading-relaxed mt-1">{exp.description}</p>
+                <div className="space-y-0.5">
+                  <span className="font-mono text-xs text-[#a855f7] tracking-wider block">{exp.period}</span>
+                  <h4 className="text-xl font-semibold text-[#f0f0e8]">{exp.title}</h4>
+                  <p className="text-[#a855f7] font-mono text-sm">{exp.company}</p>
+                  <p className="text-[#a0a0a0] text-sm leading-relaxed pt-1">{exp.description}</p>
+                </div>
               </div>
             ))}
           </div>
