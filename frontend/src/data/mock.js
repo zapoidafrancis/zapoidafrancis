@@ -137,7 +137,7 @@ export const works = [
     artist: '"Loving Her" (ZDF)',
     role: ['bass-player'],
     type: 'link',
-    externalUrl: 'https://www.zdf.de/serien/loving-her',
+    externalUrl: 'https://www.zdf.de/serien/loving-her-102?staffel=2',
     image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80',
     description: 'Bass performance for Season 2 theme song',
     year: 2023
