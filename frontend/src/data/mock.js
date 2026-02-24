@@ -148,7 +148,7 @@ export const works = [
     artist: '"Loving Her" (ZDF)',
     role: ['music-composer', 'music-producer'],
     type: 'link',
-    externalUrl: 'https://www.zdf.de/serien/loving-her',
+    externalUrl: 'https://www.zdf.de/serien/loving-her-102?staffel=2',
     image: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=800&q=80',
     description: 'Composition and production of two original pieces of the soundtrack for international broadcasting (collaboration with Sky Deep)',
     year: 2023
