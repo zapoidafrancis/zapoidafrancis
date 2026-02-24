@@ -66,9 +66,9 @@ const Hero = () => {
   const baseSplitY = isMobile ? 3 : 5;
 
   // Default split values (subtle when not hovering near head)
-  const redX = -(split.x || 8);
-  const cyanX = split.x || 8;
-  const blueY = -(split.y || 5);
+  const redX = -(split.x || baseSplit);
+  const cyanX = split.x || baseSplit;
+  const blueY = -(split.y || baseSplitY);
 
   return (
     <section 
