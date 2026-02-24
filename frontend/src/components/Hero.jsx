@@ -16,62 +16,73 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo with color and artistic effects */}
+      {/* Background photo with dramatic artistic effects */}
       <div className="absolute inset-0 z-0">
-        {/* Main photo - with color, higher visibility */}
+        {/* Main photo - full color, prominent */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
-            backgroundPosition: 'center 20%',
-            filter: 'contrast(1.1) saturate(0.8)',
+            backgroundPosition: 'center 15%',
+            opacity: 0.6,
           }}
         ></div>
         
-        {/* Horizontal scan lines effect */}
+        {/* Purple duotone overlay */}
         <div 
-          className="absolute inset-0 opacity-30 pointer-events-none"
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.4) 0%, rgba(88, 28, 135, 0.5) 100%)',
+            mixBlendMode: 'color',
+          }}
+        ></div>
+        
+        {/* Heavy horizontal scan lines */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage: `repeating-linear-gradient(
               0deg,
-              transparent,
-              transparent 2px,
-              rgba(0, 0, 0, 0.3) 2px,
-              rgba(0, 0, 0, 0.3) 4px
+              transparent 0px,
+              transparent 3px,
+              rgba(0, 0, 0, 0.4) 3px,
+              rgba(0, 0, 0, 0.4) 6px
             )`,
-            backgroundSize: '100% 4px',
           }}
         ></div>
         
-        {/* Vertical stripes overlay */}
+        {/* Vertical glitch stripes */}
         <div 
-          className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay"
+          className="absolute inset-0 pointer-events-none opacity-60"
           style={{
             backgroundImage: `repeating-linear-gradient(
               90deg,
-              transparent,
-              transparent 8px,
-              rgba(168, 85, 247, 0.5) 8px,
-              rgba(168, 85, 247, 0.5) 10px
+              transparent 0px,
+              transparent 40px,
+              rgba(168, 85, 247, 0.15) 40px,
+              rgba(168, 85, 247, 0.15) 42px,
+              transparent 42px,
+              transparent 120px,
+              rgba(168, 85, 247, 0.2) 120px,
+              rgba(168, 85, 247, 0.2) 125px
             )`,
           }}
         ></div>
         
-        {/* Grain texture */}
+        {/* Noise/grain texture */}
         <div 
-          className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 opacity-30 mix-blend-overlay pointer-events-none"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
           }}
         ></div>
         
-        {/* Gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d]/90 via-[#0d0d0d]/60 to-[#0d0d0d]/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/80 via-transparent to-[#0d0d0d]/60"></div>
+        {/* Left side dark gradient for text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/70 to-transparent"></div>
+        
+        {/* Bottom gradient for marquee */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/50"></div>
       </div>
-      
-      {/* Film grain overlay */}
-      <div className="grain-overlay"></div>
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pt-32 pb-20">
         {/* Name - MASSIVE lowercase */}
@@ -111,7 +122,7 @@ const Hero = () => {
       </div>
 
       {/* Infinite scrolling marquee - roles (faster) */}
-      <div className="w-full overflow-hidden border-t border-b border-[#2a2a2a] py-6 mt-auto">
+      <div className="w-full overflow-hidden border-t border-b border-[#2a2a2a] py-6 mt-auto relative z-10">
         <div className="animate-marquee-fast flex whitespace-nowrap items-center">
           {marqueeRoles.map((role, idx) => (
             <span 
