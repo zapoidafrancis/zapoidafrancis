@@ -203,7 +203,7 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/6yoveVjzC2kndMJPOBz71a?si=b9875a28c50d4582',
     spotifyId: '6yoveVjzC2kndMJPOBz71a',
-    image: 'https://i.scdn.co/image/ab67616d0000b2739a9a9a9a9a9a9a9a9a9a9a9a',
+    image: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023d1e07701ec7223cbd29b830',
     description: 'Arrangement, production, guitar/bass performance, and studio assistance',
     year: 2020
   },
