@@ -98,41 +98,41 @@ body {
 /* RGB split - figure only, slow continuous never settling */
 @keyframes rgbRedSlow {
   0% { transform: translateX(-12px); }
-  20% { transform: translateX(-25px); }
-  40% { transform: translateX(-18px); }
-  60% { transform: translateX(-35px); }
-  80% { transform: translateX(-22px); }
+  20% { transform: translateX(-20px); }
+  40% { transform: translateX(-15px); }
+  60% { transform: translateX(-27px); }
+  80% { transform: translateX(-18px); }
   100% { transform: translateX(-12px); }
 }
 
 @keyframes rgbCyanSlow {
   0% { transform: translateX(12px); }
-  20% { transform: translateX(25px); }
-  40% { transform: translateX(18px); }
-  60% { transform: translateX(35px); }
-  80% { transform: translateX(22px); }
+  20% { transform: translateX(20px); }
+  40% { transform: translateX(15px); }
+  60% { transform: translateX(27px); }
+  80% { transform: translateX(18px); }
   100% { transform: translateX(12px); }
 }
 
 @keyframes rgbBlueSlow {
   0% { transform: translateY(-8px); }
-  20% { transform: translateY(-18px); }
-  40% { transform: translateY(-12px); }
-  60% { transform: translateY(-25px); }
-  80% { transform: translateY(-15px); }
+  20% { transform: translateY(-14px); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-20px); }
+  80% { transform: translateY(-12px); }
   100% { transform: translateY(-8px); }
 }
 
 .animate-rgb-red-slow {
-  animation: rgbRedSlow 24s ease-in-out infinite;
+  animation: rgbRedSlow 32s ease-in-out infinite;
 }
 
 .animate-rgb-cyan-slow {
-  animation: rgbCyanSlow 24s ease-in-out infinite;
+  animation: rgbCyanSlow 32s ease-in-out infinite;
 }
 
 .animate-rgb-blue-slow {
-  animation: rgbBlueSlow 24s ease-in-out infinite;
+  animation: rgbBlueSlow 32s ease-in-out infinite;
 }
 
 /* Infinite marquee animation - faster */
