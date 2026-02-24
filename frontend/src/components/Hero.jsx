@@ -46,14 +46,14 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover animate-rgb-red-flow"
           style={{
             objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1.1)',
+            filter: 'grayscale(100%) brightness(1.2)',
             mixBlendMode: 'screen',
           }}
         />
         <div 
           className="absolute inset-0 animate-rgb-red-flow pointer-events-none"
           style={{
-            background: 'rgba(255, 0, 100, 0.35)',
+            background: 'rgba(255, 0, 120, 0.5)',
             mixBlendMode: 'multiply',
           }}
         ></div>
@@ -65,14 +65,14 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover animate-rgb-cyan-flow"
           style={{
             objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1.1)',
+            filter: 'grayscale(100%) brightness(1.2)',
             mixBlendMode: 'screen',
           }}
         />
         <div 
           className="absolute inset-0 animate-rgb-cyan-flow pointer-events-none"
           style={{
-            background: 'rgba(0, 255, 255, 0.35)',
+            background: 'rgba(0, 255, 255, 0.5)',
             mixBlendMode: 'multiply',
           }}
         ></div>
@@ -84,14 +84,14 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover animate-rgb-blue-flow"
           style={{
             objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1.1)',
+            filter: 'grayscale(100%) brightness(1.2)',
             mixBlendMode: 'screen',
           }}
         />
         <div 
           className="absolute inset-0 animate-rgb-blue-flow pointer-events-none"
           style={{
-            background: 'rgba(80, 0, 255, 0.25)',
+            background: 'rgba(100, 0, 255, 0.4)',
             mixBlendMode: 'multiply',
           }}
         ></div>
