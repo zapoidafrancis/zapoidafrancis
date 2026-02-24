@@ -2,52 +2,89 @@ import React from 'react';
 import { heroData } from '../data/mock';
 
 const Hero = () => {
+  const roles = [
+    'musician',
+    'audio engineer', 
+    'music producer',
+    'sound designer',
+    'guitar teacher'
+  ];
+
+  // Duplicate roles for seamless infinite scroll
+  const marqueeRoles = [...roles, ...roles];
+
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white px-4 py-20 relative overflow-hidden">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-black to-black"></div>
+    <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden noise-bg">
+      {/* Subtle top gradient */}
+      <div className="absolute inset-0 hero-gradient pointer-events-none"></div>
       
-      <div className="max-w-7xl mx-auto text-left relative z-10 w-full">
-        {/* Name - HUGE and BOLD with pulse animation */}
-        <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-8 tracking-tight animate-pulse-glow">
-          <span className="block">{heroData.name.split(' ')[0]}</span>
-          <span className="block text-[#9370db]">{heroData.name.split(' ').slice(1).join(' ')}</span>
+      {/* Film grain overlay */}
+      <div className="grain-overlay"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pt-32 pb-20">
+        {/* Small intro text */}
+        <p 
+          className="font-mono text-[#00f0ff] text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-in-up"
+          data-testid="hero-intro"
+        >
+          Berlin-based
+        </p>
+
+        {/* Name - MASSIVE lowercase */}
+        <h1 
+          className="font-display text-[15vw] md:text-[12vw] lg:text-[10vw] leading-[0.85] tracking-tight mb-4 opacity-0 animate-fade-in-up delay-100"
+          data-testid="hero-name"
+        >
+          <span className="block">zapoida</span>
+          <span className="block text-[#00f0ff]">francis</span>
         </h1>
 
-        {/* Tagline - Clean and bold */}
-        <div className="mb-12 animate-fade-in-up">
-          <p className="text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 tracking-wide">
-            {heroData.tagline}
-          </p>
-        </div>
-
         {/* Description */}
-        <p className="text-lg md:text-xl max-w-3xl text-gray-400 leading-relaxed mb-16 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <p 
+          className="text-lg md:text-xl max-w-2xl text-[#a0a0a0] leading-relaxed mt-12 mb-16 opacity-0 animate-fade-in-up delay-300"
+          data-testid="hero-description"
+        >
           {heroData.description}
         </p>
 
-        {/* CTA Buttons - Minimal and sleek */}
-        <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up delay-400">
           <a
             href="#works"
-            className="group px-10 py-5 bg-[#9370db] text-white font-bold text-lg rounded-none hover:bg-[#8060c0] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
+            className="btn-filled px-8 py-4 text-sm tracking-widest inline-block text-center"
+            data-testid="hero-cta-works"
           >
-            <span className="group-hover:tracking-wider transition-all duration-300">VIEW WORK</span>
+            View Work
           </a>
           <a
             href="#contact"
-            className="group px-10 py-5 bg-transparent border-2 border-white text-white font-bold text-lg rounded-none hover:bg-white hover:text-black transition-all duration-300"
+            className="btn-sharp px-8 py-4 text-sm tracking-widest inline-block text-center"
+            data-testid="hero-cta-contact"
           >
-            <span className="group-hover:tracking-wider transition-all duration-300">CONTACT</span>
+            Get in Touch
           </a>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-[#9370db] rounded-full mt-2 animate-pulse"></div>
-          </div>
+      {/* Infinite scrolling marquee - roles */}
+      <div className="w-full overflow-hidden border-t border-b border-[#2a2a2a] py-6 mt-auto">
+        <div className="animate-marquee flex whitespace-nowrap">
+          {marqueeRoles.map((role, idx) => (
+            <span 
+              key={idx} 
+              className="font-display text-4xl md:text-5xl lg:text-6xl text-[#f0f0e8] mx-8 flex items-center"
+            >
+              {role}
+              <span className="text-[#00f0ff] mx-8 text-2xl">●</span>
+            </span>
+          ))}
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in-up delay-500">
+        <span className="font-mono text-xs text-[#666] tracking-widest uppercase">Scroll</span>
+        <div className="w-px h-12 bg-gradient-to-b from-[#00f0ff] to-transparent"></div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,30 +18,38 @@ const Header = () => {
     { href: '#works', label: 'Works' },
     { href: '#cv', label: 'CV' },
     { href: '#references', label: 'References' },
-    { href: '#solo-project', label: 'Solo Project' },
+    { href: '#solo-project', label: 'Solo' },
     { href: '#contact', label: 'Contact' }
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#0a0a0a] bg-opacity-95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-[#0d0d0d]/95 backdrop-blur-md border-b border-[#2a2a2a]' 
+          : 'bg-transparent'
       }`}
+      data-testid="header"
     >
-      <div className="max-w-7xl mx-auto px-4 py-4">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold text-white hover:text-[#9370db] transition-colors">
-            FMD
+          <a 
+            href="#" 
+            className="font-display text-2xl text-[#f0f0e8] hover:text-[#00f0ff] transition-colors duration-300"
+            data-testid="header-logo"
+          >
+            ZF
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {navLinks.map(link => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#90ee90] transition-colors font-medium"
+                className="font-mono text-xs tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#00f0ff] transition-colors duration-300 border-animate"
+                data-testid={`nav-${link.label.toLowerCase()}`}
               >
                 {link.label}
               </a>
@@ -50,24 +57,23 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-white hover:text-[#9370db]"
+          <button
+            className="md:hidden text-[#f0f0e8] hover:text-[#00f0ff] transition-colors p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            data-testid="mobile-menu-toggle"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4">
+          <nav className="md:hidden mt-6 pb-6 flex flex-col gap-6 border-t border-[#2a2a2a] pt-6">
             {navLinks.map(link => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#90ee90] transition-colors font-medium"
+                className="font-mono text-sm tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#00f0ff] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
