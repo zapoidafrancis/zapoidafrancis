@@ -1,54 +1,123 @@
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Additional App-level styles */
+
+/* Hero section specific */
+.hero-gradient {
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 60%);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
+/* Section transitions */
+section {
+  position: relative;
 }
 
-::-webkit-scrollbar-track {
-    background: #0a0a0a;
+/* Image hover zoom */
+.img-zoom {
+  overflow: hidden;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #9370db;
-    border-radius: 5px;
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #8060c0;
+.img-zoom:hover img {
+  transform: scale(1.05);
 }
 
-/* Audio player styling */
-audio {
-    width: 100%;
-    border-radius: 8px;
+/* Border animation on hover */
+.border-animate {
+  position: relative;
 }
 
-audio::-webkit-media-controls-panel {
-    background-color: #1a1a1a;
+.border-animate::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.4s ease;
 }
 
-audio::-webkit-media-controls-play-button,
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    color: #90ee90;
+.border-animate:hover::after {
+  width: 100%;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Spotify embed styling */
+iframe[src*="spotify"] {
+  border-radius: 0 !important;
 }
 
-.animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+/* Instagram embed container */
+.instagram-embed {
+  border: 2px solid var(--border-color);
+}
+
+/* Badge styling override */
+.badge-accent {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-radius: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+}
+
+/* Filter button active state */
+.filter-active {
+  background: var(--accent) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Vertical text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Large quote marks */
+.quote-mark {
+  font-family: 'Bebas Neue', serif;
+  font-size: 8rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.15;
+}
+
+/* Responsive video container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Smooth fade for lazy loaded images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img[loading="lazy"].loaded,
+img[loading="lazy"]:not([src=""]) {
+  opacity: 1;
 }
