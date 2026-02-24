@@ -66,7 +66,7 @@ export const works = [
     role: ['sound-designer'],
     type: 'instagram',
     instagramUrl: 'https://www.instagram.com/reel/DKwzjHotAEU/',
-    image: 'https://scontent-ord5-3.cdninstagram.com/v/t51.75761-15/505414199_17905349562180927_5827741670398753410_n.jpg?stp=dst-jpg_e35_s640x640&_nc_cat=100&ccb=7-5&_nc_sid=18de74',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80',
     description: 'Sound design for footwear innovation design asset promo video',
     year: 2025
   },
