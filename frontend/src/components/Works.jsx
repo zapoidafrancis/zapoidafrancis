@@ -156,7 +156,7 @@ const Works = () => {
           {filteredWorks.map(work => (
             <Card
               key={work.id}
-              className="bg-[#1a1a1a] rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-[#9370db] flex flex-col"
+              className="bg-[#0a0a0a] rounded-none overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-900 hover:border-[#9370db] flex flex-col group hover:shadow-2xl hover:shadow-purple-500/20"
             >
               {/* Image/Thumbnail */}
               <div className="relative h-56 overflow-hidden">
