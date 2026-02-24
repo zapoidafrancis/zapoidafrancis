@@ -66,7 +66,7 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/0vpVDyoXXEdvFpFBynuFrA?si=d15d5aca05da4ea9',
     spotifyId: '0vpVDyoXXEdvFpFBynuFrA',
-    image: 'https://i.scdn.co/image/ab67616d0000b273f5e5e5c6e5a5e5e5e5e5e5e5',
+    image: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d02b40ad1de84d5b9b155e2c',
     description: 'Mix and master',
     year: 2024
   },
