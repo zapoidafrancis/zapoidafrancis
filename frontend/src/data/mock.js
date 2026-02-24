@@ -160,7 +160,7 @@ export const works = [
     artist: 'The Lighthouse of Digital Art',
     role: ['sound-designer', 'music-producer'],
     type: 'no-link',
-    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/14ysqzn1_acquapan.png',
     description: 'Production, sound design, creation, and hosting of immersive sound and visual installation at Berlin modern art museum',
     year: 2022
   },
