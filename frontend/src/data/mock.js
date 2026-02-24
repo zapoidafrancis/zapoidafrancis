@@ -30,7 +30,7 @@ export const works = [
     artist: 'Live Tours',
     role: ['guitar-player'],
     type: 'no-link',
-    image: 'https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/osnc0ikf_markobosnjakjpeg.jpeg',
     description: 'Touring live as guitar player',
     year: 2026
   },
