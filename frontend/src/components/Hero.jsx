@@ -24,15 +24,29 @@ const Hero = () => {
     const x = (e.clientX - rect.left) / rect.width; // 0 to 1
     const y = (e.clientY - rect.top) / rect.height; // 0 to 1
     
-    // Map to split range: 12px base + up to 15px more (total 27px max)
-    const splitAmount = 12 + (x * 15);
-    const splitY = 8 + (y * 12);
+    // Target zone: upper-center (where the head is)
+    // Center X is around 0.65 (right side of screen), upper Y is around 0.25
+    const targetX = 0.65;
+    const targetY = 0.25;
+    
+    // Calculate distance from target zone (0 = on target, 1 = far away)
+    const distX = Math.abs(x - targetX);
+    const distY = Math.abs(y - targetY);
+    const distance = Math.sqrt(distX * distX + distY * distY);
+    
+    // Invert: closer to target = more effect (max at distance 0)
+    // Max distance is roughly 0.8, so normalize and invert
+    const proximity = Math.max(0, 1 - (distance / 0.5));
+    
+    // Map proximity to split range: 8px base + up to 20px more when on target
+    const splitAmount = 8 + (proximity * 20);
+    const splitY = 5 + (proximity * 15);
     
     setSplit({ x: splitAmount, y: splitY });
   };
 
   const handleMouseLeave = () => {
-    setSplit({ x: 12, y: 8 });
+    setSplit({ x: 8, y: 5 });
   };
 
   // Default split values
