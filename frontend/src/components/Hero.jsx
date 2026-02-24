@@ -15,52 +15,37 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background with photo-to-sketch animation */}
+      {/* Background with photo-to-neon animation */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Regular photo layer - fades out when sketch appears */}
+        {/* Regular photo layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale animate-photo"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale animate-photo-layer"
           style={{
             backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
             backgroundPosition: 'center 15%',
-            opacity: 0.45,
           }}
         ></div>
         
-        {/* Sketch/drawing layer - edge detection effect */}
+        {/* Neon line art layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-sketch"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat animate-neon-layer"
           style={{
-            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%) invert(100%) brightness(1.5)',
-            mixBlendMode: 'difference',
-            opacity: 0.7,
-          }}
-        ></div>
-        
-        {/* Second sketch layer for line enhancement */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-sketch"
-          style={{
-            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%) contrast(3) brightness(1.2)',
-            mixBlendMode: 'color-dodge',
-            opacity: 0.3,
+            backgroundImage: 'url(https://static.prod-images.emergentagent.com/jobs/1649a5ec-c60b-476c-b815-ab79b57e6169/images/2896a790c17074b76b8234700f36ff0e896c15fcb688d08199edcd4e4a42f847.png)',
+            backgroundPosition: 'right 10% center',
+            backgroundSize: 'auto 90%',
           }}
         ></div>
         
         {/* Grain texture */}
         <div 
-          className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
           }}
         ></div>
         
         {/* Left gradient for text */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/60 to-transparent"></div>
         
         {/* Bottom gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/30"></div>
