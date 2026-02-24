@@ -16,21 +16,22 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo layers */}
+      {/* Background photo layers - continuous flow */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         
         {/* Grayscale layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-grey-layer"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-grey-flow"
           style={{
             backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
+            filter: 'grayscale(100%)',
           }}
         ></div>
         
         {/* Negative layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative-layer"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative-flow"
           style={{
             backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
@@ -38,41 +39,65 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* RGB Red/Magenta - shifts left */}
+        {/* RGB Magenta/Red - shifts left */}
         <img 
           src={photoUrl}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-rgb-red-layer"
+          className="absolute inset-0 w-full h-full object-cover animate-rgb-red-flow"
           style={{
             objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1) sepia(1) hue-rotate(-50deg) saturate(5)',
-            mixBlendMode: 'lighten',
+            filter: 'grayscale(100%) brightness(1.2)',
+            mixBlendMode: 'screen',
+            opacity: 0,
           }}
         />
+        <div 
+          className="absolute inset-0 animate-rgb-red-flow pointer-events-none"
+          style={{
+            background: 'rgba(255, 0, 100, 0.4)',
+            mixBlendMode: 'multiply',
+          }}
+        ></div>
         
         {/* RGB Cyan - shifts right */}
         <img 
           src={photoUrl}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-rgb-cyan-layer"
+          className="absolute inset-0 w-full h-full object-cover animate-rgb-cyan-flow"
           style={{
             objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1) sepia(1) hue-rotate(120deg) saturate(5)',
-            mixBlendMode: 'lighten',
+            filter: 'grayscale(100%) brightness(1.2)',
+            mixBlendMode: 'screen',
+            opacity: 0,
           }}
         />
+        <div 
+          className="absolute inset-0 animate-rgb-cyan-flow pointer-events-none"
+          style={{
+            background: 'rgba(0, 255, 255, 0.4)',
+            mixBlendMode: 'multiply',
+          }}
+        ></div>
         
-        {/* RGB Green - shifts up */}
+        {/* RGB Blue - shifts up */}
         <img 
           src={photoUrl}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-rgb-green-layer"
+          className="absolute inset-0 w-full h-full object-cover animate-rgb-green-flow"
           style={{
             objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1) sepia(1) hue-rotate(50deg) saturate(5)',
-            mixBlendMode: 'lighten',
+            filter: 'grayscale(100%) brightness(1.2)',
+            mixBlendMode: 'screen',
+            opacity: 0,
           }}
         />
+        <div 
+          className="absolute inset-0 animate-rgb-green-flow pointer-events-none"
+          style={{
+            background: 'rgba(100, 0, 255, 0.3)',
+            mixBlendMode: 'multiply',
+          }}
+        ></div>
         
         {/* Grain texture */}
         <div 
