@@ -53,18 +53,33 @@ const Works = () => {
       );
     }
 
-    // Instagram - show button only
+    // Instagram - embed player
     if (work.type === 'instagram' && work.instagramUrl) {
+      // Extract reel ID from URL
+      const reelId = work.instagramUrl.match(/reel\/([^\/\?]+)/)?.[1];
+      
       return (
         <div className="mt-4">
+          {reelId && (
+            <div className="relative w-full" style={{ paddingBottom: '125%' }}>
+              <iframe
+                src={`https://www.instagram.com/reel/${reelId}/embed/`}
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                frameBorder="0"
+                scrolling="no"
+                allowTransparency="true"
+                allow="encrypted-media"
+              ></iframe>
+            </div>
+          )}
           <a
             href={work.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 mt-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
           >
             <ExternalLink className="w-4 h-4" />
-            View on Instagram
+            Open in Instagram
           </a>
         </div>
       );
