@@ -11,40 +11,52 @@ const Hero = () => {
     'multimedia artist'
   ];
 
-  // Duplicate roles for seamless infinite scroll
   const marqueeRoles = [...roles, ...roles];
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo - clean grayscale */}
+      {/* Background with striped photo reveal */}
       <div className="absolute inset-0 z-0">
-        {/* Main photo - grayscale */}
+        {/* The photo - grayscale, visible through stripes */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale"
           style={{
             backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
             backgroundPosition: 'center 15%',
-            opacity: 0.4,
+            opacity: 0.5,
           }}
         ></div>
         
-        {/* Subtle grain texture */}
+        {/* Thick horizontal stripes mask - photo visible in gaps */}
         <div 
-          className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              0deg,
+              #0d0d0d 0px,
+              #0d0d0d 25px,
+              transparent 25px,
+              transparent 45px
+            )`,
+          }}
+        ></div>
+        
+        {/* Grain texture */}
+        <div 
+          className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
           }}
         ></div>
         
-        {/* Left gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/60 to-transparent"></div>
+        {/* Left gradient for text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/70 to-transparent"></div>
         
         {/* Bottom gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/30"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pt-32 pb-20">
-        {/* Name - MASSIVE lowercase */}
         <h1 
           className="font-display text-[15vw] md:text-[12vw] lg:text-[10vw] leading-[0.85] tracking-tight mb-4 opacity-0 animate-fade-in-up"
           data-testid="hero-name"
@@ -53,7 +65,6 @@ const Hero = () => {
           <span className="block text-[#a855f7]">francis</span>
         </h1>
 
-        {/* Description - adjusted width to avoid orphans */}
         <p 
           className="text-lg md:text-xl max-w-lg text-[#a0a0a0] leading-relaxed mt-12 mb-16 opacity-0 animate-fade-in-up delay-200"
           data-testid="hero-description"
@@ -61,7 +72,6 @@ const Hero = () => {
           {heroData.description}
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up delay-300">
           <a
             href="#works"
@@ -80,7 +90,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Infinite scrolling marquee - roles */}
       <div className="w-full overflow-hidden border-t border-b border-[#2a2a2a] py-6 mt-auto relative z-10">
         <div className="animate-marquee-fast flex whitespace-nowrap items-center">
           {marqueeRoles.map((role, idx) => (
