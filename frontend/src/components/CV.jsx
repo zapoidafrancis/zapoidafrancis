@@ -17,7 +17,6 @@ const CV = () => {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-4">Curriculum Vitae</h2>
-          <p className="text-xl text-gray-400">Experience, education, and expertise</p>
         </div>
 
         {/* Experience Section */}
