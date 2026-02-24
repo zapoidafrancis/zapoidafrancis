@@ -36,77 +36,50 @@ const Hero = () => {
             backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
             filter: 'grayscale(100%) invert(100%)',
-            opacity: 0,
           }}
         ></div>
         
-        {/* RGB Split layers for anaglyph effect */}
-        {/* Red channel - shifts left */}
+        {/* RGB Split - Magenta/Pink channel - shifts left */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-red"
-          style={{
-            backgroundImage: `url(${photoUrl})`,
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%)',
-            opacity: 0,
-            mixBlendMode: 'screen',
-            backgroundColor: 'transparent',
-          }}
+          className="absolute inset-0 animate-rgb-red"
+          style={{ mixBlendMode: 'screen' }}
         >
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) brightness(1.2)',
-              mixBlendMode: 'multiply',
-              backgroundColor: '#ff0066',
+              filter: 'grayscale(100%) sepia(100%) saturate(3) hue-rotate(280deg) brightness(0.8)',
             }}
           ></div>
         </div>
         
-        {/* Cyan channel - shifts right */}
+        {/* RGB Split - Cyan channel - shifts right */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-cyan"
-          style={{
-            backgroundImage: `url(${photoUrl})`,
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%)',
-            opacity: 0,
-            mixBlendMode: 'screen',
-          }}
+          className="absolute inset-0 animate-rgb-cyan"
+          style={{ mixBlendMode: 'screen' }}
         >
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) brightness(1.2)',
-              mixBlendMode: 'multiply',
-              backgroundColor: '#00ffff',
+              filter: 'grayscale(100%) sepia(100%) saturate(3) hue-rotate(140deg) brightness(0.8)',
             }}
           ></div>
         </div>
         
-        {/* Green/Yellow channel - shifts up */}
+        {/* RGB Split - Green/Yellow channel - shifts up */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-green"
-          style={{
-            backgroundImage: `url(${photoUrl})`,
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%)',
-            opacity: 0,
-            mixBlendMode: 'screen',
-          }}
+          className="absolute inset-0 animate-rgb-green"
+          style={{ mixBlendMode: 'screen' }}
         >
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) brightness(1.2)',
-              mixBlendMode: 'multiply',
-              backgroundColor: '#66ff00',
+              filter: 'grayscale(100%) sepia(100%) saturate(3) hue-rotate(40deg) brightness(0.8)',
             }}
           ></div>
         </div>
