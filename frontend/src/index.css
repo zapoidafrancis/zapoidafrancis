@@ -95,49 +95,24 @@ body {
   animation: stripeSlide 8s linear infinite, stripeTilt 12s ease-in-out infinite;
 }
 
-/* Photo to neon line art animation */
-@keyframes photoFade {
-  0%, 15% {
-    opacity: 0.5;
-  }
-  35%, 65% {
-    opacity: 0;
-  }
-  85%, 100% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes neonFade {
-  0%, 15% {
-    opacity: 0;
-    filter: blur(2px);
-  }
-  35%, 65% {
-    opacity: 0.9;
-    filter: blur(0px);
-  }
-  85%, 100% {
-    opacity: 0;
-    filter: blur(2px);
-  }
-}
-
-@keyframes neonPulse {
+/* Photo filter transitions - grayscale > negative > heatmap > color */
+@keyframes photoFilters {
   0%, 100% {
-    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 20px rgba(168, 85, 247, 0.5)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.3));
+    filter: grayscale(100%);
+  }
+  25% {
+    filter: grayscale(100%) invert(100%);
   }
   50% {
-    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 1)) drop-shadow(0 0 30px rgba(168, 85, 247, 0.7)) drop-shadow(0 0 60px rgba(168, 85, 247, 0.4));
+    filter: grayscale(0%) sepia(100%) saturate(5) hue-rotate(-30deg);
+  }
+  75% {
+    filter: grayscale(0%) saturate(1.2);
   }
 }
 
-.animate-photo-layer {
-  animation: photoFade 12s ease-in-out infinite;
-}
-
-.animate-neon-layer {
-  animation: neonFade 12s ease-in-out infinite, neonPulse 2s ease-in-out infinite;
+.animate-photo-filters {
+  animation: photoFilters 16s ease-in-out infinite;
 }
 
 /* Infinite marquee animation - faster */
