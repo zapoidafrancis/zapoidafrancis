@@ -95,20 +95,20 @@ body {
   animation: stripeSlide 8s linear infinite, stripeTilt 12s ease-in-out infinite;
 }
 
-/* RGB split - figure only, smooth slow animation */
+/* RGB split - figure only, more movement range */
 @keyframes rgbRedSlow {
-  0%, 100% { transform: translateX(-25px); }
-  50% { transform: translateX(-40px); }
+  0%, 100% { transform: translateX(-12px); }
+  50% { transform: translateX(-50px); }
 }
 
 @keyframes rgbCyanSlow {
-  0%, 100% { transform: translateX(25px); }
-  50% { transform: translateX(40px); }
+  0%, 100% { transform: translateX(12px); }
+  50% { transform: translateX(50px); }
 }
 
 @keyframes rgbBlueSlow {
-  0%, 100% { transform: translateY(-15px); }
-  50% { transform: translateY(-28px); }
+  0%, 100% { transform: translateY(-8px); }
+  50% { transform: translateY(-35px); }
 }
 
 .animate-rgb-red-slow {
