@@ -23,66 +23,76 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-[#0d0d0d]/95 backdrop-blur-md border-b border-[#2a2a2a]' 
-          : 'bg-transparent'
-      }`}
-      data-testid="header"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-5">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a 
-            href="#" 
-            className="font-display text-2xl text-[#f0f0e8] hover:text-[#00f0ff] transition-colors duration-300"
-            data-testid="header-logo"
-          >
-            ZF
-          </a>
+    <>
+      {/* Blur overlay when mobile menu is open */}
+      {isMobileMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-[#0d0d0d]/60 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+      
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled 
+            ? 'bg-[#0d0d0d]/95 backdrop-blur-md border-b border-[#2a2a2a]' 
+            : 'bg-transparent'
+        }`}
+        data-testid="header"
+      >
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-5">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <a 
+              href="#" 
+              className="font-display text-2xl text-[#f0f0e8] hover:text-[#a855f7] transition-colors duration-300"
+              data-testid="header-logo"
+            >
+              ZF
+            </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
-            {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-mono text-xs tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#00f0ff] transition-colors duration-300 border-animate"
-                data-testid={`nav-${link.label.toLowerCase()}`}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-10">
+              {navLinks.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#a855f7] transition-colors duration-300"
+                  data-testid={`nav-${link.label.toLowerCase()}`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-[#f0f0e8] hover:text-[#00f0ff] transition-colors p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            data-testid="mobile-menu-toggle"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-[#f0f0e8] hover:text-[#a855f7] transition-colors p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              data-testid="mobile-menu-toggle"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMobileMenuOpen && (
+            <nav className="md:hidden absolute left-0 right-0 top-full bg-[#0d0d0d]/98 backdrop-blur-md border-b border-[#2a2a2a] px-6 py-6 flex flex-col gap-5 z-50">
+              {navLinks.map(link => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#a855f7] transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          )}
         </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <nav className="md:hidden absolute left-0 right-0 top-full bg-[#0d0d0d]/98 backdrop-blur-md border-b border-[#2a2a2a] px-6 py-6 flex flex-col gap-5 z-50">
-            {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-mono text-sm tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#00f0ff] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        )}
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 
