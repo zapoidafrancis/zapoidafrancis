@@ -43,7 +43,7 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/6Z89VmctctBLADdckeE4cU?si=3d7d4784fae440f6',
     spotifyId: '6Z89VmctctBLADdckeE4cU',
-    image: 'https://i.scdn.co/image/ab67616d0000b273d8f5e5c6e5a5e5e5e5e5e5e5',
+    image: 'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02d30c4b9031d953a756e8d474',
     description: 'Full production: arrangement, recording, guitar/bass performance, and mixing',
     year: 2025
   },
