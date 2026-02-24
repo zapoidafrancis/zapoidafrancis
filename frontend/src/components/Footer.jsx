@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="text-[#f0f0e8]">zapoida</span>{' '}
               <span className="text-[#a855f7]">francis</span>
             </h3>
-            <p className="text-[#a0a0a0] leading-relaxed max-w-xl text-lg mb-8">
+            <p className="text-[#a0a0a0] leading-relaxed max-w-lg text-lg mb-8">
               You have an idea? You want me to perfect your music or your mixed media project? You wanna learn guitar? Shoot me a message and let's talk.
             </p>
             <a 
