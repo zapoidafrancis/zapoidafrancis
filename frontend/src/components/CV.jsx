@@ -30,7 +30,7 @@ const CV = () => {
             <h3 className="font-display text-3xl">Experience</h3>
           </div>
           
-          <div className="space-y-16">
+          <div className="space-y-20">
             {cvData.experience.map((exp, idx) => (
               <div 
                 key={idx} 
@@ -42,8 +42,8 @@ const CV = () => {
                 
                 <span className="font-mono text-xs text-[#a855f7] tracking-wider">{exp.period}</span>
                 <h4 className="text-xl font-semibold text-[#f0f0e8] mt-1">{exp.title}</h4>
-                <p className="text-[#a855f7] font-mono text-sm mt-1">{exp.company}</p>
-                <p className="text-[#a0a0a0] text-sm leading-relaxed mt-2">{exp.description}</p>
+                <p className="text-[#a855f7] font-mono text-sm mt-0.5">{exp.company}</p>
+                <p className="text-[#a0a0a0] text-sm leading-relaxed mt-1">{exp.description}</p>
               </div>
             ))}
           </div>
