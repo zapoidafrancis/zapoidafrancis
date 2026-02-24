@@ -95,63 +95,77 @@ body {
   animation: stripeSlide 8s linear infinite, stripeTilt 12s ease-in-out infinite;
 }
 
-/* Smooth photo transitions: grey > negative > grey > RGB split > grey */
-@keyframes greyLayer {
-  0%, 20% { opacity: 0.5; filter: grayscale(100%); }
-  30%, 40% { opacity: 0; filter: grayscale(100%); }
-  50%, 55% { opacity: 0.5; filter: grayscale(100%); }
-  65%, 85% { opacity: 0; filter: grayscale(100%); }
-  95%, 100% { opacity: 0.5; filter: grayscale(100%); }
+/* Continuous flowing photo transitions - never settles */
+@keyframes greyFlow {
+  0% { opacity: 0.5; filter: grayscale(100%); }
+  15% { opacity: 0.4; filter: grayscale(100%); }
+  25% { opacity: 0.1; filter: grayscale(100%); }
+  35% { opacity: 0.3; filter: grayscale(100%); }
+  50% { opacity: 0.5; filter: grayscale(100%); }
+  65% { opacity: 0.2; filter: grayscale(100%); }
+  80% { opacity: 0.1; filter: grayscale(100%); }
+  90% { opacity: 0.3; filter: grayscale(100%); }
+  100% { opacity: 0.5; filter: grayscale(100%); }
 }
 
-@keyframes negativeLayer {
-  0%, 20% { opacity: 0; }
-  30%, 40% { opacity: 0.5; }
-  50%, 100% { opacity: 0; }
+@keyframes negativeFlow {
+  0% { opacity: 0; }
+  15% { opacity: 0.1; }
+  25% { opacity: 0.5; }
+  35% { opacity: 0.4; }
+  45% { opacity: 0.1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-@keyframes rgbRedLayer {
-  0%, 55% { opacity: 0; transform: translateX(0); }
-  65% { opacity: 0.6; transform: translateX(0); }
-  72%, 78% { opacity: 0.6; transform: translateX(-40px); }
-  85% { opacity: 0.6; transform: translateX(0); }
-  95%, 100% { opacity: 0; transform: translateX(0); }
+@keyframes rgbRedFlow {
+  0%, 45% { opacity: 0; transform: translateX(0); }
+  55% { opacity: 0.5; transform: translateX(-15px); }
+  65% { opacity: 0.6; transform: translateX(-35px); }
+  75% { opacity: 0.55; transform: translateX(-25px); }
+  85% { opacity: 0.4; transform: translateX(-10px); }
+  95% { opacity: 0.1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(0); }
 }
 
-@keyframes rgbCyanLayer {
-  0%, 55% { opacity: 0; transform: translateX(0); }
-  65% { opacity: 0.6; transform: translateX(0); }
-  72%, 78% { opacity: 0.6; transform: translateX(40px); }
-  85% { opacity: 0.6; transform: translateX(0); }
-  95%, 100% { opacity: 0; transform: translateX(0); }
+@keyframes rgbCyanFlow {
+  0%, 45% { opacity: 0; transform: translateX(0); }
+  55% { opacity: 0.5; transform: translateX(15px); }
+  65% { opacity: 0.6; transform: translateX(35px); }
+  75% { opacity: 0.55; transform: translateX(25px); }
+  85% { opacity: 0.4; transform: translateX(10px); }
+  95% { opacity: 0.1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(0); }
 }
 
-@keyframes rgbGreenLayer {
-  0%, 55% { opacity: 0; transform: translateY(0); }
-  65% { opacity: 0.5; transform: translateY(0); }
-  72%, 78% { opacity: 0.5; transform: translateY(-25px); }
-  85% { opacity: 0.5; transform: translateY(0); }
-  95%, 100% { opacity: 0; transform: translateY(0); }
+@keyframes rgbGreenFlow {
+  0%, 45% { opacity: 0; transform: translateY(0); }
+  55% { opacity: 0.4; transform: translateY(-10px); }
+  65% { opacity: 0.5; transform: translateY(-20px); }
+  75% { opacity: 0.45; transform: translateY(-15px); }
+  85% { opacity: 0.3; transform: translateY(-5px); }
+  95% { opacity: 0.1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(0); }
 }
 
-.animate-grey-layer {
-  animation: greyLayer 18s ease-in-out infinite;
+.animate-grey-flow {
+  animation: greyFlow 24s ease-in-out infinite;
 }
 
-.animate-negative-layer {
-  animation: negativeLayer 18s ease-in-out infinite;
+.animate-negative-flow {
+  animation: negativeFlow 24s ease-in-out infinite;
 }
 
-.animate-rgb-red-layer {
-  animation: rgbRedLayer 18s ease-in-out infinite;
+.animate-rgb-red-flow {
+  animation: rgbRedFlow 24s ease-in-out infinite;
 }
 
-.animate-rgb-cyan-layer {
-  animation: rgbCyanLayer 18s ease-in-out infinite;
+.animate-rgb-cyan-flow {
+  animation: rgbCyanFlow 24s ease-in-out infinite;
 }
 
-.animate-rgb-green-layer {
-  animation: rgbGreenLayer 18s ease-in-out infinite;
+.animate-rgb-green-flow {
+  animation: rgbGreenFlow 24s ease-in-out infinite;
 }
 
 /* Infinite marquee animation - faster */
