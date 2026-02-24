@@ -11,7 +11,9 @@ import './App.css';
 
 const Home = () => {
   return (
-    <div className="bg-[#0a0a0a]">
+    <div className="bg-[#0d0d0d] min-h-screen">
+      {/* Global film grain overlay */}
+      <div className="grain-overlay"></div>
       <Header />
       <Hero />
       <Works />

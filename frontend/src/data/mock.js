@@ -1,7 +1,7 @@
 // Real portfolio data for Francesco Maria De Lucia
 
 export const heroData = {
-  name: "Francesco Maria De Lucia",
+  name: "zapoida francis",
   tagline: "Audio Engineer • Music Producer • Musician",
   description: "An audio professional based in Berlin, blending creativity with technical expertise to craft immersive soundscapes and outstanding sonic experiences.",
   location: "Berlin, Germany",
