@@ -166,7 +166,7 @@ const Works = () => {
               {/* Content */}
               <CardContent className="p-6 flex-1 flex flex-col">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-semibold leading-tight">{work.title}</h3>
+                  <h3 className="text-xl font-semibold leading-tight text-white">{work.title}</h3>
                   <Badge variant="secondary" className="bg-gray-800 text-gray-300 flex-shrink-0 ml-2">
                     <Calendar className="w-3 h-3 mr-1" />
                     {work.year}
