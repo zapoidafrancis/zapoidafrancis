@@ -196,7 +196,7 @@ export const works = [
     artist: 'Affinity Space Design Studio',
     role: ['sound-designer'],
     type: 'no-link',
-    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/omautujk_mariposa.png',
     description: 'Immersive sound design for virtual and augmented reality experience',
     year: 2020
   },
