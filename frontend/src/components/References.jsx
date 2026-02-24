@@ -2,7 +2,6 @@ import React from 'react';
 import { Quote, Download } from 'lucide-react';
 import { references } from '../data/mock';
 import { Card, CardContent } from './ui/card';
-import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 import { Button } from './ui/button';
 
 const References = () => {
@@ -38,18 +37,12 @@ const References = () => {
                 </p>
 
                 {/* Reference Info */}
-                <div className="flex items-center gap-4 mb-6">
-                  <Avatar className="w-14 h-14 border-2 border-[#90ee90]">
-                    <AvatarImage src={ref.image} alt={ref.name} />
-                    <AvatarFallback className="bg-[#90ee90] text-black font-semibold">
-                      {ref.name.split(' ').map(n => n[0]).join('')}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p className="font-semibold text-lg">{ref.name}</p>
-                    <p className="text-[#9370db] text-sm">{ref.role}</p>
-                    <p className="text-gray-500 text-sm">{ref.company}</p>
-                  </div>
+                <div className="mb-6">
+                  <p className="font-semibold text-xl text-white mb-1">{ref.name}</p>
+                  <p className="text-[#9370db] text-base">{ref.role}</p>
+                  {ref.company && (
+                    <p className="text-gray-500 text-sm mt-1">{ref.company}</p>
+                  )}
                 </div>
 
                 {/* Download Button */}
@@ -58,7 +51,7 @@ const References = () => {
                   className="w-full bg-[#90ee90] text-black hover:bg-[#7fdf7f] transition-colors"
                 >
                   <Download className="w-4 h-4 mr-2" />
-                  Download Full Reference Letter
+                  Download Reference Letter
                 </Button>
               </CardContent>
             </Card>
