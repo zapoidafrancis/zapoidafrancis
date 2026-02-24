@@ -102,8 +102,12 @@ const Footer = () => {
                 aria-label="Linktree"
                 data-testid="social-linktree"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M7.5 21.5v-6h-3l7.5-9 7.5 9h-3v6h-4v-4h-1v4h-4zm4-14.5l-4.5 5.4h2v6.1h2v-4h2v4h2v-6.1h2L12 7z"/>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 10h16" />
+                  <path d="M6.5 4.5l11 11" />
+                  <path d="M6.5 15.5l11 -11" />
+                  <path d="M12 10v-8" />
+                  <path d="M12 15v7" />
                 </svg>
               </a>
             </div>
