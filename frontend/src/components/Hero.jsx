@@ -12,51 +12,104 @@ const Hero = () => {
   ];
 
   const marqueeRoles = [...roles, ...roles];
+  const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo layers with beam transition */}
+      {/* Background photo layers with smooth transitions */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Layer 1: Grayscale */}
+        {/* Base grayscale layer */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-layer-grayscale"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-grey-base"
           style={{
-            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
+            backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
-            opacity: 0.5,
             filter: 'grayscale(100%)',
+            opacity: 0.5,
           }}
         ></div>
         
-        {/* Layer 2: Negative */}
+        {/* Negative layer - fades in and out */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-layer-negative"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative"
           style={{
-            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
+            backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
-            opacity: 0.5,
             filter: 'grayscale(100%) invert(100%)',
+            opacity: 0,
           }}
         ></div>
         
-        {/* Layer 3: Green / Night Vision */}
+        {/* RGB Split layers for anaglyph effect */}
+        {/* Red channel - shifts left */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-layer-green"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-red"
           style={{
-            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
+            backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
-            opacity: 0.5,
-            filter: 'grayscale(100%) brightness(1.2) sepia(100%) hue-rotate(70deg) saturate(3)',
+            filter: 'grayscale(100%)',
+            opacity: 0,
+            mixBlendMode: 'screen',
+            backgroundColor: 'transparent',
           }}
-        ></div>
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%) brightness(1.2)',
+              mixBlendMode: 'multiply',
+              backgroundColor: '#ff0066',
+            }}
+          ></div>
+        </div>
         
-        {/* Beam of light glow effect */}
+        {/* Cyan channel - shifts right */}
         <div 
-          className="absolute inset-0 pointer-events-none animate-beam-glow"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-cyan"
           style={{
-            background: 'linear-gradient(90deg, transparent 45%, rgba(255,255,255,0.4) 49%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 51%, transparent 55%)',
+            backgroundImage: `url(${photoUrl})`,
+            backgroundPosition: 'center 15%',
+            filter: 'grayscale(100%)',
+            opacity: 0,
+            mixBlendMode: 'screen',
           }}
-        ></div>
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%) brightness(1.2)',
+              mixBlendMode: 'multiply',
+              backgroundColor: '#00ffff',
+            }}
+          ></div>
+        </div>
+        
+        {/* Green/Yellow channel - shifts up */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-green"
+          style={{
+            backgroundImage: `url(${photoUrl})`,
+            backgroundPosition: 'center 15%',
+            filter: 'grayscale(100%)',
+            opacity: 0,
+            mixBlendMode: 'screen',
+          }}
+        >
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%) brightness(1.2)',
+              mixBlendMode: 'multiply',
+              backgroundColor: '#66ff00',
+            }}
+          ></div>
+        </div>
         
         {/* Grain texture */}
         <div 
