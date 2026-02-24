@@ -123,14 +123,14 @@ const Works = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">
-          <p className="font-mono text-[#00f0ff] text-sm tracking-[0.3em] uppercase mb-4">Portfolio</p>
+          <p className="font-mono text-[#00ff88] text-sm tracking-[0.3em] uppercase mb-4">Portfolio</p>
           <h2 
             className="font-display text-6xl md:text-7xl lg:text-8xl tracking-tight"
             data-testid="works-title"
           >
             Selected Works
           </h2>
-          <div className="divider w-32 mt-8"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-[#a855f7] to-transparent mt-8"></div>
         </div>
 
         {/* Role Filters */}
@@ -141,8 +141,8 @@ const Works = () => {
               onClick={() => setSelectedRole(role.id)}
               className={`px-4 py-2 font-mono text-xs tracking-wider uppercase transition-all duration-300 border-2 ${
                 selectedRole === role.id
-                  ? 'bg-[#00f0ff] text-[#0d0d0d] border-[#00f0ff]'
-                  : 'bg-transparent text-[#a0a0a0] border-[#2a2a2a] hover:border-[#00f0ff] hover:text-[#00f0ff]'
+                  ? 'bg-[#a855f7] text-[#0d0d0d] border-[#a855f7]'
+                  : 'bg-transparent text-[#a0a0a0] border-[#2a2a2a] hover:border-[#a855f7] hover:text-[#a855f7]'
               }`}
               data-testid={`filter-${role.id}`}
             >
@@ -171,7 +171,7 @@ const Works = () => {
                 
                 {/* Year badge */}
                 <div className="absolute top-4 right-4 bg-[#0d0d0d]/90 border border-[#2a2a2a] px-3 py-1">
-                  <span className="font-mono text-xs text-[#00f0ff] flex items-center gap-1">
+                  <span className="font-mono text-xs text-[#00ff88] flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
                     {work.year}
                   </span>
@@ -183,7 +183,7 @@ const Works = () => {
                 <h3 className="text-lg font-semibold leading-tight text-[#f0f0e8] mb-2">
                   {work.title}
                 </h3>
-                <p className="text-[#00f0ff] font-mono text-sm mb-3">{work.artist}</p>
+                <p className="text-[#a855f7] font-mono text-sm mb-3">{work.artist}</p>
                 <p className="text-[#a0a0a0] text-sm mb-4 leading-relaxed">{work.description}</p>
 
                 {/* Role Tags */}
@@ -223,7 +223,7 @@ const Works = () => {
                 {expandedWork === work.id && (
                   <button
                     onClick={() => toggleExpand(work.id)}
-                    className="mt-4 w-full py-2 border-2 border-[#2a2a2a] text-[#666] font-mono text-xs uppercase tracking-wider hover:border-[#00f0ff] hover:text-[#00f0ff] transition-all"
+                    className="mt-4 w-full py-2 border-2 border-[#2a2a2a] text-[#666] font-mono text-xs uppercase tracking-wider hover:border-[#a855f7] hover:text-[#a855f7] transition-all"
                   >
                     Collapse
                   </button>
