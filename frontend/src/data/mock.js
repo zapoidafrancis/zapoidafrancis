@@ -78,7 +78,7 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/2Zo6tnCuiueYxzzFHngKvP?si=07ffd9c2b51a4275',
     spotifyId: '2Zo6tnCuiueYxzzFHngKvP',
-    image: 'https://i.scdn.co/image/ab67616d0000b2739e9e9e9e9e9e9e9e9e9e9e9e',
+    image: 'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0282978aca8eb2d8e0db13e0fc',
     description: 'Guitar and bass performance',
     year: 2024
   },
