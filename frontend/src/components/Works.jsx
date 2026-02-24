@@ -204,7 +204,7 @@ const Works = () => {
                       <Music className="w-4 h-4" />
                       {work.type.includes('spotify') ? 'Play on Spotify' : 
                        work.type === 'bandcamp' ? 'Listen on Bandcamp' :
-                       work.type === 'instagram' ? 'View on Instagram' :
+                       work.type === 'instagram' ? 'View Instagram Reel' :
                        'View Project'}
                     </button>
                   </div>
