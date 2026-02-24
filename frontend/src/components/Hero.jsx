@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { heroData } from '../data/mock';
 
 const Hero = () => {
+  const [split, setSplit] = useState({ x: 0, y: 0 });
+  const heroRef = useRef(null);
+
   const roles = [
     'musician',
     'audio engineer', 
@@ -14,8 +17,36 @@ const Hero = () => {
   const marqueeRoles = [...roles, ...roles];
   const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
 
+  const handleMouseMove = (e) => {
+    if (!heroRef.current) return;
+    
+    const rect = heroRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width; // 0 to 1
+    const y = (e.clientY - rect.top) / rect.height; // 0 to 1
+    
+    // Map to split range: 12px base + up to 15px more (total 27px max)
+    const splitAmount = 12 + (x * 15);
+    const splitY = 8 + (y * 12);
+    
+    setSplit({ x: splitAmount, y: splitY });
+  };
+
+  const handleMouseLeave = () => {
+    setSplit({ x: 12, y: 8 });
+  };
+
+  // Default split values
+  const redX = -(split.x || 12);
+  const cyanX = split.x || 12;
+  const blueY = -(split.y || 8);
+
   return (
-    <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
+    <section 
+      ref={heroRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden"
+    >
       {/* Background - pure black */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         
@@ -40,37 +71,40 @@ const Hero = () => {
           
           {/* RGB Magenta - shifts left */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-red-slow"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat rgb-layer-red"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(5) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
+              transform: `translateX(${redX}px)`,
             }}
           ></div>
           
           {/* RGB Cyan - shifts right */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-cyan-slow"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat rgb-layer-cyan"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(5) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
+              transform: `translateX(${cyanX}px)`,
             }}
           ></div>
           
           {/* RGB Blue/Violet - shifts up */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-blue-slow"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat rgb-layer-blue"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(4) brightness(0.9)',
               opacity: 0.3,
               mixBlendMode: 'screen',
+              transform: `translateY(${blueY}px)`,
             }}
           ></div>
         </div>
