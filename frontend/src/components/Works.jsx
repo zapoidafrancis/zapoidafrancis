@@ -1,23 +1,110 @@
 import React, { useState } from 'react';
-import { Play, ExternalLink, Calendar } from 'lucide-react';
+import { Play, ExternalLink, Calendar, Music } from 'lucide-react';
 import { roles, works } from '../data/mock';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
+import { Card, CardContent } from './ui/card';
 
 const Works = () => {
   const [selectedRole, setSelectedRole] = useState('all');
-  const [playingAudio, setPlayingAudio] = useState(null);
+  const [expandedWork, setExpandedWork] = useState(null);
 
   const filteredWorks = selectedRole === 'all'
     ? works
     : works.filter(work => work.role.includes(selectedRole));
 
-  const handlePlayAudio = (audioId) => {
-    if (playingAudio === audioId) {
-      setPlayingAudio(null);
-    } else {
-      setPlayingAudio(audioId);
+  const toggleExpand = (workId) => {
+    setExpandedWork(expandedWork === workId ? null : workId);
+  };
+
+  const renderPlatformEmbed = (work) => {
+    // Spotify embeds
+    if (work.type === 'spotify-track' && work.spotifyId) {
+      return (
+        <div className="mt-4">
+          <iframe
+            style={{ borderRadius: '12px' }}
+            src={`https://open.spotify.com/embed/track/${work.spotifyId}?utm_source=generator&theme=0`}
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      );
     }
+
+    if (work.type === 'spotify-album' && work.spotifyId) {
+      return (
+        <div className="mt-4">
+          <iframe
+            style={{ borderRadius: '12px' }}
+            src={`https://open.spotify.com/embed/album/${work.spotifyId}?utm_source=generator&theme=0`}
+            width="100%"
+            height="352"
+            frameBorder="0"
+            allowFullScreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      );
+    }
+
+    // Instagram - show button only
+    if (work.type === 'instagram' && work.instagramUrl) {
+      return (
+        <div className="mt-4">
+          <a
+            href={work.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
+          >
+            <ExternalLink className="w-4 h-4" />
+            View on Instagram
+          </a>
+        </div>
+      );
+    }
+
+    // Bandcamp
+    if (work.type === 'bandcamp' && work.bandcampUrl) {
+      return (
+        <div className="mt-4">
+          <a
+            href={work.bandcampUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#629aa9] text-white rounded-lg hover:bg-[#5289a0] transition-all"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Listen on Bandcamp
+          </a>
+        </div>
+      );
+    }
+
+    // Generic external link
+    if (work.type === 'link' && work.externalUrl) {
+      return (
+        <div className="mt-4">
+          <a
+            href={work.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#90ee90] text-black rounded-lg hover:bg-[#7fdf7f] transition-all"
+          >
+            <ExternalLink className="w-4 h-4" />
+            View Project
+          </a>
+        </div>
+      );
+    }
+
+    return null;
   };
 
   return (
@@ -50,9 +137,9 @@ const Works = () => {
         {/* Works Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredWorks.map(work => (
-            <div
+            <Card
               key={work.id}
-              className="bg-[#1a1a1a] rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-[#9370db]"
+              className="bg-[#1a1a1a] rounded-lg overflow-hidden hover:transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-[#9370db] flex flex-col"
             >
               {/* Image/Thumbnail */}
               <div className="relative h-56 overflow-hidden">
@@ -61,29 +148,32 @@ const Works = () => {
                   alt={work.title}
                   className="w-full h-full object-cover"
                 />
-                {work.type === 'audio' && (
-                  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <button
-                      onClick={() => handlePlayAudio(work.id)}
-                      className="w-16 h-16 bg-[#90ee90] rounded-full flex items-center justify-center hover:bg-[#7fdf7f] transition-all"
-                    >
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
+                
+                {/* Play icon for items with embeds */}
+                {(work.type.includes('spotify') || work.type === 'bandcamp') && (
+                  <button
+                    onClick={() => toggleExpand(work.id)}
+                    className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity"
+                  >
+                    <div className="w-16 h-16 bg-[#90ee90] rounded-full flex items-center justify-center hover:bg-[#7fdf7f] transition-all hover:scale-110">
                       <Play className="w-8 h-8 text-black ml-1" />
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 )}
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <CardContent className="p-6 flex-1 flex flex-col">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-semibold">{work.title}</h3>
-                  <Badge variant="secondary" className="bg-gray-800 text-gray-300">
+                  <h3 className="text-xl font-semibold leading-tight">{work.title}</h3>
+                  <Badge variant="secondary" className="bg-gray-800 text-gray-300 flex-shrink-0 ml-2">
                     <Calendar className="w-3 h-3 mr-1" />
                     {work.year}
                   </Badge>
                 </div>
 
-                <p className="text-[#9370db] mb-3">{work.artist}</p>
+                <p className="text-[#9370db] mb-3 font-medium">{work.artist}</p>
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">{work.description}</p>
 
                 {/* Role Tags */}
@@ -98,26 +188,26 @@ const Works = () => {
                   })}
                 </div>
 
-                {/* Audio Player or Video Link */}
-                {work.type === 'audio' && playingAudio === work.id && (
-                  <audio controls className="w-full mt-4" autoPlay>
-                    <source src={work.audioUrl} type="audio/mpeg" />
-                    Your browser does not support the audio element.
-                  </audio>
-                )}
+                {/* Platform Embed - Show when expanded or always for cards with content */}
+                {expandedWork === work.id && renderPlatformEmbed(work)}
 
-                {work.type === 'video' && (
-                  <a
-                    href={work.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#90ee90] hover:text-[#7fdf7f] transition-colors mt-2"
-                  >
-                    Watch Video <ExternalLink className="w-4 h-4" />
-                  </a>
+                {/* External Link Button - Show when not expanded */}
+                {expandedWork !== work.id && work.type !== 'no-link' && (
+                  <div className="mt-auto">
+                    <button
+                      onClick={() => toggleExpand(work.id)}
+                      className="w-full py-2 px-4 bg-[#9370db] text-white rounded-lg hover:bg-[#8060c0] transition-all flex items-center justify-center gap-2"
+                    >
+                      <Music className="w-4 h-4" />
+                      {work.type.includes('spotify') ? 'Play on Spotify' : 
+                       work.type === 'bandcamp' ? 'Listen on Bandcamp' :
+                       work.type === 'instagram' ? 'View on Instagram' :
+                       'View Project'}
+                    </button>
+                  </div>
                 )}
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
 
