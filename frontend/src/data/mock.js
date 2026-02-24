@@ -3,7 +3,7 @@
 export const heroData = {
   name: "zapoida francis",
   tagline: "Audio Engineer • Music Producer • Musician",
-  description: "An audio professional based in Berlin, blending creativity with technical expertise to craft immersive soundscapes and outstanding sonic experiences.",
+  description: "Audio professional based in Berlin, blending creativity with technical expertise to craft immersive soundscapes and outstanding sonic experiences.",
   location: "Berlin, Germany",
   email: "francescomdelucia@yahoo.com",
   phone: "+39 3518157754",
