@@ -18,7 +18,6 @@ export const roles = [
   { id: 'guitar-player', name: 'Guitar Player' },
   { id: 'bass-player', name: 'Bass Player' },
   { id: 'music-producer', name: 'Music Producer' },
-  { id: 'audio-engineer', name: 'Audio Engineer' },
   { id: 'music-composer', name: 'Music Composer' },
   { id: 'studio-assistant', name: 'Studio Assistant' }
 ];
