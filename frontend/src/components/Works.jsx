@@ -149,18 +149,6 @@ const Works = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"></div>
-                
-                {/* Play icon for items with embeds */}
-                {(work.type.includes('spotify') || work.type === 'bandcamp') && (
-                  <button
-                    onClick={() => toggleExpand(work.id)}
-                    className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity"
-                  >
-                    <div className="w-16 h-16 bg-[#90ee90] rounded-full flex items-center justify-center hover:bg-[#7fdf7f] transition-all hover:scale-110">
-                      <Play className="w-8 h-8 text-black ml-1" />
-                    </div>
-                  </button>
-                )}
               </div>
 
               {/* Content */}
