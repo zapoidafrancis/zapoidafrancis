@@ -3,7 +3,7 @@
 export const heroData = {
   name: "zapoida francis",
   tagline: "Audio Engineer • Music Producer • Musician",
-  description: "Audio professional based in Berlin, blending creativity with technical expertise to craft immersive soundscapes and outstanding sonic experiences.",
+  description: "Audio professional based in Berlin, blending creativity with technical expertise to craft immersive soundscapes and outstanding sonic\u00A0experiences.",
   location: "Berlin, Germany",
   email: "francescomdelucia@yahoo.com",
   phone: "+39 3518157754",
@@ -128,7 +128,7 @@ export const works = [
     bandcampUrl: 'https://refugeworldwide.bandcamp.com/track/sky-deep-milky-boom-boom',
     image: 'https://f4.bcbits.com/img/a0374684974_16.jpg',
     description: 'Mix and master',
-    year: 2024
+    year: 2025
   },
   // 2023
   {
