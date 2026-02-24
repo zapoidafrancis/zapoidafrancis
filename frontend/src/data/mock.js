@@ -102,7 +102,7 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/4q8AV8e9jbJjGG95ImMtHt?si=bc2125ce0f744a65',
     spotifyId: '4q8AV8e9jbJjGG95ImMtHt',
-    image: 'https://i.scdn.co/image/ab67616d0000b2737b7b7b7b7b7b7b7b7b7b7b7b',
+    image: 'https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02468dd98a6225a345ab872c99',
     description: 'Master',
     year: 2024
   },
