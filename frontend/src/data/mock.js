@@ -66,7 +66,7 @@ export const works = [
     role: ['sound-designer'],
     type: 'instagram',
     instagramUrl: 'https://www.instagram.com/reel/DKwzjHotAEU/',
-    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/v276pj67_lowtop00.png',
     description: 'Sound design for footwear innovation design asset promo video',
     year: 2025
   },
