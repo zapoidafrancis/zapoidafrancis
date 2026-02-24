@@ -8,7 +8,6 @@ const SoloProject = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
-          <p className="font-mono text-[#00ff88] text-sm tracking-[0.3em] uppercase mb-4">Personal</p>
           <h2 
             className="font-display text-6xl md:text-7xl lg:text-8xl tracking-tight"
             data-testid="solo-title"

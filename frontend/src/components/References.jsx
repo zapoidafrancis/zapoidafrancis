@@ -12,7 +12,6 @@ const References = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">
-          <p className="font-mono text-[#00ff88] text-sm tracking-[0.3em] uppercase mb-4">Testimonials</p>
           <h2 
             className="font-display text-6xl md:text-7xl lg:text-8xl tracking-tight"
             data-testid="references-title"
@@ -51,7 +50,7 @@ const References = () => {
                   {ref.company && (
                     <p className="text-[#666] text-sm mt-1">{ref.company}</p>
                   )}
-                  <p className="text-[#00ff88] font-mono text-xs mt-2">{ref.date}</p>
+                  <p className="text-[#a855f7] font-mono text-xs mt-2 opacity-60">{ref.date}</p>
                 </div>
 
                 {/* Download Button */}

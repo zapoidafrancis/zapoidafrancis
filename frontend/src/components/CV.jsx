@@ -12,14 +12,13 @@ const CV = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">
-          <p className="font-mono text-[#00ff88] text-sm tracking-[0.3em] uppercase mb-4">Background</p>
           <h2 
             className="font-display text-6xl md:text-7xl lg:text-8xl tracking-tight"
             data-testid="cv-title"
           >
             Curriculum Vitae
           </h2>
-          <div className="divider w-32 mt-8"></div>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-[#a855f7] to-transparent mt-8"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -43,7 +42,7 @@ const CV = () => {
                   <div className="absolute left-[-9px] top-0 w-4 h-4 bg-[#141414] border-2 border-[#2a2a2a] group-hover:border-[#a855f7] group-hover:bg-[#a855f7] transition-all duration-300"></div>
                   
                   <div className="mb-3">
-                    <span className="font-mono text-xs text-[#00ff88] tracking-wider">{exp.period}</span>
+                    <span className="font-mono text-xs text-[#a855f7] tracking-wider">{exp.period}</span>
                   </div>
                   <h4 className="text-xl font-semibold text-[#f0f0e8] mb-2">{exp.title}</h4>
                   <p className="text-[#a855f7] font-mono text-sm mb-4">{exp.company}</p>
@@ -71,7 +70,7 @@ const CV = () => {
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <MapPin className="w-4 h-4 text-[#666]" />
-                    <span className="font-mono text-xs text-[#00ff88] tracking-wider">{edu.year}</span>
+                    <span className="font-mono text-xs text-[#a855f7] tracking-wider">{edu.year}</span>
                   </div>
                   <h4 className="text-xl font-semibold text-[#f0f0e8] mb-2">{edu.degree}</h4>
                   <p className="text-[#a855f7] font-mono text-sm mb-4">{edu.institution}</p>
