@@ -270,7 +270,7 @@ export const cvData = {
       description: "Guitar classes, workshops and studio support for Drop In (Forum für interkulturelle und politische Bildung)."
     },
     {
-      title: "Freelance Music Producer, Audio Engineer, Session Musician",
+      title: "Freelance Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
       company: "Self-Employed",
       period: "2019 - Present",
       description: "Music production, audio engineering, guitar and bass session work, and guitar teaching for various clients and projects."
