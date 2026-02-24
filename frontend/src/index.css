@@ -95,81 +95,112 @@ body {
   animation: stripeSlide 8s linear infinite, stripeTilt 12s ease-in-out infinite;
 }
 
-/* Beam of light transition effect */
-@keyframes beamSweep1 {
-  0%, 10% {
-    clip-path: inset(0 0 0 0);
-  }
-  30%, 40% {
-    clip-path: inset(0 0 0 100%);
-  }
-  70%, 80% {
-    clip-path: inset(0 0 0 100%);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-  }
+/* Smooth photo transitions: grey > negative > grey > RGB split > grey */
+@keyframes fadeToNegative {
+  0%, 15% { opacity: 1; }
+  25%, 35% { opacity: 0; }
+  45%, 100% { opacity: 1; }
 }
 
-@keyframes beamSweep2 {
-  0%, 10% {
-    clip-path: inset(0 100% 0 0);
-  }
-  30%, 40% {
-    clip-path: inset(0 0 0 0);
-  }
-  70%, 80% {
-    clip-path: inset(0 0 0 100%);
-  }
-  100% {
-    clip-path: inset(0 100% 0 0);
-  }
+@keyframes fadeNegativeIn {
+  0%, 15% { opacity: 0; }
+  25%, 35% { opacity: 1; }
+  45%, 100% { opacity: 0; }
 }
 
-@keyframes beamSweep3 {
-  0%, 10% {
-    clip-path: inset(0 100% 0 0);
-  }
-  30%, 40% {
-    clip-path: inset(0 100% 0 0);
-  }
-  70%, 80% {
-    clip-path: inset(0 0 0 0);
-  }
-  100% {
-    clip-path: inset(0 100% 0 0);
-  }
-}
-
-@keyframes beamGlow {
-  0%, 10%, 40%, 70%, 100% {
+@keyframes rgbSplitRed {
+  0%, 50% { 
     opacity: 0;
+    transform: translateX(0);
   }
-  20%, 25% {
-    opacity: 1;
+  60% { 
+    opacity: 0.7;
+    transform: translateX(0);
   }
-  50%, 55% {
-    opacity: 1;
+  70%, 75% { 
+    opacity: 0.7;
+    transform: translateX(-30px);
   }
-  85%, 90% {
-    opacity: 1;
+  85% { 
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+  95%, 100% { 
+    opacity: 0;
+    transform: translateX(0);
   }
 }
 
-.animate-layer-grayscale {
-  animation: beamSweep1 12s ease-in-out infinite;
+@keyframes rgbSplitCyan {
+  0%, 50% { 
+    opacity: 0;
+    transform: translateX(0);
+  }
+  60% { 
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+  70%, 75% { 
+    opacity: 0.7;
+    transform: translateX(30px);
+  }
+  85% { 
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+  95%, 100% { 
+    opacity: 0;
+    transform: translateX(0);
+  }
 }
 
-.animate-layer-negative {
-  animation: beamSweep2 12s ease-in-out infinite;
+@keyframes rgbSplitGreen {
+  0%, 50% { 
+    opacity: 0;
+    transform: translateY(0);
+  }
+  60% { 
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  70%, 75% { 
+    opacity: 0.6;
+    transform: translateY(-20px);
+  }
+  85% { 
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  95%, 100% { 
+    opacity: 0;
+    transform: translateY(0);
+  }
 }
 
-.animate-layer-green {
-  animation: beamSweep3 12s ease-in-out infinite;
+@keyframes greyFadeForRgb {
+  0%, 50% { opacity: 0.5; }
+  60%, 85% { opacity: 0.15; }
+  95%, 100% { opacity: 0.5; }
 }
 
-.animate-beam-glow {
-  animation: beamGlow 12s ease-in-out infinite;
+.animate-grey-base {
+  animation: fadeToNegative 16s ease-in-out infinite, greyFadeForRgb 16s ease-in-out infinite;
+}
+
+.animate-negative {
+  animation: fadeNegativeIn 16s ease-in-out infinite;
+}
+
+.animate-rgb-red {
+  animation: rgbSplitRed 16s ease-in-out infinite;
+}
+
+.animate-rgb-cyan {
+  animation: rgbSplitCyan 16s ease-in-out infinite;
+}
+
+.animate-rgb-green {
+  animation: rgbSplitGreen 16s ease-in-out infinite;
 }
 
 /* Infinite marquee animation - faster */
