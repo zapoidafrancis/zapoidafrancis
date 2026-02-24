@@ -15,15 +15,46 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo with filter transitions */}
+      {/* Background photo layers with beam transition */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Photo with animated filters: grayscale > negative > heatmap > color */}
+        {/* Layer 1: Grayscale */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-photo-filters"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-layer-grayscale"
           style={{
             backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
             backgroundPosition: 'center 15%',
             opacity: 0.5,
+            filter: 'grayscale(100%)',
+          }}
+        ></div>
+        
+        {/* Layer 2: Negative */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-layer-negative"
+          style={{
+            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
+            backgroundPosition: 'center 15%',
+            opacity: 0.5,
+            filter: 'grayscale(100%) invert(100%)',
+          }}
+        ></div>
+        
+        {/* Layer 3: Green / Night Vision */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-layer-green"
+          style={{
+            backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
+            backgroundPosition: 'center 15%',
+            opacity: 0.5,
+            filter: 'grayscale(100%) brightness(1.2) sepia(100%) hue-rotate(70deg) saturate(3)',
+          }}
+        ></div>
+        
+        {/* Beam of light glow effect */}
+        <div 
+          className="absolute inset-0 pointer-events-none animate-beam-glow"
+          style={{
+            background: 'linear-gradient(90deg, transparent 45%, rgba(255,255,255,0.4) 49%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.4) 51%, transparent 55%)',
           }}
         ></div>
         
