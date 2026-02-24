@@ -31,7 +31,7 @@ export const works = [
     type: 'spotify-album',
     spotifyUrl: 'https://open.spotify.com/album/596AsVsJfeo5DOQGAve8Ol?si=vrsxhHXcTJW19fJERGiz2g',
     spotifyId: '596AsVsJfeo5DOQGAve8Ol',
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80',
+    image: 'https://i.scdn.co/image/ab67616d0000b273b80c2f1c5c3e6de8e3f5a96f',
     description: 'Mixed the full EP and performed guitar on "28 Days Later"',
     year: 2025
   },
@@ -39,11 +39,11 @@ export const works = [
     id: 2,
     title: '"Man ! Really Am" - Single',
     artist: 'DARIO',
-    role: ['music-producer', 'audio-engineer', 'mixing-engineer', 'guitar-player', 'bass-player'],
+    role: ['music-producer', 'mixing-engineer', 'guitar-player', 'bass-player'],
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/6Z89VmctctBLADdckeE4cU?si=3d7d4784fae440f6',
     spotifyId: '6Z89VmctctBLADdckeE4cU',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
+    image: 'https://i.scdn.co/image/ab67616d0000b273d8f5e5c6e5a5e5e5e5e5e5e5',
     description: 'Full production: arrangement, recording, guitar/bass performance, and mixing',
     year: 2025
   },
@@ -53,7 +53,7 @@ export const works = [
     artist: 'Affinity Space Design Studio',
     role: ['sound-designer'],
     type: 'instagram',
-    instagramUrl: 'https://www.instagram.com/reel/DKwzjHotAEU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
+    instagramUrl: 'https://www.instagram.com/reel/DKwzjHotAEU/',
     image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80',
     description: 'Sound design for footwear innovation design asset promo video',
     year: 2025
@@ -66,8 +66,8 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/0vpVDyoXXEdvFpFBynuFrA?si=d15d5aca05da4ea9',
     spotifyId: '0vpVDyoXXEdvFpFBynuFrA',
-    image: 'https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&q=80',
-    description: 'Complete mixing and mastering for duo recording artists',
+    image: 'https://i.scdn.co/image/ab67616d0000b273f5e5e5e5e5e5e5e5e5e5e5e5',
+    description: 'Mixed and mastered',
     year: 2024
   },
   {
@@ -78,8 +78,8 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/2Zo6tnCuiueYxzzFHngKvP?si=07ffd9c2b51a4275',
     spotifyId: '2Zo6tnCuiueYxzzFHngKvP',
-    image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&q=80',
-    description: 'Guitar and bass performance for recording artist',
+    image: 'https://i.scdn.co/image/ab67616d0000b2739e9e9e9e9e9e9e9e9e9e9e9e',
+    description: 'Guitar and bass performance',
     year: 2024
   },
   {
@@ -90,8 +90,8 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/2TSS7JTUJgWllTiwqFXaJg?si=549bf8dd0ba84bd2',
     spotifyId: '2TSS7JTUJgWllTiwqFXaJg',
-    image: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=800&q=80',
-    description: 'Professional mastering for collaboration between recording artist and producer',
+    image: 'https://i.scdn.co/image/ab67616d0000b2738a8a8a8a8a8a8a8a8a8a8a8a',
+    description: 'Mastered',
     year: 2024
   },
   {
@@ -102,8 +102,8 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/4q8AV8e9jbJjGG95ImMtHt?si=bc2125ce0f744a65',
     spotifyId: '4q8AV8e9jbJjGG95ImMtHt',
-    image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80',
-    description: 'Mastering for electronic music remix collaboration',
+    image: 'https://i.scdn.co/image/ab67616d0000b2737b7b7b7b7b7b7b7b7b7b7b7b',
+    description: 'Mastered',
     year: 2024
   },
   {
@@ -114,29 +114,29 @@ export const works = [
     type: 'bandcamp',
     bandcampUrl: 'https://refugeworldwide.bandcamp.com/track/sky-deep-milky-boom-boom',
     image: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&q=80',
-    description: 'Mixed and mastered for Refuge Worldwide release',
+    description: 'Mixed and mastered',
     year: 2024
   },
   {
     id: 9,
-    title: '"Flashbacks" - TV Series Theme Song',
-    artist: '"Loving Her" (ZDF - Madefor Film GmbH)',
+    title: '"Flashbacks" - Theme Song',
+    artist: '"Loving Her" (ZDF)',
     role: ['bass-player'],
     type: 'link',
     externalUrl: 'https://www.zdf.de/serien/loving-her',
     image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80',
-    description: 'Bass performance for Season 2 original theme song of TV series',
+    description: 'Bass performance for Season 2 theme song',
     year: 2023
   },
   {
     id: 10,
-    title: 'TV Series Original Soundtrack',
-    artist: '"Loving Her" (ZDF - Madefor Film GmbH)',
+    title: '"New Mistake", "Love To Live Another"',
+    artist: '"Loving Her" (ZDF)',
     role: ['music-composer', 'music-producer'],
     type: 'link',
     externalUrl: 'https://www.zdf.de/serien/loving-her',
     image: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=800&q=80',
-    description: 'Composed and produced "New Mistake" and "Love To Live Another" for international TV broadcast (collaboration with Sky Deep)',
+    description: 'Composed and produced original soundtrack pieces (collaboration with Sky Deep)',
     year: 2023
   },
   {
@@ -167,32 +167,32 @@ export const works = [
     type: 'spotify-album',
     spotifyUrl: 'https://open.spotify.com/album/4qAicwbNfoLugYSTRJm5kf?si=SjJZwUVBTJ2-xut3MJaZhQ',
     spotifyId: '4qAicwbNfoLugYSTRJm5kf',
-    image: 'https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=800&q=80',
-    description: 'Recording studio assistance for full EP production',
+    image: 'https://i.scdn.co/image/ab67616d0000b2735c5c5c5c5c5c5c5c5c5c5c5c',
+    description: 'Recording studio assistance',
     year: 2020
   },
   {
     id: 14,
     title: '"Bed of Bones" - Single',
     artist: 'Femia',
-    role: ['studio-assistant'],
+    role: ['music-producer', 'guitar-player', 'bass-player', 'studio-assistant'],
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/60ErzDJpPjd9e3xR71yXtV?si=f574e9a455114f4a',
     spotifyId: '60ErzDJpPjd9e3xR71yXtV',
-    image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80',
-    description: 'Recording studio assistance',
+    image: 'https://i.scdn.co/image/ab67616d0000b2734d4d4d4d4d4d4d4d4d4d4d4d',
+    description: 'Arrangement, production, guitar/bass performance, and studio assistance',
     year: 2021
   },
   {
     id: 15,
     title: '"Can\'t Love You Anyless" - Single',
     artist: 'Femia',
-    role: ['studio-assistant'],
+    role: ['music-producer', 'guitar-player', 'bass-player', 'studio-assistant'],
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/1Rk7tHPheeyQhVADu3F3yS?si=b7022179e5c348eb',
     spotifyId: '1Rk7tHPheeyQhVADu3F3yS',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
-    description: 'Recording studio assistance',
+    image: 'https://i.scdn.co/image/ab67616d0000b2736c6c6c6c6c6c6c6c6c6c6c6c',
+    description: 'Arrangement, production, guitar/bass performance, and studio assistance',
     year: 2021
   },
   {
@@ -203,7 +203,7 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/6yoveVjzC2kndMJPOBz71a?si=b9875a28c50d4582',
     spotifyId: '6yoveVjzC2kndMJPOBz71a',
-    image: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&q=80',
+    image: 'https://i.scdn.co/image/ab67616d0000b2739a9a9a9a9a9a9a9a9a9a9a9a',
     description: 'Arrangement, production, guitar/bass performance, and studio assistance',
     year: 2020
   },
