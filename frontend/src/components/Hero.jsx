@@ -15,9 +15,9 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background with striped photo reveal */}
-      <div className="absolute inset-0 z-0">
-        {/* The photo - grayscale, visible through stripes */}
+      {/* Background with animated striped photo reveal */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* The photo - grayscale */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale"
           style={{
@@ -27,9 +27,9 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* Thick horizontal stripes mask - photo visible in gaps */}
+        {/* Animated sliding + tilting stripes mask */}
         <div 
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none animate-stripes"
           style={{
             backgroundImage: `repeating-linear-gradient(
               0deg,
@@ -38,6 +38,7 @@ const Hero = () => {
               transparent 25px,
               transparent 45px
             )`,
+            backgroundSize: '100% 70px',
           }}
         ></div>
         
