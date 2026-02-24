@@ -24,10 +24,9 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pt-32 pb-20">
         {/* Small intro text */}
         <p 
-          className="font-mono text-[#00f0ff] text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-in-up"
+          className="font-mono text-[#a855f7] text-sm tracking-[0.3em] uppercase mb-6 opacity-0 animate-fade-in-up"
           data-testid="hero-intro"
         >
-          Berlin-based
         </p>
 
         {/* Name - MASSIVE lowercase */}
@@ -36,7 +35,7 @@ const Hero = () => {
           data-testid="hero-name"
         >
           <span className="block">zapoida</span>
-          <span className="block text-[#00f0ff]">francis</span>
+          <span className="block text-[#a855f7]">francis</span>
         </h1>
 
         {/* Description */}
@@ -75,7 +74,7 @@ const Hero = () => {
               className="font-display text-4xl md:text-5xl lg:text-6xl text-[#f0f0e8] mx-8 flex items-center"
             >
               {role}
-              <span className="text-[#00f0ff] mx-8 text-2xl">●</span>
+              <span className="text-[#a855f7] mx-8 text-2xl">●</span>
             </span>
           ))}
         </div>
