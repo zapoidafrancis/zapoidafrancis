@@ -31,7 +31,7 @@ export const works = [
     type: 'spotify-album',
     spotifyUrl: 'https://open.spotify.com/album/596AsVsJfeo5DOQGAve8Ol?si=vrsxhHXcTJW19fJERGiz2g',
     spotifyId: '596AsVsJfeo5DOQGAve8Ol',
-    image: 'https://i.scdn.co/image/ab67616d0000b273b80c2f1c5c3e6de8e3f5a96f',
+    image: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f42a4e0541fb3df25f11331b',
     description: 'Mix the full EP and perform guitar on "28 Days Later"',
     year: 2025
   },
