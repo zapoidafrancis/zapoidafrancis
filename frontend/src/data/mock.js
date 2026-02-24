@@ -231,7 +231,7 @@ export const works = [
     artist: 'Recording Sessions & Tours',
     role: ['guitar-player'],
     type: 'no-link',
-    image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/m44v9yhj_daudia.jpg',
     description: 'Guitar performance for recording sessions and live tours',
     year: 2019
   }
