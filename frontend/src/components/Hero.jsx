@@ -15,24 +15,15 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background with photo-to-neon animation */}
+      {/* Background photo with filter transitions */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Regular photo layer */}
+        {/* Photo with animated filters: grayscale > negative > heatmap > color */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale animate-photo-layer"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-photo-filters"
           style={{
             backgroundImage: 'url(https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg)',
             backgroundPosition: 'center 15%',
-          }}
-        ></div>
-        
-        {/* Neon line art layer */}
-        <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat animate-neon-layer"
-          style={{
-            backgroundImage: 'url(https://static.prod-images.emergentagent.com/jobs/1649a5ec-c60b-476c-b815-ab79b57e6169/images/2896a790c17074b76b8234700f36ff0e896c15fcb688d08199edcd4e4a42f847.png)',
-            backgroundPosition: 'right 10% center',
-            backgroundSize: 'auto 90%',
+            opacity: 0.5,
           }}
         ></div>
         
