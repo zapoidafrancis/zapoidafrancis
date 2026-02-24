@@ -123,12 +123,14 @@ const Works = () => {
   };
 
   return (
-    <section id="works" className="min-h-screen bg-[#0a0a0a] text-white py-20 px-4">
+    <section id="works" className="min-h-screen bg-black text-white py-32 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-12">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4">Selected Works</h2>
-          <p className="text-xl text-gray-400">Projects spanning multiple roles in audio production</p>
+        {/* Section Header - BOLD with animation */}
+        <div className="mb-20">
+          <h2 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter animate-pulse-glow uppercase">
+            Selected Works
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-400 font-light">Projects spanning multiple roles in audio production</p>
         </div>
 
         {/* Role Filters */}
