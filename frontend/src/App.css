@@ -58,7 +58,7 @@ iframe[src*="spotify"] {
   background: var(--accent);
   color: var(--bg-primary);
   border-radius: 0;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -69,7 +69,7 @@ iframe[src*="spotify"] {
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   border-radius: 0;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
 }
 
