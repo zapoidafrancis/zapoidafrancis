@@ -35,7 +35,7 @@ const Hero = () => {
           data-testid="hero-name"
         >
           <span className="block">zapoida</span>
-          <span className="block text-[#00ff88]">francis</span>
+          <span className="block text-[#a855f7]">francis</span>
         </h1>
 
         {/* Description */}
@@ -74,7 +74,7 @@ const Hero = () => {
               className="font-display text-4xl md:text-5xl lg:text-6xl text-[#f0f0e8] mx-8 flex items-center"
             >
               {role}
-              <span className="text-[#00ff88] mx-8 text-2xl">●</span>
+              <span className="text-[#a855f7] mx-8 text-2xl">●</span>
             </span>
           ))}
         </div>
