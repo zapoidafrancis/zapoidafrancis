@@ -281,13 +281,13 @@ export const cvData = {
       degree: "Bachelor's Degree (Hons) in Music Production",
       institution: "BIMM Institute, Berlin",
       year: "2021 - 2024",
-      details: "Final Project: 74/80. Coursework: Audio Production, Sound Engineering, Mixing and Mastering, Sound Design, Cultural Studies in Creative Industries."
+      details: "Audio Production, Sound Engineering, Mixing and Mastering, Sound Design, Cultural Studies in Creative Industries."
     },
     {
       degree: "Bachelor's Degree in Jazz Guitar",
       institution: "Conservatorio 'N. Sala', Benevento",
       year: "2017 - 2020",
-      details: "110/110 cum laude. Coursework: Guitar Performance, Music Composition and Arrangement, History of Music, Classical and Modern Music Knowledge, Orchestra Managing."
+      details: "Guitar Performance, Music Composition and Arrangement, History of Music, Classical and Modern Music Knowledge, Big Band Arranging."
     }
   ],
   skills: [
