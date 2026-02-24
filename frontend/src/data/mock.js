@@ -32,7 +32,7 @@ export const works = [
     spotifyUrl: 'https://open.spotify.com/album/596AsVsJfeo5DOQGAve8Ol?si=vrsxhHXcTJW19fJERGiz2g',
     spotifyId: '596AsVsJfeo5DOQGAve8Ol',
     image: 'https://i.scdn.co/image/ab67616d0000b273b80c2f1c5c3e6de8e3f5a96f',
-    description: 'Mixed the full EP and performed guitar on "28 Days Later"',
+    description: 'Mix the full EP and perform guitar on "28 Days Later"',
     year: 2025
   },
   {
@@ -66,8 +66,8 @@ export const works = [
     type: 'spotify-track',
     spotifyUrl: 'https://open.spotify.com/track/0vpVDyoXXEdvFpFBynuFrA?si=d15d5aca05da4ea9',
     spotifyId: '0vpVDyoXXEdvFpFBynuFrA',
-    image: 'https://i.scdn.co/image/ab67616d0000b273f5e5e5e5e5e5e5e5e5e5e5e5',
-    description: 'Mixed and mastered',
+    image: 'https://i.scdn.co/image/ab67616d0000b273f5e5e5c6e5a5e5e5e5e5e5e5',
+    description: 'Mix and master',
     year: 2024
   },
   {
@@ -91,7 +91,7 @@ export const works = [
     spotifyUrl: 'https://open.spotify.com/track/2TSS7JTUJgWllTiwqFXaJg?si=549bf8dd0ba84bd2',
     spotifyId: '2TSS7JTUJgWllTiwqFXaJg',
     image: 'https://i.scdn.co/image/ab67616d0000b2738a8a8a8a8a8a8a8a8a8a8a8a',
-    description: 'Mastered',
+    description: 'Master',
     year: 2024
   },
   {
@@ -103,7 +103,7 @@ export const works = [
     spotifyUrl: 'https://open.spotify.com/track/4q8AV8e9jbJjGG95ImMtHt?si=bc2125ce0f744a65',
     spotifyId: '4q8AV8e9jbJjGG95ImMtHt',
     image: 'https://i.scdn.co/image/ab67616d0000b2737b7b7b7b7b7b7b7b7b7b7b7b',
-    description: 'Mastered',
+    description: 'Master',
     year: 2024
   },
   {
@@ -114,7 +114,7 @@ export const works = [
     type: 'bandcamp',
     bandcampUrl: 'https://refugeworldwide.bandcamp.com/track/sky-deep-milky-boom-boom',
     image: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&q=80',
-    description: 'Mixed and mastered',
+    description: 'Mix and master',
     year: 2024
   },
   {
@@ -136,7 +136,7 @@ export const works = [
     type: 'link',
     externalUrl: 'https://www.zdf.de/serien/loving-her',
     image: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=800&q=80',
-    description: 'Composed and produced original soundtrack pieces (collaboration with Sky Deep)',
+    description: 'Compose and produce original soundtrack pieces (collaboration with Sky Deep)',
     year: 2023
   },
   {
@@ -146,7 +146,7 @@ export const works = [
     role: ['sound-designer', 'music-producer'],
     type: 'no-link',
     image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
-    description: 'Producer, sound designer, creator, and host for immersive sound and visual installation at Berlin modern art museum',
+    description: 'Produce, sound design, create, and host immersive sound and visual installation at Berlin modern art museum',
     year: 2022
   },
   {
@@ -209,8 +209,8 @@ export const works = [
   },
   {
     id: 17,
-    title: 'Recording Sessions & Tours',
-    artist: 'Daudia',
+    title: 'Daudia',
+    artist: 'Recording Sessions & Tours',
     role: ['guitar-player'],
     type: 'no-link',
     image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=800&q=80',
@@ -219,13 +219,13 @@ export const works = [
   },
   {
     id: 18,
-    title: 'Live Tours',
-    artist: 'Marko Bošnjak',
+    title: 'Marko Bošnjak',
+    artist: 'Live Tours',
     role: ['guitar-player'],
     type: 'no-link',
     image: 'https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&q=80',
     description: 'Touring live as guitar player',
-    year: 2024
+    year: 2026
   }
 ];
 
