@@ -95,7 +95,7 @@ body {
   animation: stripeSlide 8s linear infinite, stripeTilt 12s ease-in-out infinite;
 }
 
-/* Continuous flowing transitions - split always on, strong negative */
+/* Continuous flowing transitions - slower split, stronger negative */
 @keyframes greyFlow {
   0%, 100% { opacity: 0.5; filter: grayscale(100%); }
   45%, 55% { opacity: 0; filter: grayscale(100%); }
@@ -103,43 +103,52 @@ body {
 
 @keyframes negativeFlow {
   0%, 100% { opacity: 0; }
-  45%, 55% { opacity: 0.6; }
+  45%, 55% { opacity: 0.7; }
 }
 
-/* RGB split - maximum when positive, minimum (but visible) when negative */
+/* RGB split - slow smooth movement */
 @keyframes rgbRedFlow {
-  0%, 100% { opacity: 0.5; transform: translateX(-35px); }
-  45%, 55% { opacity: 0.2; transform: translateX(-10px); }
+  0% { opacity: 0.45; transform: translateX(-30px); }
+  25% { opacity: 0.5; transform: translateX(-38px); }
+  45%, 55% { opacity: 0.2; transform: translateX(-8px); }
+  75% { opacity: 0.5; transform: translateX(-38px); }
+  100% { opacity: 0.45; transform: translateX(-30px); }
 }
 
 @keyframes rgbCyanFlow {
-  0%, 100% { opacity: 0.5; transform: translateX(35px); }
-  45%, 55% { opacity: 0.2; transform: translateX(10px); }
+  0% { opacity: 0.45; transform: translateX(30px); }
+  25% { opacity: 0.5; transform: translateX(38px); }
+  45%, 55% { opacity: 0.2; transform: translateX(8px); }
+  75% { opacity: 0.5; transform: translateX(38px); }
+  100% { opacity: 0.45; transform: translateX(30px); }
 }
 
 @keyframes rgbBlueFlow {
-  0%, 100% { opacity: 0.4; transform: translateY(-22px); }
-  45%, 55% { opacity: 0.15; transform: translateY(-6px); }
+  0% { opacity: 0.35; transform: translateY(-18px); }
+  25% { opacity: 0.4; transform: translateY(-25px); }
+  45%, 55% { opacity: 0.15; transform: translateY(-5px); }
+  75% { opacity: 0.4; transform: translateY(-25px); }
+  100% { opacity: 0.35; transform: translateY(-18px); }
 }
 
 .animate-grey-flow {
-  animation: greyFlow 16s ease-in-out infinite;
+  animation: greyFlow 20s ease-in-out infinite;
 }
 
 .animate-negative-flow {
-  animation: negativeFlow 16s ease-in-out infinite;
+  animation: negativeFlow 20s ease-in-out infinite;
 }
 
 .animate-rgb-red-flow {
-  animation: rgbRedFlow 16s ease-in-out infinite;
+  animation: rgbRedFlow 20s ease-in-out infinite;
 }
 
 .animate-rgb-cyan-flow {
-  animation: rgbCyanFlow 16s ease-in-out infinite;
+  animation: rgbCyanFlow 20s ease-in-out infinite;
 }
 
 .animate-rgb-blue-flow {
-  animation: rgbBlueFlow 16s ease-in-out infinite;
+  animation: rgbBlueFlow 20s ease-in-out infinite;
 }
 
 /* Infinite marquee animation - faster */
