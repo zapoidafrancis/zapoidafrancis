@@ -29,13 +29,13 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* Negative layer - fades in/out */}
+        {/* Negative layer - high contrast bleach effect */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative-flow"
           style={{
             backgroundImage: `url(${photoUrl})`,
             backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%) invert(100%)',
+            filter: 'grayscale(100%) invert(100%) contrast(1.4) brightness(1.1)',
           }}
         ></div>
         
