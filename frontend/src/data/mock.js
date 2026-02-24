@@ -149,7 +149,7 @@ export const works = [
     role: ['music-composer', 'music-producer'],
     type: 'link',
     externalUrl: 'https://www.zdf.de/serien/loving-her-102?staffel=2',
-    image: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=800&q=80',
+    image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/970yy8c1_flashbacks.jpg',
     description: 'Composition and production of two original pieces of the soundtrack for international broadcasting (collaboration with Sky Deep)',
     year: 2023
   },
