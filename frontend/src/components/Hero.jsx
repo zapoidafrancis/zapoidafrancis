@@ -16,99 +16,78 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col justify-center bg-[#0d0d0d] text-[#f0f0e8] relative overflow-hidden">
-      {/* Background photo layers - continuous flow, split always on */}
+      {/* Background - pure black */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         
-        {/* Grayscale base layer */}
+        {/* Container for figure with split - masked to center area */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-grey-flow"
+          className="absolute inset-0"
           style={{
-            backgroundImage: `url(${photoUrl})`,
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%)',
+            maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%)',
           }}
-        ></div>
-        
-        {/* Negative layer - dramatic high contrast bleach effect */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-negative-flow"
-          style={{
-            backgroundImage: `url(${photoUrl})`,
-            backgroundPosition: 'center 15%',
-            filter: 'grayscale(100%) invert(100%) contrast(1.8) brightness(1.15)',
-          }}
-        ></div>
-        
-        {/* RGB Magenta - always on, shifts left */}
-        <img 
-          src={photoUrl}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-rgb-red-flow"
-          style={{
-            objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1.2)',
-            mixBlendMode: 'screen',
-          }}
-        />
-        <div 
-          className="absolute inset-0 animate-rgb-red-flow pointer-events-none"
-          style={{
-            background: 'rgba(255, 0, 120, 0.5)',
-            mixBlendMode: 'multiply',
-          }}
-        ></div>
-        
-        {/* RGB Cyan - always on, shifts right */}
-        <img 
-          src={photoUrl}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-rgb-cyan-flow"
-          style={{
-            objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1.2)',
-            mixBlendMode: 'screen',
-          }}
-        />
-        <div 
-          className="absolute inset-0 animate-rgb-cyan-flow pointer-events-none"
-          style={{
-            background: 'rgba(0, 255, 255, 0.5)',
-            mixBlendMode: 'multiply',
-          }}
-        ></div>
-        
-        {/* RGB Blue - always on, shifts up */}
-        <img 
-          src={photoUrl}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-rgb-blue-flow"
-          style={{
-            objectPosition: 'center 15%',
-            filter: 'grayscale(100%) brightness(1.2)',
-            mixBlendMode: 'screen',
-          }}
-        />
-        <div 
-          className="absolute inset-0 animate-rgb-blue-flow pointer-events-none"
-          style={{
-            background: 'rgba(100, 0, 255, 0.4)',
-            mixBlendMode: 'multiply',
-          }}
-        ></div>
+        >
+          {/* Base grayscale layer */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%)',
+              opacity: 0.35,
+            }}
+          ></div>
+          
+          {/* RGB Magenta - shifts left */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-red-slow"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(5) brightness(0.9)',
+              opacity: 0.4,
+              mixBlendMode: 'screen',
+            }}
+          ></div>
+          
+          {/* RGB Cyan - shifts right */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-cyan-slow"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(5) brightness(0.9)',
+              opacity: 0.4,
+              mixBlendMode: 'screen',
+            }}
+          ></div>
+          
+          {/* RGB Blue/Violet - shifts up */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-rgb-blue-slow"
+            style={{
+              backgroundImage: `url(${photoUrl})`,
+              backgroundPosition: 'center 15%',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(4) brightness(0.9)',
+              opacity: 0.3,
+              mixBlendMode: 'screen',
+            }}
+          ></div>
+        </div>
         
         {/* Grain texture */}
         <div 
-          className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 opacity-12 mix-blend-overlay pointer-events-none"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
           }}
         ></div>
         
         {/* Left gradient for text */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/50 to-transparent"></div>
         
         {/* Bottom gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-[#0d0d0d]/20"></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10 pt-32 pb-20">
