@@ -34,11 +34,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Mono font for details/accents */
-.font-mono {
-  font-family: 'Space Mono', monospace;
-}
-
 /* Film grain texture overlay */
 .grain-overlay {
   position: fixed;
