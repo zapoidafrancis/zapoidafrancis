@@ -90,14 +90,14 @@ const Hero = () => {
       setSplit({ x: 20, y: 12 });
     } else {
       setIsTouching(false);
-      setSplit({ x: 0, y: 0 });
+      setSplit({ x: 8, y: 5 });
     }
   };
 
   const handleTouchEnd = () => {
     if (isMobile) {
       setIsTouching(false);
-      setSplit({ x: 0, y: 0 });
+      setSplit({ x: 8, y: 5 });
     }
   };
 
