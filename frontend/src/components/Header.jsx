@@ -27,7 +27,7 @@ const Header = () => {
       {/* Blur overlay when mobile menu is open */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 backdrop-blur-md z-40 md:hidden"
+          className="fixed inset-0 bg-[#0d0d0d]/70 backdrop-blur-md z-40 md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
