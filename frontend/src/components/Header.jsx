@@ -27,7 +27,7 @@ const Header = () => {
       {/* Blur overlay when mobile menu is open */}
       {isMobileMenuOpen && (
         <div 
-          className="fixed inset-0 bg-[#0d0d0d]/60 backdrop-blur-sm z-40 md:hidden"
+          className="fixed inset-0 backdrop-blur-md z-40 md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -67,7 +67,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-[#f0f0e8] hover:text-[#a855f7] transition-colors p-2"
+              className="md:hidden text-[#f0f0e8] hover:text-[#a855f7] transition-colors p-2 relative z-50"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="mobile-menu-toggle"
             >
@@ -77,12 +77,12 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
-            <nav className="md:hidden fixed left-0 right-0 bottom-0 top-[73px] bg-[#0d0d0d]/95 backdrop-blur-md px-6 py-8 flex flex-col gap-6 z-50">
+            <nav className="md:hidden fixed left-0 right-0 top-[73px] px-6 py-8 flex flex-col gap-6 z-50">
               {navLinks.map(link => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm tracking-[0.2em] uppercase text-[#a0a0a0] hover:text-[#a855f7] transition-colors"
+                  className="text-sm tracking-[0.2em] uppercase text-[#f0f0e8] hover:text-[#a855f7] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
