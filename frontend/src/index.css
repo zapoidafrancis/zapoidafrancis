@@ -122,16 +122,16 @@ body {
 }
 
 .animate-marquee-seamless {
-  animation: marquee-seamless 20s linear infinite;
+  animation: marquee-seamless 30s linear infinite;
 }
 
-/* Mobile: faster marquee */
+/* Mobile: slightly faster marquee */
 @media (max-width: 767px) {
   .animate-marquee-fast {
-    animation: marquee 5s linear infinite;
+    animation: marquee 8s linear infinite;
   }
   .animate-marquee-seamless {
-    animation: marquee-seamless 12s linear infinite;
+    animation: marquee-seamless 20s linear infinite;
   }
 }
 
