@@ -24,7 +24,7 @@ const Hero = () => {
     'multimedia artist'
   ];
 
-  const marqueeRoles = [...roles, ...roles];
+  const marqueeRoles = [...roles, ...roles, ...roles, ...roles];
   const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
 
   // Check if touch is in the figure zone (center-right area where the body/face is)
