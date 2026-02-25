@@ -103,8 +103,8 @@ body {
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-/* Infinite marquee animation - faster */
-@keyframes marquee {
+/* Infinite marquee animation - seamless loop */
+@keyframes marquee-seamless {
   0% {
     transform: translateX(0);
   }
@@ -121,15 +121,23 @@ body {
   animation: marquee 12s linear infinite;
 }
 
-/* Mobile: faster and smaller marquee */
+.animate-marquee-seamless {
+  animation: marquee-seamless 20s linear infinite;
+}
+
+/* Mobile: faster marquee */
 @media (max-width: 767px) {
   .animate-marquee-fast {
     animation: marquee 5s linear infinite;
   }
+  .animate-marquee-seamless {
+    animation: marquee-seamless 12s linear infinite;
+  }
 }
 
 .animate-marquee:hover,
-.animate-marquee-fast:hover {
+.animate-marquee-fast:hover,
+.animate-marquee-seamless:hover {
   animation-play-state: paused;
 }
 
