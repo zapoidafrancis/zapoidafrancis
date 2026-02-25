@@ -101,10 +101,10 @@ const Hero = () => {
     }
   };
 
-  // Mobile: no split by default (0), split only when touching
-  // Desktop: subtle base split (8), more when hovering near head
-  const baseSplit = isMobile ? 0 : 8;
-  const baseSplitY = isMobile ? 0 : 5;
+  // Mobile: base split same as desktop (8px), increases to 20px when touching
+  // Desktop: base split 8px, increases when hovering near head
+  const baseSplit = 8;
+  const baseSplitY = 5;
 
   // Default split values
   const redX = -(split.x || baseSplit);
