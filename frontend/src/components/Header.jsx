@@ -77,7 +77,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
-            <nav className="md:hidden fixed left-0 right-0 top-[73px] bg-[#0d0d0d]/98 backdrop-blur-md border-b border-[#2a2a2a] px-6 py-6 flex flex-col gap-5 z-50">
+            <nav className="md:hidden fixed left-0 right-0 bottom-0 top-[73px] bg-[#0d0d0d]/95 backdrop-blur-md px-6 py-8 flex flex-col gap-6 z-50">
               {navLinks.map(link => (
                 <a
                   key={link.href}
