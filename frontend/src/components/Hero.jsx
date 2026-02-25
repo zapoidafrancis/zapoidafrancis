@@ -234,16 +234,18 @@ const Hero = () => {
       </div>
 
       <div className="w-full overflow-hidden border-t border-b border-[#2a2a2a] py-4 md:py-6 mt-auto relative z-10">
-        <div className="animate-marquee-fast flex whitespace-nowrap items-center">
-          {marqueeRoles.map((role, idx) => (
-            <span 
-              key={idx} 
-              className="font-display text-2xl md:text-5xl lg:text-6xl text-[#f0f0e8] flex items-center"
-            >
-              <span className="mx-3 md:mx-6">{role}</span>
-              <span className="text-[#a855f7] text-xs mx-1 md:mx-2">●</span>
-            </span>
-          ))}
+        <div className="marquee-container flex">
+          <div className="animate-marquee-seamless flex whitespace-nowrap items-center">
+            {marqueeRoles.map((role, idx) => (
+              <span 
+                key={idx} 
+                className="font-display text-2xl md:text-5xl lg:text-6xl text-[#f0f0e8] flex items-center flex-shrink-0"
+              >
+                <span className="mx-3 md:mx-6">{role}</span>
+                <span className="text-[#a855f7] text-xs mx-1 md:mx-2">●</span>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
