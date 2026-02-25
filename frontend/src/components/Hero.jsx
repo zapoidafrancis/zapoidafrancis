@@ -4,6 +4,7 @@ import { heroData } from '../data/mock';
 const Hero = () => {
   const [split, setSplit] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
+  const [isTouching, setIsTouching] = useState(false);
   const heroRef = useRef(null);
 
   // Detect mobile viewport
@@ -26,29 +27,29 @@ const Hero = () => {
   const marqueeRoles = [...roles, ...roles];
   const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
 
+  // Check if touch is in the figure zone (center-right area where the body/face is)
+  const isInFigureZone = (x, y) => {
+    // Figure is roughly in center-right, upper half of the hero
+    return x > 0.3 && x < 0.9 && y > 0.1 && y < 0.7;
+  };
+
   const handleMouseMove = (e) => {
-    // No interactive split on mobile
+    // Desktop only
     if (isMobile || !heroRef.current) return;
     
     const rect = heroRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width; // 0 to 1
-    const y = (e.clientY - rect.top) / rect.height; // 0 to 1
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
     
-    // Target zone: upper-center (where the head is)
-    // Center X is around 0.65 (right side of screen), upper Y is around 0.25
     const targetX = 0.65;
     const targetY = 0.25;
     
-    // Calculate distance from target zone (0 = on target, 1 = far away)
     const distX = Math.abs(x - targetX);
     const distY = Math.abs(y - targetY);
     const distance = Math.sqrt(distX * distX + distY * distY);
     
-    // Invert: closer to target = more effect (max at distance 0)
-    // Max distance is roughly 0.8, so normalize and invert
     const proximity = Math.max(0, 1 - (distance / 0.5));
     
-    // Map proximity to split range: 8px base + up to 20px more when on target
     const splitAmount = 8 + (proximity * 20);
     const splitY = 5 + (proximity * 15);
     
@@ -61,11 +62,51 @@ const Hero = () => {
     }
   };
 
-  // Mobile gets minimal fixed split, desktop gets interactive
-  const baseSplit = isMobile ? 4 : 8;
-  const baseSplitY = isMobile ? 3 : 5;
+  // Mobile touch handlers
+  const handleTouchStart = (e) => {
+    if (!isMobile || !heroRef.current) return;
+    
+    const touch = e.touches[0];
+    const rect = heroRef.current.getBoundingClientRect();
+    const x = (touch.clientX - rect.left) / rect.width;
+    const y = (touch.clientY - rect.top) / rect.height;
+    
+    if (isInFigureZone(x, y)) {
+      setIsTouching(true);
+      setSplit({ x: 20, y: 12 });
+    }
+  };
 
-  // Default split values (subtle when not hovering near head)
+  const handleTouchMove = (e) => {
+    if (!isMobile || !heroRef.current) return;
+    
+    const touch = e.touches[0];
+    const rect = heroRef.current.getBoundingClientRect();
+    const x = (touch.clientX - rect.left) / rect.width;
+    const y = (touch.clientY - rect.top) / rect.height;
+    
+    if (isInFigureZone(x, y)) {
+      setIsTouching(true);
+      setSplit({ x: 20, y: 12 });
+    } else {
+      setIsTouching(false);
+      setSplit({ x: 0, y: 0 });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isMobile) {
+      setIsTouching(false);
+      setSplit({ x: 0, y: 0 });
+    }
+  };
+
+  // Mobile: no split by default (0), split only when touching
+  // Desktop: subtle base split (8), more when hovering near head
+  const baseSplit = isMobile ? 0 : 8;
+  const baseSplitY = isMobile ? 0 : 5;
+
+  // Default split values
   const redX = -(split.x || baseSplit);
   const cyanX = split.x || baseSplit;
   const blueY = -(split.y || baseSplitY);
