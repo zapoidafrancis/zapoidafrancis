@@ -124,7 +124,7 @@ body {
 /* Mobile: faster and smaller marquee */
 @media (max-width: 767px) {
   .animate-marquee-fast {
-    animation: marquee 8s linear infinite;
+    animation: marquee 5s linear infinite;
   }
 }
 
