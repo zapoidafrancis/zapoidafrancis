@@ -3,6 +3,24 @@ import { Briefcase, GraduationCap, Download, MapPin } from 'lucide-react';
 import { cvData } from '../data/mock';
 
 const CV = () => {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(cvData.pdfUrl);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'CV_Francesco_M_De_Lucia.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      // Fallback: open in new tab if download fails
+      window.open(cvData.pdfUrl, '_blank');
+    }
+  };
+
   return (
     <section id="cv" className="min-h-screen bg-[#141414] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-4xl mx-auto">
@@ -81,15 +99,14 @@ const CV = () => {
 
         {/* Download CV Button */}
         <div className="flex justify-center">
-          <a
-            href={cvData.pdfUrl}
-            download="CV_Francesco_M_De_Lucia.pdf"
+          <button
+            onClick={handleDownload}
             className="btn-filled px-10 py-4 text-sm flex items-center gap-3"
             data-testid="download-cv-btn"
           >
             <Download className="w-5 h-5" />
             Download Full CV
-          </a>
+          </button>
         </div>
       </div>
     </section>
