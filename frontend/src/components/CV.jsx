@@ -3,22 +3,16 @@ import { Briefcase, GraduationCap, Download, MapPin } from 'lucide-react';
 import { cvData } from '../data/mock';
 
 const CV = () => {
-  const handleDownload = async () => {
-    try {
-      const response = await fetch(cvData.pdfUrl);
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'CV_Francesco_M_De_Lucia.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      // Fallback: open in new tab if download fails
-      window.open(cvData.pdfUrl, '_blank');
-    }
+  const handleDownload = () => {
+    // Create a temporary link and click it
+    const link = document.createElement('a');
+    link.href = cvData.pdfUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    // This will open in new tab on mobile, download on desktop
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
