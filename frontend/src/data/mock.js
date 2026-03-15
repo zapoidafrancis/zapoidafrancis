@@ -333,32 +333,28 @@ export const references = [
     role: "Founder & Managing Director",
     company: "KHROMA Vienna / The Lighthouse of Digital Art",
     quote: "Francesco demonstrates high technical competence, reliability, and self-responsibility. His structured work method and professional interaction with teams and artists make him a valuable asset.",
-    date: "Berlin, 05.07.2025",
-    documentUrl: "#"
+    pdfUrl: "/documents/Reference_Lighthouse.pdf"
   },
   {
     name: "Sky Deep",
     role: "Multi-Media Technical Artist",
     company: null,
     quote: "Francesco was an invaluable asset who consistently demonstrated exceptional skill, dedication, and professionalism. His understanding of music arrangement, studio equipment, and audio editing software is remarkable.",
-    date: "Berlin, 17.04.2024",
-    documentUrl: "#"
+    pdfUrl: "/documents/Reference_Sky_Deep.pdf"
   },
   {
     name: "Dario Besirevic",
     role: "Singer/Songwriter / Musical Director / Performer",
     company: null,
     quote: "Francesco was a great asset in the composition and production of my debut single. His professionalism, efficient project execution, and outstanding communication skills created the perfect balance.",
-    date: "April 17th, 2024",
-    documentUrl: "#"
+    pdfUrl: "/documents/Reference_Dario.pdf"
   },
   {
     name: "Nic Storm",
     role: "Music Producer / Recording Artist",
     company: null,
     quote: "Francesco's performance as a mastering engineer was exemplary. His excellent communication skills and prompt understanding of vision consistently resulted in high-quality work that exceeded expectations.",
-    date: "May 5th, 2024",
-    documentUrl: "#"
+    pdfUrl: "/documents/Reference_Nic.pdf"
   }
 ];
 
