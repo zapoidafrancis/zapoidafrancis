@@ -129,28 +129,26 @@ const Hero = () => {
       {/* Background - pure black */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         
-        {/* Container for figure with split - masked to hide right edge */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 50%, transparent 70%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 50%, transparent 70%)',
-          }}
-        >
+        {/* Container for figure with split */}
+        <div className="absolute inset-0 overflow-hidden">
           {/* Base grayscale layer */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%)',
               opacity: 0.35,
+              top: '-20px',
+              left: '-40px',
+              right: '-40px',
+              bottom: '-20px',
             }}
           ></div>
           
           {/* RGB Magenta - shifts left */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat rgb-layer-red"
+            className="absolute bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
@@ -158,12 +156,16 @@ const Hero = () => {
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `translateX(${redX}px)`,
+              top: '-20px',
+              left: '-40px',
+              right: '-40px',
+              bottom: '-20px',
             }}
           ></div>
           
           {/* RGB Cyan - shifts right */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat rgb-layer-cyan"
+            className="absolute bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
@@ -171,12 +173,16 @@ const Hero = () => {
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `translateX(${cyanX}px)`,
+              top: '-20px',
+              left: '-40px',
+              right: '-40px',
+              bottom: '-20px',
             }}
           ></div>
           
           {/* RGB Blue/Violet - shifts up */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat rgb-layer-blue"
+            className="absolute bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
@@ -184,6 +190,10 @@ const Hero = () => {
               opacity: 0.3,
               mixBlendMode: 'screen',
               transform: `translateY(${blueY}px)`,
+              top: '-40px',
+              left: '-40px',
+              right: '-40px',
+              bottom: '-20px',
             }}
           ></div>
         </div>
