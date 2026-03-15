@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import fonts - Bold Extended for display, Clean Swiss for body */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+/* Fonts loaded from index.html with display=block to prevent FOUT */
 
 :root {
   /* Berlin Underground Color Palette */
