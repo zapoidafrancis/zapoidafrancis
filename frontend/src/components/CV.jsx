@@ -1,11 +1,9 @@
-import React from 'react';
-import { Briefcase, GraduationCap, Download, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Briefcase, GraduationCap, Download, MapPin, X, Eye } from 'lucide-react';
 import { cvData } from '../data/mock';
 
 const CV = () => {
-  const handleDownloadCV = () => {
-    alert('Download functionality will be available soon for the full CV PDF.');
-  };
+  const [showPreview, setShowPreview] = useState(false);
 
   return (
     <section id="cv" className="min-h-screen bg-[#141414] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
@@ -83,18 +81,69 @@ const CV = () => {
           </div>
         </div>
 
-        {/* Download CV Button */}
+        {/* View CV Button */}
         <div className="flex justify-center">
           <button
-            onClick={handleDownloadCV}
+            onClick={() => setShowPreview(true)}
             className="btn-filled px-10 py-4 text-sm flex items-center gap-3"
-            data-testid="download-cv-btn"
+            data-testid="view-cv-btn"
           >
-            <Download className="w-5 h-5" />
-            Download Full CV
+            <Eye className="w-5 h-5" />
+            View Full CV
           </button>
         </div>
       </div>
+
+      {/* CV Preview Modal */}
+      {showPreview && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+          onClick={() => setShowPreview(false)}
+        >
+          {/* Backdrop with blur */}
+          <div className="absolute inset-0 bg-[#0d0d0d]/80 backdrop-blur-md"></div>
+          
+          {/* Modal Content */}
+          <div 
+            className="relative z-10 w-full max-w-4xl max-h-[90vh] flex flex-col bg-[#141414] border-2 border-[#2a2a2a]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-4 border-b border-[#2a2a2a]">
+              <h3 className="font-display text-xl text-[#f0f0e8]">Curriculum Vitae</h3>
+              <button 
+                onClick={() => setShowPreview(false)}
+                className="text-[#a0a0a0] hover:text-[#a855f7] transition-colors"
+                data-testid="close-cv-modal"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            {/* PDF Viewer */}
+            <div className="flex-1 overflow-hidden bg-white">
+              <iframe
+                src={`${cvData.pdfUrl}#toolbar=0`}
+                className="w-full h-[60vh] md:h-[70vh] bg-white"
+                title="CV Preview"
+              />
+            </div>
+            
+            {/* Modal Footer */}
+            <div className="p-4 border-t border-[#2a2a2a] flex justify-center">
+              <a
+                href={cvData.pdfUrl}
+                download="CV_Francesco_M_De_Lucia.pdf"
+                className="btn-filled px-8 py-3 text-sm flex items-center gap-2"
+                data-testid="download-cv-btn"
+              >
+                <Download className="w-5 h-5" />
+                Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

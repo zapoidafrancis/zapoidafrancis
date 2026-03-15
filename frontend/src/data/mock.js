@@ -238,10 +238,11 @@ export const works = [
 ];
 
 export const cvData = {
+  pdfUrl: "https://customer-assets.emergentagent.com/job_1166aa16-61e5-4966-808c-b4d1eea20275/artifacts/oixezhdk_CV%20Francesco%20M.%20De%20Lucia.pdf",
   experience: [
     {
       title: "Guitar Teacher",
-      company: "Musikschule Behm, Bertheau & Morgenstern, Berlin",
+      company: "Musikschule Behm, Bertheau & Morgenstern",
       period: "Feb 2026 - Present",
       description: "Guitar instruction and music education."
     },
@@ -249,45 +250,45 @@ export const cvData = {
       title: "Founder Member, Audio Engineer, Musician, Sound Artist",
       company: "Affinity Space Design Studio",
       period: "Jan 2025 - Present",
-      description: "Multimedia Design Studio. Audio engineering, sound design, and artistic collaborations."
+      description: "Multimedia design studio. Audio engineering, sound design, artistic collaborations."
+    },
+    {
+      title: "Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
+      company: "Freelance",
+      period: "2019 - Present",
+      description: "Music production, audio engineering, guitar and bass session work, guitar teaching for various clients and projects."
     },
     {
       title: "Venue Sound Technician",
-      company: "The Lighthouse of Digital Arts & New Media Art Center, Berlin",
+      company: "The Lighthouse of Digital Arts & New Media Art Center",
       period: "Apr 2025 - May 2025",
-      description: "Sound technician for digital art museum events, handling setup, soundchecks, and equipment maintenance."
+      description: "Sound technician for digital art museum events, handling setup, soundchecks, equipment maintenance."
     },
     {
       title: "Studio Assistant, Audio Engineer",
-      company: "Sky Deep's Audio Production Studio, Berlin",
+      company: "Sky Deep's Audio Production Studio",
       period: "Mar 2023 - Dec 2024",
-      description: "Studio assistance and audio engineering for soundtracks, audio post-production, mixing, recording, and logistics."
+      description: "Studio assistance and audio engineering for soundtracks, audio post-production, mixing, recording, logistics."
     },
     {
       title: "Guitar Teacher, Studio Assistant, Music Educator",
-      company: "Drop In, Berlin",
+      company: "Drop In (Forum für interkulturelle und politische Bildung)",
       period: "Oct 2022 - Dec 2022",
-      description: "Guitar classes, workshops and studio support for Drop In (Forum für interkulturelle und politische Bildung)."
-    },
-    {
-      title: "Freelance Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
-      company: "Self-Employed",
-      period: "2019 - Present",
-      description: "Music production, audio engineering, guitar and bass session work, and guitar teaching for various clients and projects."
+      description: "Guitar classes, workshops and studio support."
     }
   ],
   education: [
     {
       degree: "Bachelor's Degree (Hons) in Music Production",
-      institution: "BIMM Institute, Berlin (DE)",
-      year: "2021 - 2024",
-      details: "Audio Production, Sound Engineering, Mixing and Mastering, Sound Design, Cultural Studies in Creative Industries."
+      institution: "BIMM Institute",
+      year: "Sep 2021 - Jul 2024",
+      details: "Audio production, sound engineering, mixing and mastering, sound design, cultural studies in the creative industries."
     },
     {
       degree: "Bachelor's Degree in Jazz Guitar",
-      institution: "Conservatory 'N. Sala', Benevento (IT)",
-      year: "2017 - 2020",
-      details: "Guitar Performance, Music Composition and Arrangement, History of Music, Classical and Modern Music Knowledge, Big Band Arranging."
+      institution: "Conservatory 'N. Sala'",
+      year: "Oct 2017 - Oct 2020",
+      details: "Guitar performance, music composition and arrangement, history of music, classical and modern music knowledge, big band arranging."
     }
   ],
   skills: [
