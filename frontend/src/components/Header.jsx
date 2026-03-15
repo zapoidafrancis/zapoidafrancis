@@ -45,10 +45,14 @@ const Header = () => {
             {/* Logo */}
             <a 
               href="#" 
-              className="font-display text-2xl text-[#f0f0e8] hover:text-[#a855f7] transition-colors duration-300"
+              className="hover:opacity-80 transition-opacity duration-300 block"
               data-testid="header-logo"
             >
-              ZF
+              <img 
+                src="/images/logo_zf_white.png" 
+                alt="ZF Logo" 
+                className="h-12 w-auto"
+              />
             </a>
 
             {/* Desktop Navigation */}
