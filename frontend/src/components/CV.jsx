@@ -84,6 +84,8 @@ const CV = () => {
           <a
             href={cvData.pdfUrl}
             download="CV_Francesco_M_De_Lucia.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-filled px-10 py-4 text-sm flex items-center gap-3"
             data-testid="download-cv-btn"
           >
