@@ -3,10 +3,6 @@ import { Download } from 'lucide-react';
 import { references } from '../data/mock';
 
 const References = () => {
-  const handleDownload = (pdfUrl) => {
-    window.open(pdfUrl, '_blank');
-  };
-
   return (
     <section id="references" className="min-h-screen bg-[#0d0d0d] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-6xl mx-auto">
@@ -48,14 +44,17 @@ const References = () => {
                 </div>
 
                 {/* Download Button */}
-                <button
-                  onClick={() => handleDownload(ref.pdfUrl)}
+                <a
+                  href={ref.pdfUrl}
+                  download={`Reference_${ref.name.replace(/\s+/g, '_')}.pdf`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 border-2 border-[#2a2a2a] flex items-center justify-center hover:border-[#a855f7] hover:bg-[#a855f7] hover:text-[#0d0d0d] transition-all duration-300 flex-shrink-0"
                   title="Download Reference Letter"
                   data-testid={`download-ref-${idx}`}
                 >
                   <Download className="w-5 h-5" />
-                </button>
+                </a>
               </div>
             </div>
           ))}
