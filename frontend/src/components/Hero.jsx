@@ -153,6 +153,7 @@ const Hero = () => {
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `scale(1.05) translate3d(${redX}px, 0, 0)`,
+              transition: 'transform 0.3s ease-out',
             }}
           ></div>
           
@@ -166,6 +167,7 @@ const Hero = () => {
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `scale(1.05) translate3d(${cyanX}px, 0, 0)`,
+              transition: 'transform 0.3s ease-out',
             }}
           ></div>
           
@@ -179,6 +181,7 @@ const Hero = () => {
               opacity: 0.3,
               mixBlendMode: 'screen',
               transform: `scale(1.05) translate3d(0, ${blueY}px, 0)`,
+              transition: 'transform 0.3s ease-out',
             }}
           ></div>
         </div>
