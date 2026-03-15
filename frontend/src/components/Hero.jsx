@@ -26,10 +26,10 @@ const Hero = () => {
 
   const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
 
-  // Check if touch is in the figure zone (center-right area where the body/face is)
+  // Check if position is in the figure zone (center area where the body/face is)
   const isInFigureZone = (x, y) => {
-    // Figure is roughly in center-right, upper half of the hero
-    return x > 0.3 && x < 0.9 && y > 0.1 && y < 0.7;
+    // Figure is roughly in center, upper-middle of the hero
+    return x > 0.35 && x < 0.85 && y > 0.1 && y < 0.75;
   };
 
   const handleMouseMove = (e) => {
@@ -40,19 +40,25 @@ const Hero = () => {
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
     
-    const targetX = 0.65;
-    const targetY = 0.25;
-    
-    const distX = Math.abs(x - targetX);
-    const distY = Math.abs(y - targetY);
-    const distance = Math.sqrt(distX * distX + distY * distY);
-    
-    const proximity = Math.max(0, 1 - (distance / 0.5));
-    
-    const splitAmount = 8 + (proximity * 20);
-    const splitY = 5 + (proximity * 15);
-    
-    setSplit({ x: splitAmount, y: splitY });
+    // Only split when cursor is in the center zone (over the figure)
+    if (isInFigureZone(x, y)) {
+      const targetX = 0.6;
+      const targetY = 0.35;
+      
+      const distX = Math.abs(x - targetX);
+      const distY = Math.abs(y - targetY);
+      const distance = Math.sqrt(distX * distX + distY * distY);
+      
+      const proximity = Math.max(0, 1 - (distance / 0.4));
+      
+      const splitAmount = 10 + (proximity * 18);
+      const splitY = 6 + (proximity * 12);
+      
+      setSplit({ x: splitAmount, y: splitY });
+    } else {
+      // Outside center zone - return to base split
+      setSplit({ x: 8, y: 5 });
+    }
   };
 
   const handleMouseLeave = () => {
