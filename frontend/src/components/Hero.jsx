@@ -214,7 +214,7 @@ const Hero = () => {
           className="text-lg md:text-xl max-w-lg text-[#a0a0a0] leading-relaxed mt-12 mb-16 opacity-0 animate-fade-in-up delay-200"
           data-testid="hero-description"
         >
-          Audio professional based in Berlin, blending creativity with technical expertise to craft immersive soundscapes and outstanding{' '}
+          Audio professional based in Berlin, blending<br className="hidden md:inline" /> creativity with technical expertise to craft immersive soundscapes and outstanding{' '}
           <span className="md:inline block">sonic experiences.</span>
         </p>
 
