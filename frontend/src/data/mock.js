@@ -228,7 +228,7 @@ export const works = [
   {
     id: 17,
     title: 'Daudia',
-    artist: 'Electropop duo',
+    artist: 'Electropop Duo',
     role: ['guitar-player'],
     type: 'no-link',
     image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/m44v9yhj_daudia.jpg',
