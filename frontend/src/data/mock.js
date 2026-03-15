@@ -27,7 +27,7 @@ export const works = [
   {
     id: 18,
     title: 'Marko Bošnjak',
-    artist: 'Live Tours',
+    artist: 'Eurovision 2025 Participant',
     role: ['guitar-player'],
     type: 'no-link',
     image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/osnc0ikf_markobosnjakjpeg.jpeg',
@@ -228,7 +228,7 @@ export const works = [
   {
     id: 17,
     title: 'Daudia',
-    artist: 'Recording Sessions & Tours',
+    artist: 'Electropop duo',
     role: ['guitar-player'],
     type: 'no-link',
     image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/m44v9yhj_daudia.jpg',

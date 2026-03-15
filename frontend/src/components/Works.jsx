@@ -6,9 +6,10 @@ const Works = () => {
   const [selectedRole, setSelectedRole] = useState('all');
   const [expandedWork, setExpandedWork] = useState(null);
 
-  const filteredWorks = selectedRole === 'all'
+  const filteredWorks = (selectedRole === 'all'
     ? works
-    : works.filter(work => work.role.includes(selectedRole));
+    : works.filter(work => work.role.includes(selectedRole))
+  ).sort((a, b) => b.year - a.year);
 
   const toggleExpand = (workId) => {
     setExpandedWork(expandedWork === workId ? null : workId);
