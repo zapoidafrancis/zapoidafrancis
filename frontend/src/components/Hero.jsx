@@ -133,8 +133,8 @@ const Hero = () => {
         <div 
           className="absolute inset-0"
           style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 70%, transparent 100%)',
+            maskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 60%, transparent 85%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 60%, transparent 85%)',
           }}
         >
           {/* Base grayscale layer */}
@@ -143,7 +143,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%)',
+              filter: 'grayscale(100%) blur(0.5px)',
               opacity: 0.35,
             }}
           ></div>
@@ -154,7 +154,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(5) brightness(0.9)',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(4) brightness(0.9) blur(0.3px)',
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `translateX(${redX}px)`,
@@ -167,7 +167,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(5) brightness(0.9)',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(4) brightness(0.9) blur(0.3px)',
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `translateX(${cyanX}px)`,
@@ -180,7 +180,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(4) brightness(0.9)',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(3) brightness(0.9) blur(0.3px)',
               opacity: 0.3,
               mixBlendMode: 'screen',
               transform: `translateY(${blueY}px)`,
