@@ -3,6 +3,11 @@ import { Briefcase, GraduationCap, Download, MapPin } from 'lucide-react';
 import { cvData } from '../data/mock';
 
 const CV = () => {
+  const handleDownload = (e) => {
+    e.preventDefault();
+    window.open(cvData.pdfUrl, '_blank');
+  };
+
   return (
     <section id="cv" className="min-h-screen bg-[#141414] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-4xl mx-auto">
@@ -83,9 +88,8 @@ const CV = () => {
         <div className="flex justify-center">
           <a
             href={cvData.pdfUrl}
+            onClick={handleDownload}
             download="CV_Francesco_M_De_Lucia.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-filled px-10 py-4 text-sm flex items-center gap-3"
             data-testid="download-cv-btn"
           >
