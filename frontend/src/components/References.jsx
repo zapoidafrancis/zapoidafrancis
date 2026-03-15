@@ -3,6 +3,15 @@ import { Download } from 'lucide-react';
 import { references } from '../data/mock';
 
 const References = () => {
+  const handleClick = (e, pdfUrl) => {
+    // On mobile, force new tab
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      window.open(pdfUrl, '_blank');
+    }
+    // On desktop, let the download attribute work naturally
+  };
+
   return (
     <section id="references" className="min-h-screen bg-[#0d0d0d] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-6xl mx-auto">
@@ -47,8 +56,7 @@ const References = () => {
                 <a
                   href={ref.pdfUrl}
                   download={`Reference_${ref.name.replace(/\s+/g, '_')}.pdf`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={(e) => handleClick(e, ref.pdfUrl)}
                   className="w-12 h-12 border-2 border-[#2a2a2a] flex items-center justify-center hover:border-[#a855f7] hover:bg-[#a855f7] hover:text-[#0d0d0d] transition-all duration-300 flex-shrink-0"
                   title="Download Reference Letter"
                   data-testid={`download-ref-${idx}`}

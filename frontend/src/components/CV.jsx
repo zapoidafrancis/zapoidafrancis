@@ -3,6 +3,15 @@ import { Briefcase, GraduationCap, Download, MapPin } from 'lucide-react';
 import { cvData } from '../data/mock';
 
 const CV = () => {
+  const handleClick = (e) => {
+    // On mobile, force new tab
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      window.open(cvData.pdfUrl, '_blank');
+    }
+    // On desktop, let the download attribute work naturally
+  };
+
   return (
     <section id="cv" className="min-h-screen bg-[#141414] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-4xl mx-auto">
@@ -84,8 +93,7 @@ const CV = () => {
           <a
             href={cvData.pdfUrl}
             download="CV_Francesco_M_De_Lucia.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={handleClick}
             className="btn-filled px-10 py-4 text-sm flex items-center gap-3"
             data-testid="download-cv-btn"
           >
