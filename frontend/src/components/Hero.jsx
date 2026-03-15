@@ -129,12 +129,12 @@ const Hero = () => {
       {/* Background - pure black */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         
-        {/* Container for figure with split - masked to center area */}
+        {/* Container for figure with split - masked to hide right edge */}
         <div 
           className="absolute inset-0"
           style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 60%, transparent 85%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 60%, transparent 85%)',
+            maskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 50%, transparent 70%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%, black 50%, transparent 70%)',
           }}
         >
           {/* Base grayscale layer */}
@@ -143,7 +143,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) blur(0.5px)',
+              filter: 'grayscale(100%)',
               opacity: 0.35,
             }}
           ></div>
@@ -154,7 +154,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(4) brightness(0.9) blur(0.3px)',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(4) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `translateX(${redX}px)`,
@@ -167,7 +167,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(4) brightness(0.9) blur(0.3px)',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(4) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `translateX(${cyanX}px)`,
@@ -180,7 +180,7 @@ const Hero = () => {
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(3) brightness(0.9) blur(0.3px)',
+              filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(3) brightness(0.9)',
               opacity: 0.3,
               mixBlendMode: 'screen',
               transform: `translateY(${blueY}px)`,
