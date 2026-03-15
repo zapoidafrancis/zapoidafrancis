@@ -107,22 +107,22 @@ body {
 .marquee-track {
   display: inline-flex;
   white-space: nowrap;
-  animation: marquee-slide 20s linear infinite;
+  animation: marquee-slide 25s linear infinite;
 }
 
 @keyframes marquee-slide {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(-100%);
   }
 }
 
 /* Mobile: adjust speed */
 @media (max-width: 767px) {
   .marquee-track {
-    animation: marquee-slide 15s linear infinite;
+    animation-duration: 18s;
   }
 }
 
