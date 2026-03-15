@@ -133,67 +133,52 @@ const Hero = () => {
         <div className="absolute inset-0 overflow-hidden">
           {/* Base grayscale layer */}
           <div 
-            className="absolute bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%)',
               opacity: 0.35,
-              top: '-20px',
-              left: '-40px',
-              right: '-40px',
-              bottom: '-20px',
+              transform: 'scale(1.05)',
             }}
           ></div>
           
           {/* RGB Magenta - shifts left */}
           <div 
-            className="absolute bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(4) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
-              transform: `translateX(${redX}px)`,
-              top: '-20px',
-              left: '-40px',
-              right: '-40px',
-              bottom: '-20px',
+              transform: `scale(1.05) translate3d(${redX}px, 0, 0)`,
             }}
           ></div>
           
           {/* RGB Cyan - shifts right */}
           <div 
-            className="absolute bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(4) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
-              transform: `translateX(${cyanX}px)`,
-              top: '-20px',
-              left: '-40px',
-              right: '-40px',
-              bottom: '-20px',
+              transform: `scale(1.05) translate3d(${cyanX}px, 0, 0)`,
             }}
           ></div>
           
           {/* RGB Blue/Violet - shifts up */}
           <div 
-            className="absolute bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(3) brightness(0.9)',
               opacity: 0.3,
               mixBlendMode: 'screen',
-              transform: `translateY(${blueY}px)`,
-              top: '-40px',
-              left: '-40px',
-              right: '-40px',
-              bottom: '-20px',
+              transform: `scale(1.05) translate3d(0, ${blueY}px, 0)`,
             }}
           ></div>
         </div>
