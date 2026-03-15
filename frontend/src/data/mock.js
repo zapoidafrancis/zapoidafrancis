@@ -238,7 +238,7 @@ export const works = [
 ];
 
 export const cvData = {
-  pdfUrl: "https://customer-assets.emergentagent.com/job_1166aa16-61e5-4966-808c-b4d1eea20275/artifacts/oixezhdk_CV%20Francesco%20M.%20De%20Lucia.pdf",
+  pdfUrl: "/documents/CV_Francesco_M_De_Lucia.pdf",
   experience: [
     {
       title: "Guitar Teacher",
