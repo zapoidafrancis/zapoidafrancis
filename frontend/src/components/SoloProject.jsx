@@ -30,7 +30,7 @@ const SoloProject = () => {
             LOVE LANGUAGE
           </h3>
           <p className="text-[#f0f0e8] text-xl md:text-2xl mb-4">
-            Watch the music short film!
+            Watch the music short film now!
           </p>
           <p className="text-[#a0a0a0] text-lg whitespace-nowrap">
             A multimedia EP and web series created, written and directed by <span className="text-[#f0f0e8]">zapoida francis</span>.
@@ -58,7 +58,7 @@ const SoloProject = () => {
               
               {/* Episode Title */}
               <div className="p-4 border-t border-[#2a2a2a]">
-                <p className="text-[#a855f7] text-lg tracking-wider">{episode.title}</p>
+                <p className="text-[#f0f0e8] text-lg tracking-wider">{episode.title}</p>
               </div>
             </div>
           ))}
