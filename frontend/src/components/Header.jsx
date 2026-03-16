@@ -18,7 +18,7 @@ const Header = () => {
     { href: '#works', label: 'Works' },
     { href: '#cv', label: 'CV' },
     { href: '#references', label: 'References' },
-    { href: '#solo-project', label: 'Solo' },
+    { href: '#solo-project', label: 'Art' },
     { href: '#contact', label: 'Contact' }
   ];
 
