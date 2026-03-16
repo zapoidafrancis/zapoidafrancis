@@ -23,46 +23,7 @@ const SoloProject = () => {
           <div className="w-32 h-0.5 bg-gradient-to-r from-[#a855f7] to-transparent mt-8"></div>
         </div>
 
-        {/* Artist Bio Section */}
-        <div className="mb-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            {/* Photo */}
-            <div className="aspect-square overflow-hidden border-2 border-[#2a2a2a]">
-              <img 
-                src="/images/zapoida_artist.jpg" 
-                alt="zapoida francis" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            
-            {/* Bio */}
-            <div>
-              <h3 className="font-display text-4xl md:text-5xl mb-6">zapoida francis</h3>
-              <div className="text-[#a0a0a0] leading-relaxed space-y-4">
-                <p>
-                  zapoida francis is an artist based in Berlin, Germany. His music blends together introspective, indie songwriting with electronic and hyperpop soundscapes, adding touches of punk rock overtures. He utilises dark sonorities, samples, synthesizers, guitars and layered vocals to express himself through his artistry.
-                </p>
-                <p>
-                  His work feels nostalgic but with fresh overtones, with a distinctive underlying narrative. After releasing two singles: <span className="text-[#f0f0e8]">eyes</span> and <span className="text-[#f0f0e8]">the long run</span> in 2022, he began experimenting with new ways to make art by integrating web3 digital interactive content such as AR/VR and NFTs.
-                </p>
-                <p>
-                  In 2023, alongside the release of <span className="text-[#f0f0e8]">lonely Boy</span>, he created a video game for his listeners to play while streaming the track. The following release, <span className="text-[#f0f0e8]">Indian Tea Party</span>, featured a collaboration with the apparel brand "Alien Cleopatra". The same year, he contributed, in collaboration with Sky Deep, to two songs featured in the soundtrack of the German TV show <span className="text-[#f0f0e8]">Loving Her</span> (zdf neo), including the track <span className="text-[#f0f0e8]">No Mistake</span>.
-                </p>
-                <p>
-                  2024 began with <span className="text-[#f0f0e8]">CHEMIZTRY</span>, a collaboration with Swedish artist Jack Howchin and Lithuanian singer Gia Ivy, both featured in an aesthetic and tragicomic music video, followed by <span className="text-[#f0f0e8]">mankind</span>, a hyperpop queer anthem with its remixes by Nayeli and SATIRIC, and the single <span className="text-[#f0f0e8]">ashtray girl</span>.
-                </p>
-                <p>
-                  Kicking off 2025, he released the instrumental club EP <span className="text-[#f0f0e8]">no use</span>. He wrote and directed <span className="text-[#f0f0e8]">LOVE LANGUAGE</span>, a queer music short film series, launching from autumn 2025, along with the homonymous music EP.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="w-full h-px bg-[#2a2a2a] mb-16"></div>
-
-        {/* LOVE LANGUAGE Announcement */}
+        {/* LOVE LANGUAGE Announcement - FIRST */}
         <div className="mb-12">
           <span className="text-[#a855f7] text-sm tracking-widest uppercase mb-4 block">Latest</span>
           <h3 className="font-display text-5xl md:text-6xl lg:text-7xl mb-4">
@@ -76,8 +37,8 @@ const SoloProject = () => {
           </p>
         </div>
 
-        {/* Episodes - 2 per row, bigger */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Episodes - 2 per row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {episodes.map((episode) => (
             <div 
               key={episode.id}
@@ -103,8 +64,44 @@ const SoloProject = () => {
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="w-full h-px bg-[#2a2a2a] mb-16"></div>
+
+        {/* Artist Bio Section */}
+        <div className="mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            {/* Photo - smaller, matches bio height */}
+            <div className="overflow-hidden border-2 border-[#2a2a2a] max-w-sm">
+              <img 
+                src="/images/zapoida_artist.jpg" 
+                alt="zapoida francis" 
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            
+            {/* Bio - no title, just text */}
+            <div className="text-[#a0a0a0] leading-relaxed space-y-4">
+              <p>
+                zapoida francis is an artist based in Berlin, Germany. His music blends together introspective, indie songwriting with electronic and hyperpop soundscapes, adding touches of punk rock overtures. He utilises dark sonorities, samples, synthesizers, guitars and layered vocals to express himself through his artistry.
+              </p>
+              <p>
+                His work feels nostalgic but with fresh overtones, with a distinctive underlying narrative. After releasing two singles: <span className="text-[#f0f0e8]">eyes</span> and <span className="text-[#f0f0e8]">the long run</span> in 2022, he began experimenting with new ways to make art by integrating web3 digital interactive content such as AR/VR and NFTs.
+              </p>
+              <p>
+                In 2023, alongside the release of <span className="text-[#f0f0e8]">lonely Boy</span>, he created a video game for his listeners to play while streaming the track. The following release, <span className="text-[#f0f0e8]">Indian Tea Party</span>, featured a collaboration with the apparel brand "Alien Cleopatra". The same year, he contributed, in collaboration with Sky Deep, to two songs featured in the soundtrack of the German TV show <span className="text-[#f0f0e8]">Loving Her</span> (zdf neo), including the track <span className="text-[#f0f0e8]">No Mistake</span>.
+              </p>
+              <p>
+                2024 began with <span className="text-[#f0f0e8]">CHEMIZTRY</span>, a collaboration with Swedish artist Jack Howchin and Lithuanian singer Gia Ivy, both featured in an aesthetic and tragicomic music video, followed by <span className="text-[#f0f0e8]">mankind</span>, a hyperpop queer anthem with its remixes by Nayeli and SATIRIC, and the single <span className="text-[#f0f0e8]">ashtray girl</span>.
+              </p>
+              <p>
+                Kicking off 2025, he released the instrumental club EP <span className="text-[#f0f0e8]">no use</span>. He wrote and directed <span className="text-[#f0f0e8]">LOVE LANGUAGE</span>, a queer music short film series, launching from autumn 2025, along with the homonymous music EP.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Coming Soon - More Content */}
-        <div className="mt-20 pt-16 border-t border-[#2a2a2a]">
+        <div className="pt-16 border-t border-[#2a2a2a]">
           <p className="text-[#666] text-center text-sm tracking-wider">
             More songs, interviews & content coming soon
           </p>
