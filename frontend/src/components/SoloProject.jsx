@@ -71,7 +71,7 @@ const SoloProject = () => {
         <div className="mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
             {/* Photo + Streaming Links */}
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-between items-center md:items-start">
               <div className="overflow-hidden border-2 border-[#2a2a2a] max-w-[280px]">
                 <img 
                   src="/images/zapoida_artist.jpg" 
@@ -82,7 +82,7 @@ const SoloProject = () => {
               </div>
 
               {/* Listen on platforms */}
-              <div className="mt-8" data-testid="streaming-links">
+              <div className="mt-8 flex flex-col items-center md:items-start" data-testid="streaming-links">
                 <p className="text-[#a0a0a0] text-sm tracking-wider mb-4">Listen to zapoida francis on:</p>
                 <div className="flex flex-col gap-3">
                   <a href="https://open.spotify.com/artist/5iL3jq2jrFe0UqWFzEFZIQ" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[#a0a0a0] hover:text-[#1DB954] transition-colors duration-300" data-testid="link-spotify">
