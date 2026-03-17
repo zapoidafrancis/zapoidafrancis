@@ -19,7 +19,8 @@ A musician, music producer, and audio engineer based in Berlin needs a captivati
 5. **Art Section** (formerly Solo Project)
    - "LATEST" feature for LOVE LANGUAGE EP with 5 embedded YouTube videos
    - Artist bio with photo
-   - "Listen to zapoida francis on:" streaming links (Spotify, Apple Music, Tidal, Deezer, YouTube Music)
+   - "Listen to zapoida francis on:" streaming links stacked vertically with correct brand SVG icons (Spotify, Apple Music, Tidal, Deezer, YouTube Music)
+   - Bio photo + streaming links left column height matches bio text right column height (flex stretch layout)
 6. **Footer/Contact** - CTA, email, social links
 7. **Design System** - Purple accent (#a855f7), Bebas Neue + Inter, film grain, sharp edges
 8. **Mobile Experience** - Fixed mobile menu with backdrop blur, responsive layout
