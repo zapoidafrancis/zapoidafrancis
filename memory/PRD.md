@@ -11,82 +11,48 @@ A musician, music producer, and audio engineer based in Berlin needs a captivati
 
 ## Core Requirements
 
-### ✅ Implemented
-1. **Hero Section**
-   - Name displayed as "zapoida francis" in massive bold typography (Bebas Neue)
-   - Interactive RGB chromatic aberration effect (responds to mouse movement)
-   - Infinite scrolling marquee with roles
-   - CTA buttons (View Work, Get in Touch)
-   - Purple accent color (#a855f7)
+### Implemented
+1. **Hero Section** - Interactive RGB chromatic aberration, infinite marquee, CTA buttons
+2. **Works Section** - Filterable gallery with embedded Spotify/Instagram/external links (18 projects)
+3. **CV Section** - Timeline layout, downloadable PDF (desktop download / mobile new tab)
+4. **References Section** - 4 testimonial cards with downloadable reference letters
+5. **Art Section** (formerly Solo Project)
+   - "LATEST" feature for LOVE LANGUAGE EP with 5 embedded YouTube videos
+   - Artist bio with photo
+   - "Listen to zapoida francis on:" streaming links (Spotify, Apple Music, Tidal, Deezer, YouTube Music)
+6. **Footer/Contact** - CTA, email, social links
+7. **Design System** - Purple accent (#a855f7), Bebas Neue + Inter, film grain, sharp edges
+8. **Mobile Experience** - Fixed mobile menu with backdrop blur, responsive layout
 
-2. **Works Section**
-   - Filterable gallery by role
-   - Embedded Spotify players for tracks and albums
-   - Embedded Instagram reels
-   - External links to Bandcamp and other platforms
-   - All 18 projects populated with real data
-
-3. **CV Section**
-   - Single column layout (Experience then Education)
-   - Timeline layout for professional experience
-   - Education section
-   - Proper spacing between jobs
-   - Download CV button (UI ready, awaiting PDF)
-
-4. **References Section**
-   - 4 testimonial cards with quotes
-   - Download reference letter buttons (UI ready, awaiting PDFs)
-
-5. **Solo Project Section**
-   - Coming soon placeholder
-
-6. **Footer/Contact**
-   - CTA: "You have an idea? You want me to perfect your music or your mixed media project? Shoot me a message and let's talk."
-   - Email, location, social links
-
-7. **Design System**
-   - Purple accent (#a855f7)
-   - Sharp-edged UI (0 border-radius)
-   - Bebas Neue display font + Inter body font (monospace font removed - Dec 2025)
-   - Film grain texture overlay
-   - Purple hover states on navigation (Dec 2025)
-
-8. **Mobile Experience**
-   - Fixed mobile menu with backdrop blur (works on scrolled pages - Dec 2025)
-   - Responsive layout across all breakpoints
-
-### ⏳ Pending (P1)
-1. **Download Buttons Functionality**
-   - CV PDF file needed
-   - 4 Reference letter PDFs needed
-
-### 📋 Backlog (P2)
-1. **Solo Project Content** - User to provide songs, videos, interviews
-2. **Backend Integration** - Migrate mock data to MongoDB
+### Backlog (P2)
+1. **Backend Integration** - Migrate mock data from `/app/frontend/src/data/mock.js` to MongoDB + FastAPI
+2. **Content Management System** - Admin panel for post-deployment content editing
 
 ## Technical Architecture
 ```
 /app
-├── backend (FastAPI - not yet integrated)
+├── backend (FastAPI - scaffold only)
 └── frontend (React + Tailwind)
     └── src
-        ├── index.css (design system, RGB split animations)
-        ├── components/ (Hero, Works, CV, References, etc.)
-        └── data/mock.js (all content data)
+        ├── components/ (Hero, Works, CV, References, SoloProject, Header, Footer)
+        ├── data/mock.js (all content data)
+        └── App.css (keyframe animations, global styles)
 ```
 
 ## Design Tokens
 - **Primary BG**: #0d0d0d
+- **Section BG**: #141414
 - **Accent**: #a855f7
 - **Text Primary**: #f0f0e8
+- **Text Secondary**: #a0a0a0
 - **Border**: #2a2a2a
 
-## Hero Animation Details
-- RGB chromatic aberration on figure
-- Magenta shifts left, Cyan shifts right, Blue shifts up
-- Range: 12px (min) to 27px (max)
-- Duration: 32 seconds, continuous, never settling
-- Masked to center area (figure only, not edges)
+## Streaming Profile Links
+- Spotify: https://open.spotify.com/artist/5iL3jq2jrFe0UqWFzEFZIQ
+- Apple Music: https://music.apple.com/us/artist/zapoida-francis/1599640411
+- Tidal: https://tidal.com/search?q=zapoida+francis
+- Deezer: https://www.deezer.com/en/artist/154059692
+- YouTube Music: https://music.youtube.com/channel/UC_xVyQEZdA0LDjmvhbm2MXg
 
 ## Last Updated
-December 2025
+March 2026
