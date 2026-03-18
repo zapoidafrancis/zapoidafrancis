@@ -232,7 +232,7 @@ const SoloProject = () => {
                 {
                   href: "https://www.issuewire.com/berlin-artist-zapoida-francis-launches-love-language-queer-music-short-film-series-on-the-five-love-languages-1843518055923926",
                   img: "/images/news_issuewire.jpg",
-                  imgPosition: "object-top",
+                  imgPosition: "object-[center_40%]",
                   source: "IssueWire",
                   date: "September 17, 2025",
                   title: "Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series",
