@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SoloProject = () => {
+  const [activeTab, setActiveTab] = useState('songs');
+
   const episodes = [
     { id: 1, title: "Words of Affirmation", youtubeId: "GeXjv5r4O0E" },
     { id: 2, title: "Quality Time", youtubeId: "LRu4FQcLsUo" },
@@ -62,6 +64,117 @@ const SoloProject = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Tabbed Section: Songs / Videos / News */}
+        <div className="mb-24">
+          {/* Tab Navigation */}
+          <div className="flex gap-0 mb-10 border-b border-[#2a2a2a]" data-testid="art-tabs">
+            {['songs', 'videos', 'news'].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-3 text-sm tracking-widest uppercase transition-colors duration-300 border-b-2 -mb-px ${
+                  activeTab === tab
+                    ? 'text-[#f0f0e8] border-[#a855f7]'
+                    : 'text-[#666] border-transparent hover:text-[#a0a0a0]'
+                }`}
+                data-testid={`tab-${tab}`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Songs Tab */}
+          {activeTab === 'songs' && (
+            <div className="space-y-6" data-testid="songs-content">
+              {/* LOVE LANGUAGE EP — March 6, 2026 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/2mVrgCRGoXOoywCo3fEyS5?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="LOVE LANGUAGE"
+              />
+              {/* no use — June 20, 2025 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/0DptGmGjOW4IUXA0hbYPNx?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="no use"
+              />
+              {/* ashtray girl — November 29, 2024 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/40UUEMOPIVLqwPGyspqgXA?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="ashtray girl"
+              />
+              {/* mankind (Remixes) — November 15, 2024 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/5RiPoIMFeXnYpmI4P14YRu?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="mankind (Remixes)"
+              />
+              {/* CHEMIZTRY (with Jack Howchin) — 2024 */}
+              <iframe
+                src="https://open.spotify.com/embed/track/3ZYNi3ybMuWNY3pHJ86CnT?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="CHEMIZTRY"
+              />
+              {/* lonely Boy (Remixes) — April 5, 2024 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/40FEOBmxfdQOYT0aUUpstY?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="lonely Boy (Remixes)"
+              />
+              {/* Indian Tea Party — October 27, 2023 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/3u1H86IEymilVRxuEU3dFt?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="Indian Tea Party"
+              />
+              {/* the long run — 2022 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/7IL3mQSXACrFWarNiVdlX3?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="the long run"
+              />
+              {/* eyes (Jack Howchin Remix) — 2022 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/3NSLdwLsu8TppYzWM8ca6n?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="eyes (Jack Howchin Remix)"
+              />
+              {/* eyes — 2022 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/05Lllns5Q1cPKwTpn0EjrB?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="eyes"
+              />
+            </div>
+          )}
+
+          {/* Videos Tab */}
+          {activeTab === 'videos' && (
+            <div className="text-[#666] text-center py-16" data-testid="videos-content">
+              <p className="text-lg tracking-wider">Coming soon</p>
+            </div>
+          )}
+
+          {/* News Tab */}
+          {activeTab === 'news' && (
+            <div className="text-[#666] text-center py-16" data-testid="news-content">
+              <p className="text-lg tracking-wider">Coming soon</p>
+            </div>
+          )}
         </div>
 
         {/* Divider */}
