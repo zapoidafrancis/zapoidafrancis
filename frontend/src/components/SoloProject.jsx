@@ -217,51 +217,63 @@ const SoloProject = () => {
 
           {/* News Tab */}
           {activeTab === 'news' && (
-            <div className="space-y-8" data-testid="news-content">
+            <div className="space-y-6" data-testid="news-content">
               {/* BIMM Institute — September 22, 2025 */}
               <a
                 href="https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/"
                 target="_blank" rel="noopener noreferrer"
-                className="block bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 p-6"
+                className="flex gap-6 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden"
                 data-testid="news-bimm"
               >
-                <p className="text-[#666] text-xs tracking-widest uppercase mb-2">BIMM University Berlin — September 22, 2025</p>
-                <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Graduate set to release LOVE LANGUAGE, a music short film</h3>
-                <p className="text-[#a0a0a0] text-sm leading-relaxed">BIMM Berlin graduate Zapoida Francis is set to release LOVE LANGUAGE — a bold music short film exploring queer love and identity.</p>
+                <img
+                  src="https://i.ytimg.com/vi/r_YlSPIo8t8/hqdefault.jpg"
+                  alt="LOVE LANGUAGE"
+                  className="w-40 md:w-48 object-cover shrink-0"
+                />
+                <div className="py-5 pr-6">
+                  <p className="text-[#666] text-xs tracking-widest uppercase mb-2">BIMM University Berlin — September 22, 2025</p>
+                  <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Graduate set to release LOVE LANGUAGE, a music short film</h3>
+                  <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">BIMM Berlin graduate Zapoida Francis is set to release LOVE LANGUAGE — a bold music short film exploring queer love and identity.</p>
+                </div>
               </a>
 
               {/* IssueWire — September 17, 2025 */}
               <a
                 href="https://www.issuewire.com/berlin-artist-zapoida-francis-launches-love-language-queer-music-short-film-series-on-the-five-love-languages-1843518055923926"
                 target="_blank" rel="noopener noreferrer"
-                className="block bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 p-6"
+                className="flex gap-6 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden"
                 data-testid="news-issuewire"
               >
-                <p className="text-[#666] text-xs tracking-widest uppercase mb-2">IssueWire — September 17, 2025</p>
-                <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series</h3>
-                <p className="text-[#a0a0a0] text-sm leading-relaxed">What if Call Me by Your Name and Beyoncé's Lemonade had a baby? The result might look and sound like LOVE LANGUAGE, a bold, five-episode queer music film.</p>
+                <img
+                  src="https://s3-us-west-2.amazonaws.com/issuewireassets/primg/179279/love-language-poster-image1774979122.jpg"
+                  alt="LOVE LANGUAGE Poster"
+                  className="w-40 md:w-48 object-cover shrink-0"
+                />
+                <div className="py-5 pr-6">
+                  <p className="text-[#666] text-xs tracking-widest uppercase mb-2">IssueWire — September 17, 2025</p>
+                  <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series</h3>
+                  <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">What if Call Me by Your Name and Beyoncé's Lemonade had a baby? The result might look and sound like LOVE LANGUAGE, a bold, five-episode queer music film.</p>
+                </div>
               </a>
 
               {/* Unsigned Berlin Interview */}
-              <div
-                className="bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300"
+              <a
+                href="https://youtu.be/p64EfvmgC78"
+                target="_blank" rel="noopener noreferrer"
+                className="flex gap-6 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden"
                 data-testid="news-unsigned"
               >
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.youtube.com/embed/p64EfvmgC78"
-                    title="Zapoida Francis | Unsigned Berlin S2E3"
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6 border-t border-[#2a2a2a]">
+                <img
+                  src="https://img.youtube.com/vi/p64EfvmgC78/hqdefault.jpg"
+                  alt="Unsigned Berlin Interview"
+                  className="w-40 md:w-48 object-cover shrink-0"
+                />
+                <div className="py-5 pr-6">
                   <p className="text-[#666] text-xs tracking-widest uppercase mb-2">Unsigned Berlin</p>
-                  <h3 className="text-[#f0f0e8] text-lg tracking-wider">Zapoida Francis | Unsigned Berlin S2E3</h3>
+                  <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Zapoida Francis | Unsigned Berlin S2E3</h3>
+                  <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">Video interview featuring zapoida francis on Unsigned Berlin, Season 2 Episode 3.</p>
                 </div>
-              </div>
+              </a>
             </div>
           )}
         </div>
