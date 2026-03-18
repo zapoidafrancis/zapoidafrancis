@@ -117,9 +117,16 @@ const SoloProject = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="mankind (Remixes)"
               />
-              {/* CHEMIZTRY (with Jack Howchin) — 2024 */}
+              {/* mankind — 2024 */}
               <iframe
-                src="https://open.spotify.com/embed/track/3ZYNi3ybMuWNY3pHJ86CnT?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/3y2zjUuUMVJ2x4EOrnI0PU?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="mankind"
+              />
+              {/* CHEMIZTRY — April 26, 2024 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/6DbsHNbJMl6bouX6asf7Eo?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="CHEMIZTRY"
@@ -138,12 +145,12 @@ const SoloProject = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="Indian Tea Party"
               />
-              {/* the long run — 2022 */}
+              {/* lonely Boy — 2023 */}
               <iframe
-                src="https://open.spotify.com/embed/album/7IL3mQSXACrFWarNiVdlX3?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/3vo8Iw664LmmCPYhueFbJ7?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy" title="the long run"
+                loading="lazy" title="lonely Boy"
               />
               {/* eyes (Jack Howchin Remix) — 2022 */}
               <iframe
@@ -151,6 +158,13 @@ const SoloProject = () => {
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="eyes (Jack Howchin Remix)"
+              />
+              {/* the long run — 2022 */}
+              <iframe
+                src="https://open.spotify.com/embed/album/7IL3mQSXACrFWarNiVdlX3?utm_source=generator&theme=0"
+                width="100%" height="152" frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy" title="the long run"
               />
               {/* eyes — 2022 */}
               <iframe
@@ -164,8 +178,40 @@ const SoloProject = () => {
 
           {/* Videos Tab */}
           {activeTab === 'videos' && (
-            <div className="text-[#666] text-center py-16" data-testid="videos-content">
-              <p className="text-lg tracking-wider">Coming soon</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-testid="videos-content">
+              {[
+                { id: "jLkk21nl-b8", title: "might be me (Official Visualizer)" },
+                { id: "a-Wupdl97ys", title: "kiss before we met (Official Visualizer)" },
+                { id: "oWRFv-3TSbM", title: "No Mistake (Official Visualizer)" },
+                { id: "bCtzmKyVGYA", title: "ashtray girl (Official Lyric Visualizer)" },
+                { id: "UqONgXfShqw", title: "mankind (Official Lyric Video)" },
+                { id: "C7G2HBukP-w", title: "CHEMIZTRY (Official Music Video)" },
+                { id: "5AVEwy0rQ18", title: "Indian Tea Party (Live Acoustic)" },
+                { id: "d36O4g2Q8Ms", title: "Indian Tea Party (Official Lyric Video)" },
+                { id: "OvcUK5ubgcY", title: "lonely Boy (Official Gameplay / Lyric Video)" },
+                { id: "l3PtmmrS8QM", title: "the long run (Official Music Video)" },
+                { id: "6Bp8ttfHd_k", title: "eyes (Official Music Video)" },
+              ].map((video) => (
+                <div
+                  key={video.id}
+                  className="bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300"
+                  data-testid={`video-${video.id}`}
+                >
+                  <div className="aspect-video">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={video.title}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4 border-t border-[#2a2a2a]">
+                    <p className="text-[#f0f0e8] text-sm tracking-wider">{video.title}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
