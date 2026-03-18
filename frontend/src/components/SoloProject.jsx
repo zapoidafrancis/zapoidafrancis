@@ -105,7 +105,7 @@ const SoloProject = () => {
               />
               {/* ashtray girl — November 29, 2024 */}
               <iframe
-                src="https://open.spotify.com/embed/album/40UUEMOPIVLqwPGyspqgXA?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/554RUSH2zJIprjrXo7ANgu?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="ashtray girl"
@@ -126,7 +126,7 @@ const SoloProject = () => {
               />
               {/* CHEMIZTRY — April 26, 2024 */}
               <iframe
-                src="https://open.spotify.com/embed/album/6DbsHNbJMl6bouX6asf7Eo?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/3e20Txv4Y19GBxIWDdhuZq?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="CHEMIZTRY"
@@ -140,7 +140,7 @@ const SoloProject = () => {
               />
               {/* Indian Tea Party — October 27, 2023 */}
               <iframe
-                src="https://open.spotify.com/embed/album/3u1H86IEymilVRxuEU3dFt?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/7uHQJOrcDWfNOZ0oQGehsN?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="Indian Tea Party"
@@ -154,21 +154,21 @@ const SoloProject = () => {
               />
               {/* eyes (Jack Howchin Remix) — 2022 */}
               <iframe
-                src="https://open.spotify.com/embed/album/3NSLdwLsu8TppYzWM8ca6n?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/4rYZTwwF453mM0k5PwNx8X?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="eyes (Jack Howchin Remix)"
               />
               {/* the long run — 2022 */}
               <iframe
-                src="https://open.spotify.com/embed/album/7IL3mQSXACrFWarNiVdlX3?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/54j3vFaNxAEVIrZMygiHSD?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="the long run"
               />
               {/* eyes — 2022 */}
               <iframe
-                src="https://open.spotify.com/embed/album/05Lllns5Q1cPKwTpn0EjrB?utm_source=generator&theme=0"
+                src="https://open.spotify.com/embed/track/0tlCqJah8c9W6midaEFMx2?utm_source=generator&theme=0"
                 width="100%" height="152" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy" title="eyes"
@@ -217,8 +217,51 @@ const SoloProject = () => {
 
           {/* News Tab */}
           {activeTab === 'news' && (
-            <div className="text-[#666] text-center py-16" data-testid="news-content">
-              <p className="text-lg tracking-wider">Coming soon</p>
+            <div className="space-y-8" data-testid="news-content">
+              {/* BIMM Institute — September 22, 2025 */}
+              <a
+                href="https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/"
+                target="_blank" rel="noopener noreferrer"
+                className="block bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 p-6"
+                data-testid="news-bimm"
+              >
+                <p className="text-[#666] text-xs tracking-widest uppercase mb-2">BIMM University Berlin — September 22, 2025</p>
+                <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Graduate set to release LOVE LANGUAGE, a music short film</h3>
+                <p className="text-[#a0a0a0] text-sm leading-relaxed">BIMM Berlin graduate Zapoida Francis is set to release LOVE LANGUAGE — a bold music short film exploring queer love and identity.</p>
+              </a>
+
+              {/* IssueWire — September 17, 2025 */}
+              <a
+                href="https://www.issuewire.com/berlin-artist-zapoida-francis-launches-love-language-queer-music-short-film-series-on-the-five-love-languages-1843518055923926"
+                target="_blank" rel="noopener noreferrer"
+                className="block bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 p-6"
+                data-testid="news-issuewire"
+              >
+                <p className="text-[#666] text-xs tracking-widest uppercase mb-2">IssueWire — September 17, 2025</p>
+                <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series</h3>
+                <p className="text-[#a0a0a0] text-sm leading-relaxed">What if Call Me by Your Name and Beyoncé's Lemonade had a baby? The result might look and sound like LOVE LANGUAGE, a bold, five-episode queer music film.</p>
+              </a>
+
+              {/* Unsigned Berlin Interview */}
+              <div
+                className="bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300"
+                data-testid="news-unsigned"
+              >
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/p64EfvmgC78"
+                    title="Zapoida Francis | Unsigned Berlin S2E3"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-6 border-t border-[#2a2a2a]">
+                  <p className="text-[#666] text-xs tracking-widest uppercase mb-2">Unsigned Berlin</p>
+                  <h3 className="text-[#f0f0e8] text-lg tracking-wider">Zapoida Francis | Unsigned Berlin S2E3</h3>
+                </div>
+              </div>
             </div>
           )}
         </div>
