@@ -218,62 +218,54 @@ const SoloProject = () => {
           {/* News Tab */}
           {activeTab === 'news' && (
             <div className="space-y-6" data-testid="news-content">
-              {/* BIMM Institute — September 22, 2025 */}
-              <a
-                href="https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/"
-                target="_blank" rel="noopener noreferrer"
-                className="flex gap-6 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden"
-                data-testid="news-bimm"
-              >
-                <img
-                  src="https://i.ytimg.com/vi/r_YlSPIo8t8/hqdefault.jpg"
-                  alt="LOVE LANGUAGE"
-                  className="w-40 md:w-48 object-cover shrink-0"
-                />
-                <div className="py-5 pr-6">
-                  <p className="text-[#666] text-xs tracking-widest uppercase mb-2">BIMM University Berlin — September 22, 2025</p>
-                  <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Graduate set to release LOVE LANGUAGE, a music short film</h3>
-                  <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">BIMM Berlin graduate Zapoida Francis is set to release LOVE LANGUAGE — a bold music short film exploring queer love and identity.</p>
-                </div>
-              </a>
-
-              {/* IssueWire — September 17, 2025 */}
-              <a
-                href="https://www.issuewire.com/berlin-artist-zapoida-francis-launches-love-language-queer-music-short-film-series-on-the-five-love-languages-1843518055923926"
-                target="_blank" rel="noopener noreferrer"
-                className="flex gap-6 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden"
-                data-testid="news-issuewire"
-              >
-                <img
-                  src="https://s3-us-west-2.amazonaws.com/issuewireassets/primg/179279/love-language-poster-image1774979122.jpg"
-                  alt="LOVE LANGUAGE Poster"
-                  className="w-40 md:w-48 object-cover shrink-0"
-                />
-                <div className="py-5 pr-6">
-                  <p className="text-[#666] text-xs tracking-widest uppercase mb-2">IssueWire — September 17, 2025</p>
-                  <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series</h3>
-                  <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">What if Call Me by Your Name and Beyoncé's Lemonade had a baby? The result might look and sound like LOVE LANGUAGE, a bold, five-episode queer music film.</p>
-                </div>
-              </a>
-
-              {/* Unsigned Berlin Interview */}
-              <a
-                href="https://youtu.be/p64EfvmgC78"
-                target="_blank" rel="noopener noreferrer"
-                className="flex gap-6 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden"
-                data-testid="news-unsigned"
-              >
-                <img
-                  src="https://img.youtube.com/vi/p64EfvmgC78/hqdefault.jpg"
-                  alt="Unsigned Berlin Interview"
-                  className="w-40 md:w-48 object-cover shrink-0"
-                />
-                <div className="py-5 pr-6">
-                  <p className="text-[#666] text-xs tracking-widest uppercase mb-2">Unsigned Berlin</p>
-                  <h3 className="text-[#f0f0e8] text-lg tracking-wider mb-3">Zapoida Francis | Unsigned Berlin S2E3</h3>
-                  <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">Video interview featuring zapoida francis on Unsigned Berlin, Season 2 Episode 3.</p>
-                </div>
-              </a>
+              {[
+                {
+                  href: "https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/",
+                  img: "https://www.bimm-institute.de/wp-content/uploads/2025/09/2024_0905_16552700-1400x620.jpg",
+                  source: "BIMM University Berlin",
+                  date: "September 22, 2025",
+                  title: "Graduate set to release LOVE LANGUAGE, a music short film",
+                  desc: "BIMM Berlin graduate Zapoida Francis is set to release LOVE LANGUAGE — a bold music short film exploring queer love and identity.",
+                  testId: "news-bimm"
+                },
+                {
+                  href: "https://www.issuewire.com/berlin-artist-zapoida-francis-launches-love-language-queer-music-short-film-series-on-the-five-love-languages-1843518055923926",
+                  img: "/images/news_issuewire.jpg",
+                  source: "IssueWire",
+                  date: "September 17, 2025",
+                  title: "Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series",
+                  desc: "What if Call Me by Your Name and Beyoncé's Lemonade had a baby? The result might look and sound like LOVE LANGUAGE, a bold, five-episode queer music film.",
+                  testId: "news-issuewire"
+                },
+                {
+                  href: "https://youtu.be/p64EfvmgC78",
+                  img: "https://img.youtube.com/vi/p64EfvmgC78/hqdefault.jpg",
+                  source: "Unsigned Berlin",
+                  date: "",
+                  title: "Zapoida Francis | Unsigned Berlin S2E3",
+                  desc: "Video interview featuring zapoida francis on Unsigned Berlin, Season 2 Episode 3.",
+                  testId: "news-unsigned"
+                }
+              ].map((item) => (
+                <a
+                  key={item.testId}
+                  href={item.href}
+                  target="_blank" rel="noopener noreferrer"
+                  className="flex gap-0 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden h-40 md:h-44"
+                  data-testid={item.testId}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-36 md:w-52 h-full object-cover shrink-0"
+                  />
+                  <div className="py-4 px-5 md:px-6 flex flex-col justify-center overflow-hidden">
+                    <p className="text-[#666] text-xs tracking-widest uppercase mb-2">{item.source}{item.date && ` — ${item.date}`}</p>
+                    <h3 className="text-[#f0f0e8] text-base md:text-lg tracking-wider mb-2 line-clamp-2">{item.title}</h3>
+                    <p className="text-[#a0a0a0] text-sm leading-relaxed line-clamp-2 hidden md:block">{item.desc}</p>
+                  </div>
+                </a>
+              ))}
             </div>
           )}
         </div>
