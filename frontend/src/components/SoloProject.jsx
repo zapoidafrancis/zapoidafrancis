@@ -222,6 +222,7 @@ const SoloProject = () => {
                 {
                   href: "https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/",
                   img: "https://www.bimm-institute.de/wp-content/uploads/2025/09/2024_0905_16552700-1400x620.jpg",
+                  imgPosition: "object-[35%_center]",
                   source: "BIMM University Berlin",
                   date: "September 22, 2025",
                   title: "Graduate set to release LOVE LANGUAGE, a music short film",
@@ -231,6 +232,7 @@ const SoloProject = () => {
                 {
                   href: "https://www.issuewire.com/berlin-artist-zapoida-francis-launches-love-language-queer-music-short-film-series-on-the-five-love-languages-1843518055923926",
                   img: "/images/news_issuewire.jpg",
+                  imgPosition: "object-top",
                   source: "IssueWire",
                   date: "September 17, 2025",
                   title: "Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series",
@@ -240,8 +242,9 @@ const SoloProject = () => {
                 {
                   href: "https://youtu.be/p64EfvmgC78",
                   img: "https://img.youtube.com/vi/p64EfvmgC78/hqdefault.jpg",
+                  imgPosition: "object-center",
                   source: "Unsigned Berlin",
-                  date: "",
+                  date: "May 5, 2023",
                   title: "Zapoida Francis | Unsigned Berlin S2E3",
                   desc: "Video interview featuring zapoida francis on Unsigned Berlin, Season 2 Episode 3.",
                   testId: "news-unsigned"
@@ -251,18 +254,18 @@ const SoloProject = () => {
                   key={item.testId}
                   href={item.href}
                   target="_blank" rel="noopener noreferrer"
-                  className="flex gap-0 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden h-40 md:h-44"
+                  className="flex gap-0 bg-[#0d0d0d] border-2 border-[#2a2a2a] hover:border-[#a855f7] transition-colors duration-300 overflow-hidden h-48 md:h-56"
                   data-testid={item.testId}
                 >
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-36 md:w-52 h-full object-cover shrink-0"
+                    className={`w-36 md:w-52 h-full object-cover shrink-0 ${item.imgPosition}`}
                   />
                   <div className="py-4 px-5 md:px-6 flex flex-col justify-center overflow-hidden">
                     <p className="text-[#666] text-xs tracking-widest uppercase mb-2">{item.source}{item.date && ` — ${item.date}`}</p>
-                    <h3 className="text-[#f0f0e8] text-base md:text-lg tracking-wider mb-2 line-clamp-2">{item.title}</h3>
-                    <p className="text-[#a0a0a0] text-sm leading-relaxed line-clamp-2 hidden md:block">{item.desc}</p>
+                    <h3 className="text-[#f0f0e8] text-base md:text-lg tracking-wider mb-2">{item.title}</h3>
+                    <p className="text-[#a0a0a0] text-sm leading-relaxed hidden md:block">{item.desc}</p>
                   </div>
                 </a>
               ))}
