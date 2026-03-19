@@ -283,7 +283,7 @@ const SoloProject = () => {
 
           {/* Press Tab */}
           {activeTab === 'press' && (
-            <div className="space-y-16" data-testid="press-content">
+            <div className="flex flex-col gap-8" data-testid="press-content">
               {[
                 {
                   href: "https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/",
