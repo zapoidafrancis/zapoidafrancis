@@ -34,7 +34,7 @@ const SoloProject = () => {
           <p className="text-[#f0f0e8] text-xl md:text-2xl mb-4">
             Watch the music short film now!
           </p>
-          <p className="text-[#a0a0a0] text-lg whitespace-nowrap">
+          <p className="text-[#a0a0a0] text-lg">
             A multimedia EP and web series created, written and directed by <span className="text-[#f0f0e8]">zapoida francis</span>.
           </p>
         </div>
@@ -283,7 +283,7 @@ const SoloProject = () => {
 
           {/* Press Tab */}
           {activeTab === 'press' && (
-            <div className="space-y-6" data-testid="press-content">
+            <div className="space-y-8" data-testid="press-content">
               {[
                 {
                   href: "https://www.bimm-institute.de/news/graduate-set-to-release-love-language-a-music-short-film/",
@@ -339,12 +339,6 @@ const SoloProject = () => {
           )}
         </div>
 
-        {/* Coming Soon - More Content */}
-        <div className="pt-16 border-t border-[#2a2a2a]">
-          <p className="text-[#666] text-center text-sm tracking-wider">
-            More songs, interviews & content coming soon
-          </p>
-        </div>
       </div>
     </section>
   );
