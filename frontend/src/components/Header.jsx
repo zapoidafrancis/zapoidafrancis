@@ -15,7 +15,7 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#works', label: 'Works' },
+    { href: '#works', label: 'Work' },
     { href: '#cv', label: 'CV' },
     { href: '#references', label: 'References' },
     { href: '#solo-project', label: 'Art' },
