@@ -124,7 +124,7 @@ const Works = () => {
             className="font-display text-6xl md:text-7xl lg:text-8xl tracking-tight"
             data-testid="works-title"
           >
-            Selected Works
+            Commissioned Works
           </h2>
           <div className="w-32 h-0.5 bg-gradient-to-r from-[#a855f7] to-transparent mt-8"></div>
         </div>
