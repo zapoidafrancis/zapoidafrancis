@@ -301,7 +301,7 @@ const SoloProject = () => {
                   imgPosition: "object-[center_65%]",
                   source: "IssueWire",
                   date: "September 17, 2025",
-                  title: "Berlin Artist zapoida francis Launches LOVE LANGUAGE: Queer Music Short Film Series",
+                  title: "Berlin Artist zapoida francis Launches LOVE LANGUAGE",
                   desc: "What if Call Me by Your Name and Beyoncé's Lemonade had a baby? The result might look and sound like LOVE LANGUAGE, a bold, five-episode queer music film.",
                   testId: "press-issuewire"
                 },
