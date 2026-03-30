@@ -241,12 +241,6 @@ export const cvData = {
   pdfUrl: "/documents/CV Francesco M. De Lucia.pdf",
   experience: [
     {
-      title: "Guitar Teacher",
-      company: "Musikschule Behm, Bertheau & Morgenstern",
-      period: "Feb 2026 - Mar 2026",
-      description: "Guitar instruction and music education."
-    },
-    {
       title: "Founder Member, Audio Engineer, Musician, Sound Artist",
       company: "Affinity Space Design Studio",
       period: "Jan 2025 - Present",
@@ -257,6 +251,12 @@ export const cvData = {
       company: "Freelance",
       period: "2019 - Present",
       description: "Music production, audio engineering, guitar and bass session work, guitar teaching for various clients and projects."
+    },
+    {
+      title: "Guitar Teacher",
+      company: "Musikschule Behm, Bertheau & Morgenstern",
+      period: "Feb 2026 - Mar 2026",
+      description: "Guitar instruction and music education."
     },
     {
       title: "Venue Sound Technician",
