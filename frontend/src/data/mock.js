@@ -238,12 +238,12 @@ export const works = [
 ];
 
 export const cvData = {
-  pdfUrl: "/documents/CV_Francesco_M_De_Lucia.pdf",
+  pdfUrl: "/documents/CV Francesco M. De Lucia.pdf",
   experience: [
     {
       title: "Guitar Teacher",
       company: "Musikschule Behm, Bertheau & Morgenstern",
-      period: "Feb 2026 - Present",
+      period: "Feb 2026 - Mar 2026",
       description: "Guitar instruction and music education."
     },
     {
