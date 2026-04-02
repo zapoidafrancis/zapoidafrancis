@@ -51,7 +51,7 @@ const Header = () => {
               <img 
                 src="/images/zf_logo_white.png" 
                 alt="ZF" 
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </a>
 
