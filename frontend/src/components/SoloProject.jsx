@@ -9,6 +9,7 @@ const SoloProject = () => {
     { id: 3, title: "Acts of Service", youtubeId: "omb6GWfifVk" },
     { id: 4, title: "Gifts", youtubeId: "7JxBms57h6o" },
     { id: 5, title: "Physical Touch", youtubeId: "O_36vFuV5z0" },
+    { id: 6, title: "Full Short Film", youtubeId: "UXWjhduVQOM" },
   ];
 
   return (

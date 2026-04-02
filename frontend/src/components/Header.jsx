@@ -45,7 +45,7 @@ const Header = () => {
             {/* Logo */}
             <a 
               href="#" 
-              className="hover:opacity-80 transition-opacity duration-300"
+              className="hover:opacity-80 transition-opacity duration-300 flex items-center gap-2"
               data-testid="header-logo"
             >
               <img 
@@ -53,6 +53,7 @@ const Header = () => {
                 alt="ZF" 
                 className="h-10 w-auto"
               />
+              <span className="md:hidden text-[#f0f0e8] text-sm tracking-widest uppercase">Home</span>
             </a>
 
             {/* Desktop Navigation */}
