@@ -45,14 +45,18 @@ const Header = () => {
             {/* Logo */}
             <a 
               href="#" 
-              className="group transition-all duration-300"
+              className="group transition-all duration-300 flex flex-col items-start"
               data-testid="header-logo"
+              onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
             >
               <img 
                 src="/images/zf_logo_white.png" 
                 alt="ZF" 
                 className="h-10 w-auto group-hover:brightness-0 group-hover:invert-0 group-active:brightness-0 group-active:invert-0 transition-all duration-300 [filter:brightness(1)] group-hover:[filter:brightness(0)_saturate(100%)_invert(48%)_sepia(60%)_saturate(5000%)_hue-rotate(250deg)_brightness(100%)] group-active:[filter:brightness(0)_saturate(100%)_invert(48%)_sepia(60%)_saturate(5000%)_hue-rotate(250deg)_brightness(100%)]"
               />
+              {isMobileMenuOpen && (
+                <span className="md:hidden text-[#f0f0e8] text-sm tracking-[0.2em] uppercase mt-2 group-hover:text-[#a855f7] group-active:text-[#a855f7] transition-colors">Home</span>
+              )}
             </a>
 
             {/* Desktop Navigation */}
@@ -81,14 +85,7 @@ const Header = () => {
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
-            <nav className="md:hidden fixed left-0 right-0 top-[73px] px-6 py-8 flex flex-col gap-6 z-50">
-              <a
-                href="#"
-                className="text-sm tracking-[0.2em] uppercase text-[#f0f0e8] hover:text-[#a855f7] active:text-[#a855f7] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </a>
+            <nav className="md:hidden fixed left-0 right-0 top-[100px] px-6 py-8 flex flex-col gap-6 z-50">
               {navLinks.map(link => (
                 <a
                   key={link.href}
