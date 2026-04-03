@@ -55,7 +55,7 @@ const Header = () => {
                 className="h-10 w-auto group-hover:brightness-0 group-hover:invert-0 group-active:brightness-0 group-active:invert-0 transition-all duration-300 [filter:brightness(1)] group-hover:[filter:brightness(0)_saturate(100%)_invert(48%)_sepia(60%)_saturate(5000%)_hue-rotate(250deg)_brightness(100%)] group-active:[filter:brightness(0)_saturate(100%)_invert(48%)_sepia(60%)_saturate(5000%)_hue-rotate(250deg)_brightness(100%)]"
               />
               {isMobileMenuOpen && (
-                <span className="md:hidden text-[#f0f0e8] text-sm tracking-[0.2em] uppercase mt-2 group-hover:text-[#a855f7] group-active:text-[#a855f7] transition-colors">Home</span>
+                <span className="md:hidden text-[#f0f0e8] text-[10px] tracking-[0.15em] uppercase mt-1 group-hover:text-[#a855f7] group-active:text-[#a855f7] transition-colors">Home</span>
               )}
             </a>
 
