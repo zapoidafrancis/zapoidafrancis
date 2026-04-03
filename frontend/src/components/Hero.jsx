@@ -133,55 +133,67 @@ const Hero = () => {
         <div className="absolute inset-0 overflow-hidden">
           {/* Base grayscale layer */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%)',
+              WebkitFilter: 'grayscale(100%)',
               opacity: 0.35,
               transform: 'scale(1.05)',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
             }}
           ></div>
           
           {/* RGB Magenta - shifts left */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(4) brightness(0.9)',
+              WebkitFilter: 'grayscale(100%) sepia(1) hue-rotate(-50deg) saturate(4) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `scale(1.05) translate3d(${redX}px, 0, 0)`,
               transition: 'transform 0.3s ease-out',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
             }}
           ></div>
           
           {/* RGB Cyan - shifts right */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(4) brightness(0.9)',
+              WebkitFilter: 'grayscale(100%) sepia(1) hue-rotate(130deg) saturate(4) brightness(0.9)',
               opacity: 0.4,
               mixBlendMode: 'screen',
               transform: `scale(1.05) translate3d(${cyanX}px, 0, 0)`,
               transition: 'transform 0.3s ease-out',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
             }}
           ></div>
           
           {/* RGB Blue/Violet - shifts up */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${photoUrl})`,
               backgroundPosition: 'center 15%',
               filter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(3) brightness(0.9)',
+              WebkitFilter: 'grayscale(100%) sepia(1) hue-rotate(200deg) saturate(3) brightness(0.9)',
               opacity: 0.3,
               mixBlendMode: 'screen',
               transform: `scale(1.05) translate3d(0, ${blueY}px, 0)`,
               transition: 'transform 0.3s ease-out',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
             }}
           ></div>
         </div>
