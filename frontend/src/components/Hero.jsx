@@ -25,6 +25,7 @@ const Hero = () => {
   ];
 
   const photoUrl = 'https://customer-assets.emergentagent.com/job_1649a5ec-c60b-476c-b815-ab79b57e6169/artifacts/zpwuzo59_438204671_1500072907526634_6067261798977781686_n.jpg';
+  const photoUrlGrayscale = '/images/hero_grayscale.jpg';
 
   // Check if position is in the figure zone (center area where the body/face is)
   const isInFigureZone = (x, y) => {
@@ -131,18 +132,14 @@ const Hero = () => {
         
         {/* Container for figure with split */}
         <div className="absolute inset-0 overflow-hidden">
-          {/* Base grayscale layer */}
+          {/* Base grayscale layer - using actual grayscale image for Safari thumbnail compatibility */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url(${photoUrl})`,
+              backgroundImage: `url(${photoUrlGrayscale})`,
               backgroundPosition: 'center 15%',
-              filter: 'grayscale(100%)',
-              WebkitFilter: 'grayscale(100%)',
               opacity: 0.35,
               transform: 'scale(1.05)',
-              WebkitBackfaceVisibility: 'hidden',
-              backfaceVisibility: 'hidden',
             }}
           ></div>
           
