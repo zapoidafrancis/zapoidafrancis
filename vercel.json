@@ -1,5 +1,7 @@
 {
   "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "frontend/build",
-  "installCommand": "echo 'skipping global install'"
+  "installCommand": "echo 'skipping global install'",
+  "framework": null,
+  "nodeVersion": "18.x"
 }
