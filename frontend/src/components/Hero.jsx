@@ -226,7 +226,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up delay-300">
           <a
-            href="#works"
+            href="#work"
             className="btn-filled px-8 py-4 text-sm tracking-widest inline-block text-center"
             data-testid="hero-cta-works"
           >

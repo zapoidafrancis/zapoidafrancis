@@ -116,7 +116,7 @@ const Works = () => {
   };
 
   return (
-    <section id="works" className="min-h-screen bg-[#0d0d0d] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
+    <section id="work" className="min-h-screen bg-[#0d0d0d] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">

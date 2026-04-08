@@ -15,10 +15,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#works', label: 'Work' },
+    { href: '#work', label: 'Work' },
     { href: '#cv', label: 'CV' },
     { href: '#references', label: 'References' },
-    { href: '#solo-project', label: 'Art' },
+    { href: '#art', label: 'Art' },
     { href: '#contact', label: 'Contact' }
   ];
 

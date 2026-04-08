@@ -13,7 +13,7 @@ const SoloProject = () => {
   ];
 
   return (
-    <section id="solo-project" className="min-h-screen bg-[#141414] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
+    <section id="art" className="min-h-screen bg-[#141414] text-[#f0f0e8] py-32 px-6 md:px-12 noise-bg relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
