@@ -11,53 +11,50 @@ A musician, music producer, and audio engineer based in Berlin needs a captivati
 
 ## Core Requirements
 
-### Implemented
+### Implemented ✅
 1. **Hero Section** - Interactive RGB chromatic aberration, infinite marquee, CTA buttons
 2. **Works Section** - Filterable gallery with embedded Spotify/Instagram/external links (18 projects)
 3. **CV Section** - Timeline layout, downloadable PDF (desktop download / mobile new tab)
 4. **References Section** - 4 testimonial cards with downloadable reference letters
-5. **Art Section** (formerly Solo Project)
+5. **Art Section** (Solo Project)
    - "LATEST" feature for LOVE LANGUAGE EP with 5 embedded YouTube videos
    - Artist bio with photo (appears AFTER the "Latest" section and episodes)
-   - "Listen to zapoida francis on:" streaming links stacked vertically with correct brand SVG icons (Spotify, Apple Music, Tidal, Deezer, YouTube Music)
-   - Bio photo + streaming links left column height matches bio text right column height (flex stretch layout)
-   - **Tabbed Content Section** (appears AFTER the bio):
-     - **Music tab** (renamed from "Songs"): 12 Spotify embeds for all releases, chronologically ordered
-     - **Videos tab**: 11 YouTube video embeds in a 2-column grid
-     - **Press tab** (renamed from "News"): 3 article/interview cards with images, dates, and descriptions
+   - "Listen to zapoida francis on:" streaming links (Spotify, Apple Music, Tidal, Deezer, YouTube Music)
+   - **Tabbed Content Section** (Music/Videos/Press tabs)
 6. **Footer/Contact** - CTA, email, social links
 7. **Design System** - Purple accent (#a855f7), Bebas Neue + Inter, film grain, sharp edges
 8. **Mobile Experience** - Fixed mobile menu with backdrop blur, responsive layout
+9. **SEO** - Meta tags, Open Graph images, sitemap.xml, robots.txt
+10. **Touch Device Support** - Hero split effect works correctly on iPad/tablets
 
-### Backlog (P2)
-1. **Backend Integration** - Migrate mock data from `/app/frontend/src/data/mock.js` to MongoDB + FastAPI
-2. **Content Management System** - Admin panel for post-deployment content editing
+### Deployment ✅
+- **Live URL**: https://zapoidafrancis.com
+- **Hosting**: GitHub Pages (free)
+- **CI/CD**: GitHub Actions auto-deploy on push to main branch
+- **HTTPS**: Enforced
 
 ## Technical Architecture
 ```
 /app
-├── backend (FastAPI - scaffold only)
-└── frontend (React + Tailwind)
-    └── src
-        ├── components/ (Hero, Works, CV, References, SoloProject, Header, Footer)
-        ├── data/mock.js (all content data)
-        └── App.css (keyframe animations, global styles)
+├── .github/workflows/deploy.yml (GitHub Actions)
+├── frontend/
+│   ├── public/ (images, SEO files, documents)
+│   ├── src/components/ (Hero, Works, CV, References, SoloProject, Header, Footer)
+│   ├── src/data/mock.js (all content data)
+│   └── package.json (yarn, react-scripts)
 ```
-
-## Design Tokens
-- **Primary BG**: #0d0d0d
-- **Section BG**: #141414
-- **Accent**: #a855f7
-- **Text Primary**: #f0f0e8
-- **Text Secondary**: #a0a0a0
-- **Border**: #2a2a2a
 
 ## Streaming Profile Links
 - Spotify: https://open.spotify.com/artist/5iL3jq2jrFe0UqWFzEFZIQ
 - Apple Music: https://music.apple.com/us/artist/zapoida-francis/1599640411
-- Tidal: https://tidal.com/search?q=zapoida+francis
+- Tidal: https://tidal.com/artist/29676090
 - Deezer: https://www.deezer.com/en/artist/154059692
 - YouTube Music: https://music.youtube.com/channel/UC_xVyQEZdA0LDjmvhbm2MXg
 
+## How to Update Content
+1. Edit files in `/frontend/src/` (components or mock.js)
+2. Click "Save to GitHub" in Emergent
+3. GitHub Actions automatically rebuilds and deploys (~2-3 min)
+
 ## Last Updated
-March 2026
+April 2026
