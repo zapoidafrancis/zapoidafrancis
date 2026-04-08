@@ -4,13 +4,16 @@ import { heroData } from '../data/mock';
 const Hero = () => {
   const [split, setSplit] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [isTouching, setIsTouching] = useState(false);
   const heroRef = useRef(null);
 
-  // Detect mobile viewport
+  // Detect mobile viewport AND touch capability
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkTouch = () => setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
     checkMobile();
+    checkTouch();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
@@ -34,8 +37,8 @@ const Hero = () => {
   };
 
   const handleMouseMove = (e) => {
-    // Desktop only
-    if (isMobile || !heroRef.current) return;
+    // Desktop only - skip if touch device
+    if (isMobile || isTouchDevice || !heroRef.current) return;
     
     const rect = heroRef.current.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
@@ -63,14 +66,14 @@ const Hero = () => {
   };
 
   const handleMouseLeave = () => {
-    if (!isMobile) {
+    if (!isMobile && !isTouchDevice) {
       setSplit({ x: 8, y: 5 });
     }
   };
 
-  // Mobile touch handlers
+  // Touch handlers - work on any touch device (mobile OR tablet)
   const handleTouchStart = (e) => {
-    if (!isMobile || !heroRef.current) return;
+    if (!isTouchDevice || !heroRef.current) return;
     
     const touch = e.touches[0];
     const rect = heroRef.current.getBoundingClientRect();
@@ -84,7 +87,7 @@ const Hero = () => {
   };
 
   const handleTouchMove = (e) => {
-    if (!isMobile || !heroRef.current) return;
+    if (!isTouchDevice || !heroRef.current) return;
     
     const touch = e.touches[0];
     const rect = heroRef.current.getBoundingClientRect();
@@ -101,7 +104,7 @@ const Hero = () => {
   };
 
   const handleTouchEnd = () => {
-    if (isMobile) {
+    if (isTouchDevice) {
       setIsTouching(false);
       setSplit({ x: 8, y: 5 });
     }
