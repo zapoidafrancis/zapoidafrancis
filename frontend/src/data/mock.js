@@ -241,16 +241,16 @@ export const cvData = {
   pdfUrl: "/documents/CV Francesco M. De Lucia.pdf",
   experience: [
     {
-      title: "Founder Member, Audio Engineer, Musician, Sound Artist",
-      company: "Affinity Space Design Studio",
-      period: "Jan 2025 - Present",
-      description: "Multimedia design studio. Audio engineering, sound design, artistic collaborations."
-    },
-    {
       title: "Guitar Teacher",
       company: "Musikschule Behm, Bertheau & Morgenstern",
       period: "Feb 2026 - Present",
       description: "Guitar instruction and music education."
+    },
+    {
+      title: "Founder Member, Audio Engineer, Musician, Sound Artist",
+      company: "Affinity Space Design Studio",
+      period: "Jan 2025 - Present",
+      description: "Multimedia design studio. Audio engineering, sound design, artistic collaborations."
     },
     {
       title: "Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
