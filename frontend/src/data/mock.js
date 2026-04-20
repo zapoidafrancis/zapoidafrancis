@@ -247,16 +247,16 @@ export const cvData = {
       description: "Multimedia design studio. Audio engineering, sound design, artistic collaborations."
     },
     {
+      title: "Guitar Teacher",
+      company: "Musikschule Behm, Bertheau & Morgenstern",
+      period: "Feb 2026 - Present",
+      description: "Guitar instruction and music education."
+    },
+    {
       title: "Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
       company: "Freelance",
       period: "2019 - Present",
       description: "Music production, audio engineering, guitar and bass session work, guitar teaching for various clients and projects."
-    },
-    {
-      title: "Guitar Teacher",
-      company: "Musikschule Behm, Bertheau & Morgenstern",
-      period: "Feb 2026 - Mar 2026",
-      description: "Guitar instruction and music education."
     },
     {
       title: "Venue Sound Technician",
