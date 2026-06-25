@@ -27,12 +27,12 @@ export const works = [
   {
     id: 19,
     title: 'Yousician / GuitarTuna',
-    artist: 'Promotional Video Content',
+    artist: 'Music Learning Platform',
     role: ['guitar-player'],
     type: 'external',
     externalUrl: 'https://www.tiktok.com/@yousician/video/7642251774681812246',
     image: '/images/yousician_guitartuna.jpg',
-    description: 'Realisation of promotional video content for the music learning platforms Yousician and GuitarTuna.',
+    description: 'Realisation of promotional video content for the music learning apps Yousician and GuitarTuna.',
     year: 2026
   },
   {
