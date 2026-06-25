@@ -32,7 +32,7 @@ export const works = [
     type: 'tiktok',
     tiktokUrl: 'https://www.tiktok.com/@yousician/video/7642251774681812246',
     image: '/images/yousician_guitartuna.jpg',
-    description: 'Promotional video series for the music learning apps Yousician and GuitarTuna.',
+    description: 'Promotional videos for the music learning apps Yousician and GuitarTuna.',
     badge: '1M+ views',
     year: 2026
   },
