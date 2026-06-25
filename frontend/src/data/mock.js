@@ -265,16 +265,22 @@ export const cvData = {
       description: "Guitar instruction and music education."
     },
     {
-      title: "Venue Sound Technician",
-      company: "The Lighthouse of Digital Arts & New Media Art Center",
-      period: "Apr 2025 - May 2025",
-      description: "Sound technician for digital art museum events, handling setup, soundchecks, equipment maintenance."
-    },
-    {
       title: "Founder Member, Audio Engineer, Musician, Sound Artist",
       company: "Affinity Space Design Studio",
       period: "Jan 2025 - Present",
       description: "Multimedia design studio. Audio engineering, sound design, artistic collaborations."
+    },
+    {
+      title: "Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
+      company: "Self-Employed",
+      period: "2019 - Present",
+      description: "Music production, audio engineering, guitar and bass session work, guitar teaching for various clients and projects."
+    },
+    {
+      title: "Venue Sound Technician",
+      company: "The Lighthouse of Digital Arts & New Media Art Center",
+      period: "Apr 2025 - May 2025",
+      description: "Sound technician for digital art museum events, handling setup, soundchecks, equipment maintenance."
     },
     {
       title: "Studio Assistant, Audio Engineer",
@@ -287,12 +293,6 @@ export const cvData = {
       company: "Drop In (Forum für interkulturelle und politische Bildung)",
       period: "Oct 2022 - Dec 2022",
       description: "Guitar classes, workshops and studio support."
-    },
-    {
-      title: "Music Producer, Audio Engineer, Session Musician, Guitar Teacher",
-      company: "Self-Employed",
-      period: "2019 - Present",
-      description: "Music production, audio engineering, guitar and bass session work, guitar teaching for various clients and projects."
     }
   ],
   education: [
