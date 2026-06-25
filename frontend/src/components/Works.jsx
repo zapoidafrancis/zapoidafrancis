@@ -205,9 +205,16 @@ const Works = () => {
 
               {/* Content */}
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-lg font-semibold leading-tight text-[#f0f0e8] mb-2">
-                  {work.title}
-                </h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-lg font-semibold leading-tight text-[#f0f0e8]">
+                    {work.title}
+                  </h3>
+                  {work.badge && (
+                    <span className="px-2 py-1 bg-[#a855f7]/20 border border-[#a855f7] text-[#a855f7] text-xs font-medium">
+                      {work.badge}
+                    </span>
+                  )}
+                </div>
                 <p className="text-[#a855f7] text-sm mb-3">{work.artist}</p>
                 <p className="text-[#a0a0a0] text-sm mb-4 leading-relaxed">{work.description}</p>
 
