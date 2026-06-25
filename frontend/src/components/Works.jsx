@@ -96,6 +96,35 @@ const Works = () => {
       );
     }
 
+    if (work.type === 'tiktok' && work.tiktokUrl) {
+      const videoId = work.tiktokUrl.match(/video\/(\d+)/)?.[1];
+      
+      return (
+        <div className="mt-6">
+          {videoId && (
+            <div className="relative w-full border-2 border-[#2a2a2a]" style={{ paddingBottom: '125%' }}>
+              <iframe
+                src={`https://www.tiktok.com/embed/v2/${videoId}`}
+                className="absolute top-0 left-0 w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+          <a
+            href={work.tiktokUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-3 mt-4 btn-sharp text-xs"
+          >
+            <ExternalLink className="w-4 h-4" />
+            Open TikTok
+          </a>
+        </div>
+      );
+    }
+
     if (work.type === 'link' && work.externalUrl) {
       return (
         <div className="mt-6">
@@ -210,6 +239,7 @@ const Works = () => {
                       {work.type.includes('spotify') ? 'Play on Spotify' : 
                        work.type === 'bandcamp' ? 'Listen on Bandcamp' :
                        work.type === 'instagram' ? 'View Instagram' :
+                       work.type === 'tiktok' ? 'View TikTok' :
                        'View Project'}
                     </button>
                   </div>
