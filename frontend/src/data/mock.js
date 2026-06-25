@@ -25,6 +25,17 @@ export const roles = [
 export const works = [
   // 2026
   {
+    id: 19,
+    title: 'Yousician / GuitarTuna',
+    artist: 'Promotional Video Content',
+    role: ['guitar-player'],
+    type: 'external',
+    externalUrl: 'https://www.tiktok.com/@yousician/video/7642251774681812246',
+    image: '/images/yousician_guitartuna.jpg',
+    description: 'Realisation of promotional video content for the music learning platforms Yousician and GuitarTuna.',
+    year: 2026
+  },
+  {
     id: 18,
     title: 'Marko Bošnjak',
     artist: 'Eurovision 2025 Participant',
