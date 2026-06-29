@@ -158,7 +158,7 @@ export const works = [
     id: 10,
     title: '"New Mistake", "Love To Live Another"',
     artist: '"Loving Her" (ZDF)',
-    role: ['music-composer', 'music-producer'],
+    role: ['music-composer', 'music-producer', 'mixing-engineer'],
     type: 'link',
     externalUrl: 'https://www.zdf.de/serien/loving-her-102?staffel=2',
     image: 'https://customer-assets.emergentagent.com/job_sonic-portfolio-13/artifacts/y77kma2o_new%20mistake%20and%20love%20to%20live%20another.jpeg',
